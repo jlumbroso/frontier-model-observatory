@@ -3,8 +3,8 @@
 # Epistemic Records and Generated Views
 
 - **Date**: 2026-09-05
-- **Iteration**: 2
-- **Status**: Draft
+- **Iteration**: 3
+- **Status**: Accepted
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
 **TL;DR**: Keep canonical, versioned evidence records in the repository and generate many redundant path-oriented views for humans, models, grep, and data tools.
@@ -140,6 +140,22 @@ Every generated file should identify its generator version, schema version, sour
 
 ---
 
+## Decision
+
+### Chosen: Bounded hybrid records with bitemporal historical semantics
+
+Authoritatively edit separate, versioned entity, event, artifact, and claim streams. Use JSONL as the initial physical encoding, subject to calibration, and validate them against explicit schemas.
+
+Claims and events carry valid-time, observed-time, and explicit supersession where applicable. Git history remains an additional audit layer but is not used as a substitute for domain time. Descriptive corrections may be edited when they do not represent a historical assertion; contestable or time-sensitive changes are appended and linked.
+
+Generate Markdown, JSON, CSV, SQLite, and redundant path-oriented views from these records. A generated view is never an independent editorial surface.
+
+**Why**: Jérémie accepted D for canonical form and C for historical truth. The combination preserves stable natural joints while supporting “what was known or available when” queries.
+
+**Trade-offs accepted**: Four canonical record families and two explicit temporal axes are more complex than a single table. Schema validation and cross-record referential checks are therefore mandatory.
+
+---
+
 ## Consequences
 
 - Redundant path organization becomes cheap and internally consistent.
@@ -151,7 +167,7 @@ Every generated file should identify its generator version, schema version, sour
 
 ## Action Items
 
-- [ ] Resolve canonical record families and temporal policy.
+- [x] Resolve canonical record families and temporal policy.
 - [ ] Draft schemas against a representative calibration corpus.
 - [ ] Define projection manifests and deterministic generation.
 - [ ] Add validation that generated outputs match canonical source records.
@@ -161,7 +177,7 @@ Every generated file should identify its generator version, schema version, sour
 ## Validation
 
 - [x] GPT 5.6 Sol at Perplexity Computer: Multiple access paths are preserved as a requirement.
-- [ ] Jérémie Lumbroso: Canonical/editable boundary matches intent.
+- [x] Jérémie "Sonnet 4.5" Lumbroso: Selected bounded hybrid records and bitemporal history.
 - [ ] Calibration corpus: Each canonical fact has one authoritative home.
 
 ---
@@ -179,6 +195,12 @@ Every generated file should identify its generator version, schema version, sour
 - Contributors: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Proposed bounded canonical record families and explicit temporal correction semantics.
 - Outcome: Remains Draft pending answers.
+
+### Iteration 3 (2026-09-05)
+- Trigger: QST-CANONICAL-FORM and QST-HISTORICAL-TRUTH answered through ADRs4AI mobile.
+- Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Adopted D, bounded hybrid canonical streams, and C, bitemporal historical semantics.
+- Outcome: Draft → Accepted.
 
 ---
 

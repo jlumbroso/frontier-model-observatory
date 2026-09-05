@@ -137,5 +137,20 @@ class CandidateTests(unittest.TestCase):
         )
         self.assertEqual([], errors)
 
+    def test_synthetic_records_cannot_masquerade_as_provider_evidence(self):
+        """Structural fixtures use reserved hosts and explicit fixture names."""
+        text = (
+            ROOT / "tests" / "fixtures" / "schema" / "all-records.jsonl"
+        ).read_text(encoding="utf-8")
+        self.assertIn("example.invalid", text)
+        self.assertIn("Fixture Provider", text)
+        for provider_host in (
+            "anthropic.com",
+            "openai.com",
+            "deepmind.google",
+            "googleapis.com",
+        ):
+            self.assertNotIn(provider_host, text)
+
 if __name__ == "__main__":
     unittest.main()

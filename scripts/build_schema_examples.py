@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Generate deterministic, cross-linked JSONL examples from calibration facts."""
+"""Generate deterministic synthetic records shaped by calibration findings.
+
+These fixtures exercise structure only. Reserved `.invalid` hosts and explicit
+fixture names prevent them from masquerading as canonical provider evidence.
+"""
 import json
 from pathlib import Path
 
@@ -49,30 +53,30 @@ def entity(kind, ident, key, name, **extra):
     return d
 
 records = [
-    entity("organization", U["org"], "google-deepmind", "Google DeepMind",
+    entity("organization", U["org"], "fixture-provider", "Fixture Provider",
            roles=["provider", "publisher"]),
-    entity("model_family", U["family"], "gemini-robotics", "Gemini Robotics",
+    entity("model_family", U["family"], "fixture-model", "Fixture Model",
            provider_org_id=U["org"]),
-    entity("model", U["model"], "gemini-robotics-1-5", "Gemini Robotics 1.5",
+    entity("model", U["model"], "fixture-model-1-5", "Fixture Model 1.5",
            provider_org_id=U["org"], family_id=U["family"],
            modalities=[{"native": "robot camera images", "normalized": "robotics"}]),
-    entity("checkpoint", U["checkpoint"], "gemini-robotics-1-5-ga", "Gemini Robotics 1.5 general availability",
+    entity("checkpoint", U["checkpoint"], "fixture-model-1-5-ga", "Fixture Model 1.5 general availability",
            model_id=U["model"], stage="general_availability"),
-    entity("configuration", U["configuration"], "gemini-robotics-1-5-camera-input", "robot camera image input",
+    entity("configuration", U["configuration"], "fixture-model-1-5-camera-input", "robot camera image input",
            configures_id=U["model"], configuration_class="input_modality"),
-    entity("product", U["product"], "vertex-ai", "Vertex AI", provider_org_id=U["org"]),
-    entity("deployment", U["deployment"], "vertex-ai/gemini-robotics-1-5", "Gemini Robotics 1.5 on Vertex AI",
+    entity("product", U["product"], "fixture-product", "Fixture Product", provider_org_id=U["org"]),
+    entity("deployment", U["deployment"], "fixture-product/fixture-model-1-5", "Fixture Model 1.5 on Fixture Product",
            product_id=U["product"], model_id=U["model"], checkpoint_id=U["checkpoint"],
            configuration_ids=[U["configuration"]], valid_time=OPEN_2026),
-    entity("endpoint", U["endpoint"], "gemini-api", "Gemini API", provider_org_id=U["org"],
+    entity("endpoint", U["endpoint"], "fixture-api", "Fixture API", provider_org_id=U["org"],
            product_id=U["product"], endpoint_class="api"),
-    entity("alias", U["alias"], "alias/gemini-robotics-1-5", "Gemini Robotics 1.5 provider label",
-           alias_value="Gemini Robotics 1.5", alias_type="marketing_name",
+    entity("alias", U["alias"], "alias/fixture-model-1-5", "Fixture Model 1.5 provider label",
+           alias_value="Fixture Model 1.5", alias_type="marketing_name",
            target_id=U["model"], valid_time=OPEN_2026),
 ]
 
-a = env("artifact", U["artifact"], "google/gemini-robotics-1-5-technical-report")
-a.update({"preferred_title": "Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots",
+a = env("artifact", U["artifact"], "fixture/fixture-model-1-5-technical-report")
+a.update({"preferred_title": "Fixture Model 1.5: Pushing the Frontier of Generalist Robots",
           "publisher_org_ids": [U["org"]], "artifact_class": "technical_report",
           "native_artifact_type": {"native": "technical report", "normalized": "technical_report"},
           "subject_refs": [{"subject_id": U["model"], "scope_role": "primary"}],
@@ -80,9 +84,9 @@ a.update({"preferred_title": "Gemini Robotics 1.5: Pushing the Frontier of Gener
           "redistribution_status": "review_required", "current_version_ids": [U["version"]]})
 records.append(a)
 
-v = env("artifact_version", U["version"], "google/gemini-robotics-1-5-technical-report/v1")
+v = env("artifact_version", U["version"], "fixture/fixture-model-1-5-technical-report/v1")
 v.update({"artifact_id": U["artifact"], "version_ordinal": 1,
-          "title_native": "Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots",
+          "title_native": "Fixture Model 1.5: Pushing the Frontier of Generalist Robots",
           "representation_kinds": ["pdf"], "date_assertions": [
               {"date_role": "index_listed", "value": {"value": "2025-09-25", "precision": "day", "basis": "index_surface"}},
               {"date_role": "transport_last_modified", "value": {"value": "2025-09-25", "precision": "day", "basis": "transport_header"}}
@@ -90,7 +94,7 @@ v.update({"artifact_id": U["artifact"], "version_ordinal": 1,
           "byte_object_ids": ["fmo:sha256:" + "0" * 64], "url_alias_ids": [U["url2"]], "page_count": 62})
 records.append(v)
 
-a2 = env("artifact", U["artifact2"], "google/gemini-robotics-1-5-model-card-part")
+a2 = env("artifact", U["artifact2"], "fixture/fixture-model-1-5-model-card-part")
 a2.update({"preferred_title": "Appendix A. Model Card", "publisher_org_ids": [U["org"]],
            "artifact_class": "model_disclosure",
            "native_artifact_type": {"native": "model card (Mitchell et al., 2019)", "normalized": "model_disclosure"},
@@ -99,7 +103,7 @@ a2.update({"preferred_title": "Appendix A. Model Card", "publisher_org_ids": [U[
            "redistribution_status": "review_required", "current_version_ids": [U["version2"]]})
 records.append(a2)
 
-v2 = env("artifact_version", U["version2"], "google/gemini-robotics-1-5-model-card-part/v1")
+v2 = env("artifact_version", U["version2"], "fixture/fixture-model-1-5-model-card-part/v1")
 v2.update({"artifact_id": U["artifact2"], "version_ordinal": 1, "title_native": "Appendix A. Model Card",
            "representation_kinds": ["document_part"], "date_assertions": [],
            "dates_unreported_reason": "The card is an appendix inside the report.",
@@ -114,8 +118,8 @@ records.append({"schema_version": "1.0.0", "record_type": "byte_object",
                 "observed_time": OBS, "derivation": "provider_original"})
 
 for ident, key, url, role, target in [
-    (U["url1"], "url/deepmind/gemini-robotics-1-5", "https://deepmind.google/models/model-cards/gemini-robotics-1-5/", "vanity", U["artifact2"]),
-    (U["url2"], "url/storage/gemini-robotics-1-5-report", "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-1-5-Tech-Report.pdf", "asset", U["version"])
+    (U["url1"], "url/fixture/fixture-model-1-5", "https://catalog.example.invalid/models/model-cards/fixture-model-1-5/", "vanity", U["artifact2"]),
+    (U["url2"], "url/fixture-assets/fixture-model-1-5-report", "https://assets.example.invalid/reports/Fixture-Model-1-5-Tech-Report.pdf", "asset", U["version"])
 ]:
     d = env("url_alias", ident, key)
     d.update({"url": url, "url_normalized": url, "url_role": role,
@@ -124,7 +128,7 @@ for ident, key, url, role, target in [
               "canonicality": "alias", "lifecycle": "active"})
     records.append(d)
 
-r = env("retrieval_event", U["retrieval"], "retrieval/gemini-robotics-1-5/2026-09-05")
+r = env("retrieval_event", U["retrieval"], "retrieval/fixture-model-1-5/2026-09-05")
 r.update({"requested_url_id": U["url1"], "final_url_id": U["url2"],
           "retrieved_at": {"value": "2026-09-05", "precision": "day", "basis": "retrieval"},
           "method": "http_get", "agent": "calibration research session", "outcome": "redirected_success",
@@ -132,13 +136,13 @@ r.update({"requested_url_id": U["url1"], "final_url_id": U["url2"],
           "byte_object_id": "fmo:sha256:" + "0" * 64})
 records.append(r)
 
-rd = env("redirect_observation", U["redirect"], "redirect/gemini-robotics-1-5/2026-09-05/0")
+rd = env("redirect_observation", U["redirect"], "redirect/fixture-model-1-5/2026-09-05/0")
 rd.update({"retrieval_event_id": U["retrieval"], "hop_index": 0, "from_url_id": U["url1"],
            "to_url_id": U["url2"], "mechanism": "http", "status_code": 301,
            "observed_time": OBS, "is_terminal": True})
 records.append(rd)
 
-p = env("artifact_part", U["part"], "google/gemini-robotics-1-5-report/appendix-a-table-2")
+p = env("artifact_part", U["part"], "fixture/fixture-model-1-5-report/appendix-a-table-2")
 p.update({"artifact_version_id": U["version"], "part_kind": "appendix",
           "locator": {"page_range": {"scheme": "pdf_index", "start": 30, "end": 30}, "table": "Table 2"},
           "label_native": "Appendix A. Model Card", "subject_ids": [U["model"]],
@@ -155,7 +159,7 @@ rel.update({"source_ref": {"id": U["artifact2"], "record_type": "artifact"},
             "evidence": [{"artifact_version_id": U["version"], "artifact_part_id": U["part"], "page": 30}]})
 records.append(rel)
 
-c1 = env("claim", U["claim1"], "claim/gemini-robotics-1-5/model-card-location")
+c1 = env("claim", U["claim1"], "claim/fixture-model-1-5/model-card-location")
 c1.update({"claim_kind": "assertion", "subject_refs": [{"id": U["model"], "record_type": "entity"}],
            "predicate": {"native": "model card location", "normalized": "documented_in_part"},
            "object": {"type": "artifact_ref", "value": U["part"]},
@@ -166,7 +170,7 @@ c1.update({"claim_kind": "assertion", "subject_refs": [{"id": U["model"], "recor
            "evidence": [{"artifact_version_id": U["version"], "artifact_part_id": U["part"], "page": 30}]})
 records.append(c1)
 
-c2 = env("claim", U["claim2"], "claim/gemini-robotics-1-5/table-2-result")
+c2 = env("claim", U["claim2"], "claim/fixture-model-1-5/table-2-result")
 c2.update({"claim_kind": "evaluation", "subject_refs": [{"id": U["model"], "record_type": "entity"}],
            "predicate": {"native": "Table 2 result", "normalized": "evaluation_result"},
            "object": {"type": "number", "value": 1},
@@ -184,15 +188,15 @@ c2.update({"claim_kind": "evaluation", "subject_refs": [{"id": U["model"], "reco
                           "artifact_version_id": U["version"]}})
 records.append(c2)
 
-e = env("event", U["event"], "event/gemini-robotics-1-5/model-card-publication")
-e.update({"event_kind": "publication", "title": "Gemini Robotics 1.5 model-card publication",
+e = env("event", U["event"], "event/fixture-model-1-5/model-card-publication")
+e.update({"event_kind": "publication", "title": "Fixture Model 1.5 model-card publication",
           "subject_ids": [U["artifact2"], U["model"]],
           "valid_time": {"status": "known", "start": {"value": "2025-09-25", "precision": "day", "basis": "index_surface"}},
           "observed_time": OBS, "attributed_to_org_ids": [U["org"]],
           "evidence": [{"artifact_version_id": U["version"], "artifact_part_id": U["part"], "page": 30}]})
 records.append(e)
 
-ab = env("absence", U["absence"], "absence/gemini-robotics-1-5/standalone-card")
+ab = env("absence", U["absence"], "absence/fixture-model-1-5/standalone-card")
 ab.update({"absence_type": "not_found",
            "target": {"subject_id": U["model"], "description_native": "standalone model card document"},
            "expected_artifact_class": "model_disclosure",
@@ -204,8 +208,8 @@ ab.update({"absence_type": "not_found",
            "next_check_at": {"value": "2027-03", "precision": "month", "qualifier": "approximate"}})
 records.append(ab)
 
-cv = env("coverage_ledger_entry", U["coverage"], "coverage/calibration/gemini-robotics-1-5")
-cv.update({"scope_key": "calibration/google/gemini-robotics-1-5",
+cv = env("coverage_ledger_entry", U["coverage"], "coverage/calibration/fixture-model-1-5")
+cv.update({"scope_key": "calibration/fixture/fixture-model-1-5",
            "scope_description": "Calibration coverage for the report-appendix documentary form",
            "coverage_status": "covered",
            "assessed_at": {"value": "2026-09-05", "precision": "day", "basis": "retrieval"},

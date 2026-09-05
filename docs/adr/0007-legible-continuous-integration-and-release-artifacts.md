@@ -3,7 +3,7 @@
 # Legible Continuous Integration and Release Artifacts
 
 - **Date**: 2026-09-05
-- **Iteration**: 5
+- **Iteration**: 6
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -153,6 +153,7 @@ The current fine-grained PAT has repository-content authority but correctly reje
 - [x] Implement deterministic skill packaging and checksums.
 - [x] Add release-manifest generation and tests.
 - [x] Package extracted text separately from the compact skill, with an in-archive provenance manifest.
+- [x] Publish comprehensive chronology research as standalone JSONL, JSON, and CSV assets with a source-bound manifest.
 - [ ] Land workflows using a credential or human commit with workflow authority.
 - [ ] Inspect the first hosted summary and preserve any resulting corrections.
 
@@ -163,7 +164,7 @@ The current fine-grained PAT has repository-content authority but correctly reje
 - [x] GPT 5.6 Sol at Perplexity Computer: Direct requirement is captured without reducing CI to pass/fail.
 - [x] Local verification scripts validate and render all four result states.
 - [x] Workflow YAML, immutable action pins, static contracts, and actionlint 1.7.12 validate locally.
-- [x] Local release build deterministically produces ten primary assets, including a validated skill ZIP and a 13-document extracted-text ZIP.
+- [x] Local release build deterministically produces fourteen primary assets, including a validated skill ZIP, a 13-document extracted-text ZIP, and three chronology-research formats.
 - [ ] Hosted push/PR run produces a complete failure-resistant summary.
 - [ ] Tagged release publishes a downloadable validated skill ZIP and checksums.
 
@@ -200,6 +201,12 @@ The current fine-grained PAT has repository-content authority but correctly reje
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added QST-WORKFLOW-LANDING with narrow-token, human-commit, and defer options.
 - Outcome: Hosted CI and release publication await one explicit landing choice; local validation remains green.
+
+### Iteration 6 (2026-09-05)
+- Trigger: Comprehensive chronology became model-usable in the skill and needed equal treatment as a conventional data product.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added standalone JSONL, JSON, CSV, and manifest chronology assets to the deterministic release bundle, increasing the local release contract from ten to fourteen primary assets.
+- Outcome: Every current canonical, research, skill, and extracted-text surface is locally packageable; hosted publication still awaits QST-WORKFLOW-LANDING.
 
 ---
 

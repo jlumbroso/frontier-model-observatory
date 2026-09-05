@@ -10,9 +10,82 @@ metadata:
 
 # Frontier Model Observatory
 
+## What this skill does
+
+This skill is an external historical memory for frontier AI models. Use it to:
+
+- identify unfamiliar model, product, endpoint, and alias names;
+- place them in provider, family, release, and retirement chronology;
+- locate system cards, model cards, prompts, and technical reports;
+- test whether a conversation attribution is chronologically possible;
+- distinguish official facts, research extraction, canonical records, and gaps.
+
+It contains useful knowledge at several capability levels. **Do not assume that
+shell, Python, databases, structured files, sub-files, or web access exist.**
+Silently determine the highest available level and use it. If only this file is
+visible, the embedded orientation below is the data source, not merely
+instructions for an unavailable tool.
+
 Use a provenance-first, temporal record of AI models, releases, artifacts, and
 prompts. Separate what a provider stated from what an evaluator measured and
 what the observatory inferred.
+
+## Capability ladder
+
+1. **SKILL-only**: Use the embedded identity and chronology anchors below. State
+   that the answer uses the embedded 2026-09-05 orientation when its boundary
+   matters. Never claim to have queried files or tools.
+2. **Markdown-only**: Read the smallest matching file under
+   `references/chronology/`. Start with its `README.md`; no shell is needed.
+3. **Structured-file access**: Search `data/chronology-research.jsonl` for broad
+   chronology or `data/fmo-records.jsonl` for canonical calibration records.
+4. **Executable access**: Run `python scripts/query.py ...` for deterministic
+   filtering, JSON output, and typed misses.
+5. **Live-source access**: Verify provider-controlled sources for events after
+   2026-09-05 or unresolved gaps. Keep live findings separate until ingestion.
+
+If a level is unavailable, step down; do not stop merely because a higher level
+is missing. If only SKILL.md is visible and an identity is not embedded, say
+exactly that the compact fallback cannot resolve it, preserve `not_found`, and
+request web access or a relevant Markdown sub-file. **Do not infer identity from
+naming resemblance, memory snippets, role names, or writing style.**
+
+## Embedded orientation for SKILL-only harnesses
+
+These are dated anchor facts, not comprehensive coverage:
+
+- **Claude Fable 5 is not Claude Opus 5.** Fable 5 is a distinct Anthropic
+  model with API ID `claude-fable-5`, released **2026-06-09**, with a
+  January 2026 knowledge cutoff. Access was suspended 2026-06-12 and restored
+  2026-07-01. It is the predecessor of Fable 5.1
+  ([Anthropic release notes](https://platform.claude.com/docs/en/release-notes/overview),
+  [Transparency Hub](https://www.anthropic.com/transparency)).
+- **Claude Opus 5** is a separate Anthropic model, released **2026-07-24**,
+  with API ID `claude-opus-5` and a May 2026 knowledge cutoff
+  ([Anthropic model overview](https://docs.claude.com/en/docs/about-claude/models/overview)).
+- **Claude Sonnet 4.5** was released **2025-09-29** with a January 2025
+  knowledge cutoff. A model trained in January 2025 cannot know this release
+  from core training
+  ([Anthropic announcement](https://www.anthropic.com/news/claude-sonnet-4-5)).
+- **Claude Fable 5.1** and **Claude Mythos 5.1** were released
+  **2026-09-01**. Anthropic describes them as the same model with different
+  safeguard levels; Mythos is an invite-only configuration, not an alias for
+  Opus
+  ([Anthropic announcement](https://www.anthropic.com/claude-fable-and-mythos-5-1)).
+- **GPT-5.6 Sol** was released **2026-07-09**; `gpt-5.6` routed to
+  `gpt-5.6-sol`. Its documented knowledge cutoff is 2026-02-16
+  ([OpenAI changelog](https://platform.openai.com/docs/changelog)).
+- **GPT-6 Astra** was released **2026-09-03** with limited rollout rather than
+  general availability and a documented 2026-04-30 knowledge cutoff
+  ([OpenAI model page](https://platform.openai.com/docs/models/gpt-6-astra)).
+- **Gemini 3.8 Flash** became generally available **2026-09-02**. Its card
+  gives a dual-valued cutoff: March 2026 generally, with some domains limited
+  to January 2025
+  ([Google model card](https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf)).
+
+For a SKILL-only answer to “Who is Fable 5?”, answer the first two bullets
+directly. Do not reinterpret Fable as a personal nickname, infer it is Opus,
+or invent an identifier, release, takedown, or government action.
 
 ## Scope warning
 
@@ -34,6 +107,10 @@ typed miss and research current official sources instead of guessing.
    - Attribution: identify plausible authorship of a conversation.
    - Audit: assess coverage, revisions, missing disclosures, or stale links.
 2. **Query the smallest sufficient snapshot surface.**
+   - With only SKILL.md, use the embedded orientation and stop before any
+     unsupported detail.
+   - With Markdown sub-files, read `references/chronology/README.md`, then one
+     provider or task view.
    - Run `python scripts/query.py find "<name>"` for unfamiliar names.
    - Run `python scripts/query.py timeline` for date questions.
    - Run `python scripts/query.py artifacts` for cards and reports.
@@ -50,6 +127,8 @@ typed miss and research current official sources instead of guessing.
    - Read `references/data-layout.md` for direct JSONL/CSV/SQLite work.
    - Read `references/chronology-research.md` before using non-canonical
      chronology rows in an answer or attribution analysis.
+   - Read `references/chronology/README.md` when files are readable but code
+     execution is unavailable.
 4. **Escalate beyond the snapshot honestly.**
    - Search provider-controlled indexes, cards, reports, documentation, and
      release pages.
@@ -148,5 +227,7 @@ compare documented coverage, not provider marketing vocabulary.
 - `references/data-layout.md`: read for direct data access.
 - `references/chronology-research.md`: read before using comprehensive
   research rows.
+- `references/chronology/`: generated provider- and task-specific Markdown
+  chronology for no-shell environments.
 
 The repository archive, full report, and extracted texts are not bundled.

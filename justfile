@@ -562,6 +562,7 @@ check-views:
 [doc("Build the skill's generated canonical data snapshot")]
 skill:
     python scripts/build_skill.py
+    python scripts/generate_skill_markdown.py
 
 [group('verify')]
 [doc("Check the bundled skill snapshot against canonical distributions")]

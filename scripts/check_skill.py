@@ -12,11 +12,12 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from scripts import build_skill, package_skill
+from scripts import build_skill, generate_skill_markdown, package_skill
 
 
 def main() -> int:
     errors = build_skill.check()
+    errors.extend(generate_skill_markdown.check())
     if errors:
         print("\n".join(errors))
         return 1

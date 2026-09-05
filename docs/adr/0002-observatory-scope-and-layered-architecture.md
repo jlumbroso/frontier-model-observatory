@@ -3,7 +3,7 @@
 # Observatory Scope and Layered Architecture
 
 - **Date**: 2026-09-05
-- **Iteration**: 7
+- **Iteration**: 8
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -191,6 +191,7 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - [x] Replace a narrow v0.1 scope with whole-project delivery through intermediate stakes.
 - [x] Resolve the license/governance mechanism and its necessary policy exception.
 - [x] Implement the repository policy and semantic local verification guard before corpus ingestion.
+- [x] Extend policy verification into extracted text from materialized PDF and HTML artifacts.
 - [ ] Wire `just verify` into hosted CI when an authorized workflow change is available.
 - [ ] Create a coverage-ledger schema after ADR-0003 settles canonical records.
 
@@ -201,6 +202,7 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - [x] GPT 5.6 Sol at Perplexity Computer: Human scope answer is preserved.
 - [x] Jérémie "Sonnet 4.5" Lumbroso: Selected comprehensive scope, categorical repository exclusion, and standard-license governance.
 - [x] `just verify`: Semantic exclusion guard passes, including the `Meta-Observation` false-positive regression.
+- [x] `just verify`: Binary and HTML contents are deterministically text-extracted and policy-scanned before acceptance.
 - [ ] Calibration corpus: Provider and modality boundaries are implementable.
 
 ---
@@ -248,6 +250,12 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Removed the unpushed workflow rather than broadening credentials; retained `just verify` as the authoritative gate and recorded hosted CI wiring as open.
 - Outcome: Remains Partially Implemented.
+
+### Iteration 8 (2026-09-05)
+- Trigger: Deterministic PDF extraction found excluded-company subject matter inside an otherwise in-scope provider model card.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Extended enforcement from repository-visible text to extracted PDF/HTML text, dematerialized the affected provider bytes, retained their hash and source metadata, and recorded a typed `excluded_by_policy` absence. The original Git LFS object remains reachable from already-pushed history until a separately confirmed history rewrite.
+- Outcome: The current tree is policy-clean; complete repository-history conformance remains authorization-gated.
 
 ---
 

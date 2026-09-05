@@ -3,7 +3,7 @@
 # Artifact Archive and Prompt Provenance
 
 - **Date**: 2026-09-05
-- **Iteration**: 4
+- **Iteration**: 5
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -186,6 +186,14 @@ Use one artifact manifest abstraction over tiered storage. Keep compact text, ma
 
 Preserve retrievable public artifacts in the private research archive. Include provider originals in a public distribution only when license, permission, or a documented legal rationale supports redistribution. Publication status is an explicit per-artifact field, never inferred from public accessibility.
 
+Materialization is also subordinate to repository content policy. When an
+otherwise in-scope source contains prohibited subject matter, retain its
+artifact identity, official URL, retrieval event, media type, byte length, and
+SHA-256 identity as remote-only metadata; record a typed
+`excluded_by_policy` absence instead of storing the source bytes or extracted
+text. This is a content-policy outcome, not evidence that the artifact does
+not exist.
+
 Treat provider-published prompts as first-class corpus records. Store unofficial, observed, reconstructed, research-reproduced, or allegedly leaked prompt material only in a segregated quarantine with provenance, privacy, confidence, and distribution controls. Ordinary generated views exclude quarantine by default.
 
 **Why**: Jérémie selected D for storage, B for redistribution, and B for unofficial prompts.
@@ -197,6 +205,7 @@ Treat provider-published prompts as first-class corpus records. Store unofficial
 ## Consequences
 
 - Link integrity and byte integrity become separate checks.
+- Repository-visible text checks are insufficient for binary archives; deterministic extracted-text policy checks are required before materialization is accepted.
 - Silent provider revisions can be detected by hash even when URLs remain unchanged.
 - Generated PDFs can never masquerade as provider-issued documents.
 - Prompt records must carry stronger provenance and privacy boundaries than ordinary release metadata.
@@ -206,10 +215,11 @@ Treat provider-published prompts as first-class corpus records. Store unofficial
 
 ## Action Items
 
-- [ ] Measure calibration-corpus artifact count and size before final storage choice.
-- [ ] Draft the artifact manifest and provenance enums.
+- [x] Measure the first calibration corpus: 13 policy-clean materialized artifacts totaling 91,364,181 bytes after one source became remote-only.
+- [x] Draft and implement the artifact manifest and provenance enums.
 - [x] Add byte hash, length, media-type, content-addressed-path, and Git LFS checks as a summonable recipe.
-- [ ] Add link, extraction, and generated-view checks when implemented.
+- [x] Add extraction-policy and generated-view checks to the required verification gate.
+- [ ] Add scheduled live-link and silent-byte-change checks in hosted CI.
 - [ ] Resolve redistribution and unofficial-prompt gates before any public release.
 
 ---
@@ -218,7 +228,8 @@ Treat provider-published prompts as first-class corpus records. Store unofficial
 
 - [x] GPT 5.6 Sol at Perplexity Computer: Complete-copy and text-extraction intent is preserved.
 - [x] Jérémie "Sonnet 4.5" Lumbroso: Selected tiered storage, evidence-gated redistribution, and official-plus-quarantine prompt handling.
-- [ ] Artifact sample: Manifest fields describe real provider artifacts without forced equivalence.
+- [x] Artifact sample: Manifest fields describe real provider artifacts without forced equivalence.
+- [x] `just verify`: 13 materialized sources pass hashes, media checks, LFS policy, and extracted-text policy.
 
 ---
 
@@ -247,6 +258,12 @@ Treat provider-published prompts as first-class corpus records. Store unofficial
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Stored a 39,642,839-byte provider PDF under its SHA-256 path through Git LFS and added independent archive-integrity validation.
 - Outcome: Accepted → Partially Implemented; complete calibration storage and extraction remain.
+
+### Iteration 5 (2026-09-05)
+- Trigger: Extracted text exposed prohibited subject matter inside a materialized provider PDF.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added deterministic PDF/HTML extraction auditing, converted the affected byte object from `materialized` to `remote_only`, linked a typed policy absence from coverage, regenerated all projections, and fixed CSV generation to use LF-only line endings.
+- Outcome: Current-tree archive and projections are verified; promoted full-text derivatives, live-link monitoring, redistribution review, and already-pushed history cleanup remain.
 
 ---
 

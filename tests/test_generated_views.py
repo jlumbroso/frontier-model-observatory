@@ -87,6 +87,15 @@ class GeneratedViewsTests(unittest.TestCase):
                 if path.is_file() and path.name != "manifest.json"
             }
         self.assertEqual(listed, actual)
+        sqlite_row = next(
+            item
+            for item in manifest["files"]
+            if item["path"] == "dist/fmo.sqlite"
+        )
+        self.assertEqual("logical_rows_v1", sqlite_row["digest_basis"])
+        self.assertTrue(
+            all("digest_basis" in item for item in manifest["files"])
+        )
 
     def test_csv_projections_use_lf_line_endings(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

@@ -518,6 +518,12 @@ check-extracted-text:
 verify:
     python scripts/verify.py
 
+[group('ci')]
+[doc("Install Linux system packages required by hosted verification")]
+install-ci-system-dependencies:
+    sudo apt-get update
+    sudo apt-get install --yes poppler-utils
+
 [group('verify')]
 [doc("Require every registered subsystem to be implemented and green")]
 verify-complete:

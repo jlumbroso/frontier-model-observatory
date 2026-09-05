@@ -39,6 +39,9 @@ jobs:
       - name: Set up just
         uses: extractions/setup-just@f8a3cce218d9f83db3a2ecd90e41ac3de6cdfd9b # v3
 
+      - name: Install system dependencies
+        run: just install-ci-system-dependencies
+
       - name: Install validation dependencies
         run: python -m pip install --requirement requirements.txt
 

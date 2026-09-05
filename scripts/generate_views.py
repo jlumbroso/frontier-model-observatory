@@ -487,11 +487,7 @@ def generate_views(root: Path, views: Path, dist: Path) -> None:
         "record_count": len(records),
         "coverage_scope_count": len(coverage),
         "files": [
-            {
-                "path": output_label(path),
-                "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
-                "byte_length": path.stat().st_size,
-            }
+            manifest_file_row(path, output_label(path))
             for path in sorted(generated)
         ],
     }
@@ -560,6 +556,55 @@ def write_sqlite(path: Path, records: list[dict], chronology: list[dict]) -> Non
     connection.close()
 
 
+def sqlite_logical_bytes(path: Path) -> bytes:
+    connection = sqlite3.connect(path)
+    try:
+        payload = {
+            "logical_format": "fmo-sqlite-rows-v1",
+            "user_version": connection.execute(
+                "PRAGMA user_version"
+            ).fetchone()[0],
+            "records": connection.execute(
+                "SELECT record_type, id, canonical_key, json "
+                "FROM records ORDER BY id"
+            ).fetchall(),
+            "chronology": connection.execute(
+                "SELECT year, date, precision, date_role, date_basis, "
+                "artifact_title, artifact_version_id FROM chronology "
+                "ORDER BY date, date_role, artifact_version_id"
+            ).fetchall(),
+        }
+    finally:
+        connection.close()
+    return (
+        json.dumps(
+            payload,
+            ensure_ascii=False,
+            sort_keys=True,
+            separators=(",", ":"),
+        )
+        + "\n"
+    ).encode("utf-8")
+
+
+def manifest_file_row(path: Path, label: str) -> dict:
+    if path.suffix == ".sqlite":
+        payload = sqlite_logical_bytes(path)
+        return {
+            "path": label,
+            "sha256": hashlib.sha256(payload).hexdigest(),
+            "byte_length": len(payload),
+            "digest_basis": "logical_rows_v1",
+        }
+    payload = path.read_bytes()
+    return {
+        "path": label,
+        "sha256": hashlib.sha256(payload).hexdigest(),
+        "byte_length": len(payload),
+        "digest_basis": "raw_bytes",
+    }
+
+
 def file_map(root: Path) -> dict[str, bytes]:
     return {
         str(path.relative_to(root)): path.read_bytes()
@@ -584,6 +629,9 @@ def check_freshness(root: Path) -> list[str]:
                 for path, data in file_map(generated_dist).items()
             }
         )
+        expected_sqlite_logical = sqlite_logical_bytes(
+            generated_dist / "fmo.sqlite"
+        )
         actual = {}
         for name in ("views", "dist"):
             base = root / name
@@ -594,12 +642,20 @@ def check_freshness(root: Path) -> list[str]:
                         for path, data in file_map(base).items()
                     }
                 )
+        actual_sqlite_logical = (
+            sqlite_logical_bytes(root / "dist" / "fmo.sqlite")
+            if (root / "dist" / "fmo.sqlite").exists()
+            else b""
+        )
     errors = []
     for path in sorted(set(expected) | set(actual)):
         if path not in actual:
             errors.append(f"missing generated file: {path}")
         elif path not in expected:
             errors.append(f"unexpected generated file: {path}")
+        elif path == "dist/fmo.sqlite":
+            if expected_sqlite_logical != actual_sqlite_logical:
+                errors.append(f"stale generated file: {path}")
         elif expected[path] != actual[path]:
             errors.append(f"stale generated file: {path}")
     return errors

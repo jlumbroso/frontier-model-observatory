@@ -26,6 +26,7 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn("if: always()", text)
         self.assertIn("lfs: true", text)
         self.assertIn("contents: read", text)
+        self.assertIn("just install-ci-system-dependencies", text)
 
     def test_release_workflow_publishes_downloadable_skill(self) -> None:
         text = (WORKFLOWS / "release.yml").read_text()
@@ -34,6 +35,7 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn("build/release/SHA256SUMS", text)
         self.assertIn("GITHUB_STEP_SUMMARY", text)
         self.assertIn("contents: write", text)
+        self.assertIn("just install-ci-system-dependencies", text)
 
     def test_no_workflow_uses_mutable_action_tag(self) -> None:
         text = "\n".join(

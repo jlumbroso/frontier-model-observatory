@@ -4,211 +4,253 @@
   "files": [
     {
       "byte_length": 2155,
+      "digest_basis": "raw_bytes",
       "path": "dist/artifacts.csv",
       "sha256": "70bf4826a0c20d4a1d1956915fb29bb6d3e7319d0d53882b6ed2b04327484e36"
     },
     {
       "byte_length": 5682,
+      "digest_basis": "raw_bytes",
       "path": "dist/chronology.csv",
       "sha256": "bc3510734d55f5e5412f8aaa0e5d39ab7f11d56a0b08269d1527767ab7e2e917"
     },
     {
       "byte_length": 2381,
+      "digest_basis": "raw_bytes",
       "path": "dist/coverage.csv",
       "sha256": "d736769d209929efdb8f6a47b7b82ff27103dc9c14c324c681ea057ba9bedf47"
     },
     {
       "byte_length": 5871,
+      "digest_basis": "raw_bytes",
       "path": "dist/entities.csv",
       "sha256": "147ae590f15c126ba232225919fb5f93ea63887f80ad45dcdc86fbc7030d0312"
     },
     {
       "byte_length": 151806,
+      "digest_basis": "raw_bytes",
       "path": "dist/fmo-records.json",
       "sha256": "593a0c1c730020dfe3544300f53d85e8b6d3dc8ea961a5898c3235c00543d20c"
     },
     {
       "byte_length": 119035,
+      "digest_basis": "raw_bytes",
       "path": "dist/fmo-records.jsonl",
       "sha256": "3a7138563afd5dbe679b139505ef1d1b65ba3bbc57654dfcc2c47c255c210c70"
     },
     {
-      "byte_length": 208896,
+      "byte_length": 153365,
+      "digest_basis": "logical_rows_v1",
       "path": "dist/fmo.sqlite",
-      "sha256": "58e0564791bb12d42ad933f7e86e23f647310d3d74263e42096aaeb64614e4c7"
+      "sha256": "1b06897e500ed999e857ac1d0fbd20e923e347b3e05d3d3d0b7ad95eaf25a59d"
     },
     {
       "byte_length": 474,
+      "digest_basis": "raw_bytes",
       "path": "views/README.md",
       "sha256": "f78cce966dbeb3e71e50ec945c40cd648329da91af7b0fd9fd024b9db9c79fa0"
     },
     {
       "byte_length": 1043,
+      "digest_basis": "raw_bytes",
       "path": "views/by-artifact-type/model_disclosure/README.md",
       "sha256": "ebba660952a84e93ca5c8feec40bfa79128f9a73d9fb6648e858ded330fa924c"
     },
     {
       "byte_length": 59870,
+      "digest_basis": "raw_bytes",
       "path": "views/by-artifact-type/model_disclosure/records.jsonl",
       "sha256": "d6e0c3edad7f45e5c30194bbc224519508361648784e0243692f8a819601bb9a"
     },
     {
       "byte_length": 240,
+      "digest_basis": "raw_bytes",
       "path": "views/by-artifact-type/system_prompt/README.md",
       "sha256": "2fcf0c41b2a8d1c1d9b02b646e1b99d2bec6eb8905ea7aa8d086f7247e45219b"
     },
     {
       "byte_length": 4762,
+      "digest_basis": "raw_bytes",
       "path": "views/by-artifact-type/system_prompt/records.jsonl",
       "sha256": "f88debad101138b98378c1df4ec32616b9d54a753410e88bd86e20f0b0fc2807"
     },
     {
       "byte_length": 294,
+      "digest_basis": "raw_bytes",
       "path": "views/by-artifact-type/technical_report/README.md",
       "sha256": "fb1acffbdf16723e000b6be194f5e8ac89112374204bc4255b4e9e7c9b55f0ac"
     },
     {
       "byte_length": 10615,
+      "digest_basis": "raw_bytes",
       "path": "views/by-artifact-type/technical_report/records.jsonl",
       "sha256": "540994882e2a525c1812cc4dafd2490c8780126a45df15104c0107ed226f5940"
     },
     {
       "byte_length": 477,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/anthropic/claude-family/README.md",
       "sha256": "b78c20196b0d32e1ede229cb226f4c51a625b41107e4e35bf029a719e991c220"
     },
     {
       "byte_length": 26293,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/anthropic/claude-family/records.jsonl",
       "sha256": "a0cca8752a0d86bf5d93fd0e905e6a01715d3798e2ee238a2876f5e560371d9c"
     },
     {
       "byte_length": 173,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/google-deepmind/gemini-family/README.md",
       "sha256": "a2be7e33b5a9a2e38b86f8da0c7a3afe2f847b68e8e3151ffce76dedf5ebcfcc"
     },
     {
       "byte_length": 6118,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/google-deepmind/gemini-family/records.jsonl",
       "sha256": "8c9eaa11fc61045ad596354c20aff5548cd2cddae66b62eb229f6c575a644e2c"
     },
     {
       "byte_length": 274,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/google-deepmind/gemini-robotics/README.md",
       "sha256": "299af9526f0bf684f4b4b1cf8947ccf08c92233087e4d60dfbd3539b30ff0726"
     },
     {
       "byte_length": 12494,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/google-deepmind/gemini-robotics/records.jsonl",
       "sha256": "e326be4811562ea7b0368f24b8ac9689294b8553b67ddc55a1064bfb7f385c5d"
     },
     {
       "byte_length": 661,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/google-deepmind/gemma-family/README.md",
       "sha256": "deadd877a8f64d6238df5eaf22ebb2cecd06eaf6e34e549272c6d58b60e9c42c"
     },
     {
       "byte_length": 10745,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/google-deepmind/gemma-family/records.jsonl",
       "sha256": "8e98c5caf037d17c005d533b4ab0cdc5de16619426c0a1fe978f7e2f4ed476f8"
     },
     {
       "byte_length": 156,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/google-deepmind/veo-family/README.md",
       "sha256": "45b34cbafe3319c5d630f3b682ad4928a09c0d1df1b02e411b52c4b8bba05e8d"
     },
     {
       "byte_length": 6107,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/google-deepmind/veo-family/records.jsonl",
       "sha256": "689c498aebf36bb84d77d253e14d66060713be0fe6166ffb483a6b85000da6e2"
     },
     {
       "byte_length": 226,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/openai/gpt-5-family/README.md",
       "sha256": "067e21ec23286b4ee738ab77c5e69f3010939a8442681bf545290ab78bbe07b9"
     },
     {
       "byte_length": 8513,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/openai/gpt-5-family/records.jsonl",
       "sha256": "0ee84497f664f3c9c335621d462a306dd81d946a93aa2b570bace10ee13f4ced"
     },
     {
       "byte_length": 217,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/openai/gpt-live-family/README.md",
       "sha256": "27522b110af769d5a5de60b9b976b98028860c94da880e7d26e990fa689c1278"
     },
     {
       "byte_length": 6743,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/openai/gpt-live-family/records.jsonl",
       "sha256": "b039128e8701c0c06a0aca2085e64fcc017666c658546700cf96854e66b45060"
     },
     {
       "byte_length": 154,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/openai/o1-family/README.md",
       "sha256": "115e5caef1d612b11c67560c4f463d2f50c27fd1002b5132b25b31e97b65b6f0"
     },
     {
       "byte_length": 1058,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/openai/o1-family/records.jsonl",
       "sha256": "c9e83c65787ae7f471517bd556c9ae7ea6e0fdbf33bc9904d0e3e93b0cf34c9a"
     },
     {
       "byte_length": 150,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/openai/sora-family/README.md",
       "sha256": "d5570f29a85ae51d501b43db92bff6b598ca5f1ff5c58ed2f7b6c99af5052f48"
     },
     {
       "byte_length": 5807,
+      "digest_basis": "raw_bytes",
       "path": "views/by-family/openai/sora-family/records.jsonl",
       "sha256": "7ed1bb3b5a806dce617e8e1aa1c29029c16dfc6fe559ade9b83a0eece9180f16"
     },
     {
       "byte_length": 1081,
+      "digest_basis": "raw_bytes",
       "path": "views/by-provider/anthropic/README.md",
       "sha256": "73d43c0a2130cab2bdf7f481f1803ca6e6748c00b29f272a464a15f677689292"
     },
     {
       "byte_length": 34124,
+      "digest_basis": "raw_bytes",
       "path": "views/by-provider/anthropic/records.jsonl",
       "sha256": "320d584a79d4b03a68f30ddf35afe3af8b99aeb51f1062f5641fb5ffd2f52488"
     },
     {
       "byte_length": 1179,
+      "digest_basis": "raw_bytes",
       "path": "views/by-provider/google-deepmind/README.md",
       "sha256": "3576b54f2965861dd8840feca1593ffbeb0e24c0f6d3463d4f177409660810af"
     },
     {
       "byte_length": 41709,
+      "digest_basis": "raw_bytes",
       "path": "views/by-provider/google-deepmind/records.jsonl",
       "sha256": "d81a8963112a365e59b1274adb8ab5b2946d20e519dddda5b6b82b6a6d8a7bb6"
     },
     {
       "byte_length": 1166,
+      "digest_basis": "raw_bytes",
       "path": "views/by-provider/openai/README.md",
       "sha256": "6226d151f8673a5c1e8ae24f3a1cebe91b965175828af1fef572675e77f2a76e"
     },
     {
       "byte_length": 43202,
+      "digest_basis": "raw_bytes",
       "path": "views/by-provider/openai/records.jsonl",
       "sha256": "623034bd7a3f082db002c4415593c2b7ac1e96fa6d35b33efef6d61121b9860a"
     },
     {
       "byte_length": 851,
+      "digest_basis": "raw_bytes",
       "path": "views/by-year/2024/README.md",
       "sha256": "bb493da9f59cfcda39e3bad3078669c5bc3c8307d504ed35655a233f751c1623"
     },
     {
       "byte_length": 1821,
+      "digest_basis": "raw_bytes",
       "path": "views/by-year/2025/README.md",
       "sha256": "825b59b81e73e1c13e3b3648c289ba1f579d72703299db817d5826bc3aa7b9f3"
     },
     {
       "byte_length": 1659,
+      "digest_basis": "raw_bytes",
       "path": "views/by-year/2026/README.md",
       "sha256": "7afd9f2af1e064fe6f10b6c0b278e97080abf368c4cc1c6f3db177f329cd5122"
     },
     {
       "byte_length": 1858,
+      "digest_basis": "raw_bytes",
       "path": "views/calibration/coverage.md",
       "sha256": "1dd0c08e06fffc3094b82894d0faff52a6b677c8058ba00c2760819c5619c97e"
     }

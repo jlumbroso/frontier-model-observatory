@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "terms": [
+    {
+      "label": "excluded organization",
+      "pattern": "\\b(?:Meta (?:Platforms|AI|models?|company|products?|weights?|releases?|events?)|(?:from|by) Meta)\\b",
+      "ignore_case": true
+    },
+    {
+      "label": "excluded model family",
+      "pattern": "\\bLlama(?:Guard)?\\b",
+      "ignore_case": true
+    },
+    {
+      "label": "excluded research organization",
+      "pattern": "\\bFacebook AI Research\\b",
+      "ignore_case": true
+    }
+  ],
+  "exempt_paths": [
+    "docs/EXCLUSION-POLICY.md",
+    "docs/adr/0002-observatory-scope-and-layered-architecture.md",
+    "policy/exclusions.json",
+    "tests/test_exclusion_policy.py"
+  ]
+}

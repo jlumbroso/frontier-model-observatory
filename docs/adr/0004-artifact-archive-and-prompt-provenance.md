@@ -3,8 +3,8 @@
 # Artifact Archive and Prompt Provenance
 
 - **Date**: 2026-09-05
-- **Iteration**: 2
-- **Status**: Draft
+- **Iteration**: 3
+- **Status**: Accepted
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
 **TL;DR**: Preserve repository-controlled copies, text extractions, summaries, hashes, and source metadata for cards and official prompts, while making provenance and redistribution status explicit.
@@ -178,6 +178,22 @@ B — Official plus quarantine.
 
 ---
 
+## Decision
+
+### Chosen: Tiered preservation, evidence-gated public release, and prompt quarantine
+
+Use one artifact manifest abstraction over tiered storage. Keep compact text, manifests, hashes, and selected small originals in ordinary Git; place larger or repeatedly revised binaries in Git LFS or an external object store when corpus measurement justifies it.
+
+Preserve retrievable public artifacts in the private research archive. Include provider originals in a public distribution only when license, permission, or a documented legal rationale supports redistribution. Publication status is an explicit per-artifact field, never inferred from public accessibility.
+
+Treat provider-published prompts as first-class corpus records. Store unofficial, observed, reconstructed, research-reproduced, or allegedly leaked prompt material only in a segregated quarantine with provenance, privacy, confidence, and distribution controls. Ordinary generated views exclude quarantine by default.
+
+**Why**: Jérémie selected D for storage, B for redistribution, and B for unofficial prompts.
+
+**Trade-offs accepted**: A comprehensive materialized archive may require more than one storage backend, and quarantined prompts require a real enforcement boundary rather than a display-time label alone.
+
+---
+
 ## Consequences
 
 - Link integrity and byte integrity become separate checks.
@@ -200,7 +216,7 @@ B — Official plus quarantine.
 ## Validation
 
 - [x] GPT 5.6 Sol at Perplexity Computer: Complete-copy and text-extraction intent is preserved.
-- [ ] Jérémie Lumbroso: Prompt interpretation and archive policy match intent.
+- [x] Jérémie "Sonnet 4.5" Lumbroso: Selected tiered storage, evidence-gated redistribution, and official-plus-quarantine prompt handling.
 - [ ] Artifact sample: Manifest fields describe real provider artifacts without forced equivalence.
 
 ---
@@ -218,6 +234,12 @@ B — Official plus quarantine.
 - Contributors: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added artifact manifest, prompt provenance classes, and ORRCF storage and distribution questions.
 - Outcome: Remains Draft pending answers.
+
+### Iteration 3 (2026-09-05)
+- Trigger: QST-ARCHIVE-STORAGE, QST-REDISTRIBUTION, and QST-UNOFFICIAL-PROMPTS answered through ADRs4AI mobile.
+- Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Adopted D, tiered storage; B, evidence-gated public release; and B, official prompts plus segregated quarantine.
+- Outcome: Draft → Accepted.
 
 ---
 

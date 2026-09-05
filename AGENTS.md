@@ -265,12 +265,13 @@ The repository preserves original artifacts where lawful and practical, separate
 - The Prime Directive and Secondary Directive remain load-bearing.
 - Primary artifacts, claim-level provenance, explicit uncertainty, and temporal/version identity are foundational rather than optional enrichment.
 - Human-readable and machine-readable views must derive from common canonical records.
+- Canonical data is a bounded hybrid of entity, event, artifact, and claim streams with bitemporal historical semantics. See `docs/adr/0003-epistemic-records-and-generated-views.md`.
+- Archival storage is tiered; public redistribution is evidence-gated; unofficial prompts are quarantined outside ordinary views. See `docs/adr/0004-artifact-archive-and-prompt-provenance.md`.
+- The intended provider scope is comprehensive and delivered through useful intermediate stakes rather than reduced to a permanently narrow v0.1.
 
 ### Open questions:
 
-- What operational inclusion rule should define "frontier" without freezing a provider list?
-- What may the repository redistribute versus index and materialize locally?
-- How should system prompts with official, observed, reconstructed, or leaked provenance be separated?
+- How should the categorical excluded-company policy be expressed and licensed without contradicting its own statement or the inherited MIT grant?
 - Which fields survive calibration across providers without creating false equivalence?
 
 ---

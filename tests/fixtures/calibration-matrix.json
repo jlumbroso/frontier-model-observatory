@@ -1,0 +1,14 @@
+[
+  {"subject":"Claude Opus 4.6 System Card","features":["changelog","alias_redirect","native_term"]},
+  {"subject":"Claude Fable 5.1 & Claude Mythos 5.1 System Card","features":["configurations","companion"]},
+  {"subject":"Claude 4 System Card","features":["two_models","two_byte_versions"]},
+  {"subject":"Claude Opus 5 system prompts","features":["system_prompt","deployment_scope","not_applicable"]},
+  {"subject":"OpenAI o1 system-card trio","features":["same_title_three_versions","preview_ga","pointer"]},
+  {"subject":"GPT-5.2 update","features":["updates","three_level_chain"]},
+  {"subject":"GPT-Live System Card","features":["audio","evaluation_correction","as_of"]},
+  {"subject":"Sora 2 System Card","features":["html_only","redirect_to_html","no_pdf_bytes"]},
+  {"subject":"Gemini 3 Pro Model Card","features":["alias_to_pdf","date_conflict","dependent_family"]},
+  {"subject":"Veo 3 Model Card","features":["prospective_scope","transport_revision"]},
+  {"subject":"Gemini Robotics 1.5 report appendix","features":["artifact_part","two_models"]},
+  {"subject":"Gemma 4 model card","features":["open_weights","platform_timestamp","separate_legal_artifacts"]}
+]

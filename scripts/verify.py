@@ -113,10 +113,12 @@ def repository_metrics(root: Path) -> dict[str, object]:
     skill_files, skill_bytes = count_files_and_bytes(
         root / "frontier-model-observatory"
     )
+    schema_files = len(list((root / "schemas").rglob("*.schema.json"))) if (root / "schemas").exists() else 0
 
     return {
         "adr_documents": len(adr_paths([root / "docs" / "adr"])),
         "questions": status_counts,
+        "schema_files": schema_files,
         "canonical_jsonl_files": data_files,
         "canonical_jsonl_rows": data_rows,
         "artifact_files": artifact_files,
@@ -215,6 +217,7 @@ def render_summary(
             "",
             f"- ADR documents: **{metrics['adr_documents']}**",
             f"- Questions by status: `{json.dumps(question_counts, sort_keys=True)}`",
+            f"- JSON Schema documents: **{metrics['schema_files']}**",
             f"- Canonical JSONL: **{metrics['canonical_jsonl_files']} files / {metrics['canonical_jsonl_rows']} rows**",
             f"- Archive: **{metrics['artifact_files']} files / {human_bytes(int(metrics['artifact_bytes']))}**",
             f"- Generated views: **{metrics['generated_view_files']} files / {human_bytes(int(metrics['generated_view_bytes']))}**",
@@ -252,8 +255,26 @@ def checks_for(root: Path) -> list[CheckResult]:
             [sys.executable, "scripts/check_exclusions.py"],
         ),
     ]
+    if (root / "schemas").exists():
+        checks.append(
+            run_check(
+                root,
+                "schemas",
+                "Schema validation",
+                [
+                    sys.executable,
+                    "scripts/validate_records.py",
+                    "tests/fixtures/schema",
+                    "--exclusion-policy",
+                    "policy/exclusions.json",
+                ],
+            )
+        )
+    else:
+        checks.append(
+            pending_check("schemas", "Schema validation", "schemas does not exist yet.")
+        )
     subsystems = [
-        ("schemas", "Schema validation", root / "schemas"),
         ("canonical", "Canonical record validation", root / "data"),
         ("archive", "Artifact integrity", root / "artifacts"),
         ("views", "Generated-view freshness", root / "views"),

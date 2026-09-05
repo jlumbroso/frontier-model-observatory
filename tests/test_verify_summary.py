@@ -45,6 +45,7 @@ class VerificationSummaryTests(unittest.TestCase):
         metrics = {
             "adr_documents": 7,
             "questions": {"answered": 8},
+            "schema_files": 15,
             "canonical_jsonl_files": 0,
             "canonical_jsonl_rows": 0,
             "artifact_files": 0,

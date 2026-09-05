@@ -497,3 +497,13 @@ verify:
 [doc("Require every registered subsystem to be implemented and green")]
 verify-complete:
     python scripts/verify.py --require-complete
+
+[group('schema')]
+[doc("Regenerate deterministic structural schema fixtures")]
+schema-examples:
+    python scripts/build_schema_examples.py
+
+[group('schema')]
+[doc("Validate structural records against schema and semantic rules")]
+validate-schema:
+    python scripts/validate_records.py tests/fixtures/schema --exclusion-policy policy/exclusions.json

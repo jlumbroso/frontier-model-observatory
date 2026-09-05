@@ -34,6 +34,10 @@ class ReleasePackageTests(unittest.TestCase):
         self.assertIn("fmo-records.jsonl", first_files)
         self.assertIn("fmo.sqlite", first_files)
         self.assertIn("dataset-manifest.json", first_files)
+        self.assertIn("chronology-research-rows.jsonl", first_files)
+        self.assertIn("chronology-research-rows.json", first_files)
+        self.assertIn("chronology-research-rows.csv", first_files)
+        self.assertIn("chronology-research-manifest.json", first_files)
         self.assertIn("release-manifest.json", first_files)
         self.assertIn("SHA256SUMS", first_files)
         with zipfile.ZipFile(

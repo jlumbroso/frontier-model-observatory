@@ -29,6 +29,20 @@ DATASET_FILES = [
     "fmo.sqlite",
     "manifest.json",
 ]
+RESEARCH_ASSETS = {
+    "chronology-research-rows.jsonl": (
+        ROOT / "research" / "chronology" / "rows.jsonl"
+    ),
+    "chronology-research-rows.json": (
+        ROOT / "research" / "chronology" / "rows.json"
+    ),
+    "chronology-research-rows.csv": (
+        ROOT / "research" / "chronology" / "rows.csv"
+    ),
+    "chronology-research-manifest.json": (
+        ROOT / "research" / "chronology" / "manifest.json"
+    ),
+}
 
 
 def extracted_text_records() -> list[dict]:
@@ -109,6 +123,10 @@ def build(output: Path, version: str) -> dict:
         destination = output / (
             "dataset-manifest.json" if filename == "manifest.json" else filename
         )
+        shutil.copyfile(source, destination)
+        assets.append(destination)
+    for filename, source in RESEARCH_ASSETS.items():
+        destination = output / filename
         shutil.copyfile(source, destination)
         assets.append(destination)
 

@@ -19,23 +19,22 @@ Completed:
 - portable `AGENTS.md` guidance;
 - founding scope, representation, archival, and governance ADRs;
 - parser-backed ORRCF question routing;
-- a local verification gate and repository exclusion-policy checker.
+- a local verification gate and repository exclusion-policy checker;
 - a primary-source disclosure-surface inventory and twelve-artifact calibration
   decision.
 - fifteen versioned JSON Schemas, layered semantic validation, and structural
   fixtures covering every record and entity kind.
-- the first evidence-grounded canonical bundle: 15 records and one
-  content-addressed provider PDF stored through Git LFS.
-- all twelve minimum calibration subjects represented by 132 canonical records,
-  15 byte identities, and 14 materialized captures totaling 91,525,566 bytes;
+- all twelve minimum calibration subjects represented by 146 canonical records;
+- 13 policy-clean provider sources and 13 linked, content-addressed text
+  derivatives, totaling 93,562,059 materialized bytes;
 - deterministic Markdown, JSON, JSONL, CSV, and SQLite projections;
 - a validated 16-file progressive skill with deterministic ZIP, dataset assets,
   release manifests, and SHA-256 checksums.
 
 In progress:
 
-- exact text extraction, evidence anchors, corrected evaluation claims, and
-  three optional documentary-variation probes;
+- evidence anchors, corrected evaluation claims, summaries, and three optional
+  documentary-variation probes;
 - authorized landing and hosted inspection of the prepared CI workflows;
 - provider-wide chronology and artifact inventory beyond calibration.
 
@@ -128,13 +127,13 @@ scripts/                  inspectable operational tools
 tests/                    behavioral and regression tests
 justfile                  summonable project operations
 
-data/                     canonical records (planned)
-schemas/                  versioned record schemas (planned)
-artifacts/                archival objects and manifests (planned)
-views/                    generated path-oriented projections (planned)
-dist/                     generated distributions (planned)
+data/                     canonical type-homogeneous JSONL records
+schemas/                  versioned JSON Schema 2020-12 package
+artifacts/                content-addressed originals and extracted text
+views/                    generated path-oriented projections
+dist/                     generated JSON, JSONL, CSV, and SQLite distributions
 frontier-model-observatory/
-                           distributable skill (planned)
+                           validated progressive skill
 ```
 
 ## Collaboration
@@ -160,7 +159,8 @@ Start with:
 ```bash
 just --list
 just unanswered
-just verify
+just verify-complete
+just check-extracted-text
 ```
 
 When a code or shell operation is executed more than once, it should graduate

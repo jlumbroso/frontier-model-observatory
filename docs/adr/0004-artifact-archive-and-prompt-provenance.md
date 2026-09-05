@@ -3,7 +3,7 @@
 # Artifact Archive and Prompt Provenance
 
 - **Date**: 2026-09-05
-- **Iteration**: 5
+- **Iteration**: 6
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -219,6 +219,7 @@ Treat provider-published prompts as first-class corpus records. Store unofficial
 - [x] Draft and implement the artifact manifest and provenance enums.
 - [x] Add byte hash, length, media-type, content-addressed-path, and Git LFS checks as a summonable recipe.
 - [x] Add extraction-policy and generated-view checks to the required verification gate.
+- [x] Materialize and provenance-link policy-clean plain text for every eligible calibration source.
 - [ ] Add scheduled live-link and silent-byte-change checks in hosted CI.
 - [ ] Resolve redistribution and unofficial-prompt gates before any public release.
 
@@ -230,6 +231,7 @@ Treat provider-published prompts as first-class corpus records. Store unofficial
 - [x] Jérémie "Sonnet 4.5" Lumbroso: Selected tiered storage, evidence-gated redistribution, and official-plus-quarantine prompt handling.
 - [x] Artifact sample: Manifest fields describe real provider artifacts without forced equivalence.
 - [x] `just verify`: 13 materialized sources pass hashes, media checks, LFS policy, and extracted-text policy.
+- [x] `just check-extracted-text`: every eligible source has one materialized derivative linked through `derived_from_byte_ids` and its artifact version.
 
 ---
 
@@ -265,10 +267,16 @@ Treat provider-published prompts as first-class corpus records. Store unofficial
 - Changes: Added deterministic PDF/HTML extraction auditing, converted the affected byte object from `materialized` to `remote_only`, linked a typed policy absence from coverage, regenerated all projections, and fixed CSV generation to use LF-only line endings.
 - Outcome: Current-tree archive and projections are verified; promoted full-text derivatives, live-link monitoring, redistribution review, and already-pushed history cleanup remain.
 
+### Iteration 6 (2026-09-05)
+- Trigger: Full-text preservation became the next stable intermediate form.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added idempotent `materialize-text` and read-only `check-extracted-text` operations; materialized 13 policy-clean text derivatives totaling 2,197,878 bytes; connected every derivative to its source byte and artifact version; and added completeness to the required verification matrix.
+- Outcome: Exact text extraction is complete for all currently eligible calibration sources. Evidence locators, summaries, live monitoring, and broader provider coverage remain.
+
 ---
 
 ## Links
 
 - Related ADRs: `0002-observatory-scope-and-layered-architecture.md`, `0003-epistemic-records-and-generated-views.md`
-- Related code: future `artifacts/`, `data/artifacts.jsonl`, and archive recipes
+- Related code: `artifacts/`, `data/artifacts.jsonl`, `data/byte-objects.jsonl`, `scripts/materialize_extracted_text.py`
 - Supersedes: none

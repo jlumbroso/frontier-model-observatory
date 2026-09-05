@@ -16,9 +16,11 @@ what the observatory inferred.
 
 ## Scope warning
 
-The bundled snapshot is a **calibration corpus**, not comprehensive frontier
-coverage. Read `data/snapshot-manifest.json` before making a coverage claim.
-When a requested model, release, or date lies outside the snapshot, report a
+The bundled canonical snapshot is a **calibration corpus**, not comprehensive
+frontier coverage. A separate official-source chronology research projection
+covers the three core providers more broadly but is explicitly non-canonical.
+Read `data/snapshot-manifest.json` before making a coverage claim. When a
+requested model, release, or date lies outside both bundled surfaces, report a
 typed miss and research current official sources instead of guessing.
 
 ## Workflow
@@ -36,6 +38,8 @@ typed miss and research current official sources instead of guessing.
    - Run `python scripts/query.py timeline` for date questions.
    - Run `python scripts/query.py artifacts` for cards and reports.
    - Run `python scripts/query.py coverage` before claiming completeness.
+   - Run `python scripts/query.py research "<name>"` when the canonical
+     calibration snapshot misses a core-provider model or historical label.
    - Add `--json` when the result will be manipulated by code or another tool.
 3. **Load depth only when the task requires it.**
    - Read `references/epistemic-protocol.md` for comparisons, audits, claim
@@ -44,6 +48,8 @@ typed miss and research current official sources instead of guessing.
      compound request.
    - Read `references/attribution.md` for conversation attribution.
    - Read `references/data-layout.md` for direct JSONL/CSV/SQLite work.
+   - Read `references/chronology-research.md` before using non-canonical
+     chronology rows in an answer or attribution analysis.
 4. **Escalate beyond the snapshot honestly.**
    - Search provider-controlled indexes, cards, reports, documentation, and
      release pages.
@@ -132,9 +138,15 @@ compare documented coverage, not provider marketing vocabulary.
   `data/coverage.csv`: compact manipulation surfaces.
 - `data/fmo.sqlite`: indexed local queries.
 - `data/snapshot-manifest.json`: coverage boundary and integrity metadata.
+- `data/chronology-research.jsonl`: 438 official-source research rows; search
+  on demand and never present them as canonical records.
+- `data/chronology-research-manifest.json`: source hash, counts, and semantic
+  status for the research projection.
 - `references/epistemic-protocol.md`: read for evidence synthesis.
 - `references/query-modes.md`: read for progressive depth selection.
 - `references/attribution.md`: read for authorship reconstruction.
 - `references/data-layout.md`: read for direct data access.
+- `references/chronology-research.md`: read before using comprehensive
+  research rows.
 
-The repository archive and research reports are intentionally not bundled.
+The repository archive, full report, and extracted texts are not bundled.

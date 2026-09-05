@@ -83,6 +83,21 @@ class SkillQueryTests(unittest.TestCase):
     def test_built_snapshot_matches_canonical_distribution(self) -> None:
         self.assertEqual([], build_skill.check())
 
+    def test_research_mode_finds_noncanonical_chronology_rows(self) -> None:
+        code, output = self.invoke(
+            ["research", "Claude 2.1", "--section", "Anthropic", "--json"]
+        )
+        payload = json.loads(output)
+        self.assertEqual(0, code)
+        self.assertFalse(payload["canonical"])
+        self.assertEqual(
+            "research_projection_not_canonical",
+            payload["research_projection"]["semantic_status"],
+        )
+        self.assertTrue(payload["results"])
+        self.assertTrue(
+            all(item["urls"] for item in payload["results"])
+        )
 
 if __name__ == "__main__":
     unittest.main()

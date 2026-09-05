@@ -24,6 +24,12 @@ FILES = [
     "coverage.csv",
     "fmo.sqlite",
 ]
+RESEARCH_FILES = {
+    "chronology-research.jsonl": ROOT / "research" / "chronology" / "rows.jsonl",
+    "chronology-research-manifest.json": (
+        ROOT / "research" / "chronology" / "manifest.json"
+    ),
+}
 
 
 def build(target: Path) -> None:
@@ -44,6 +50,22 @@ def build(target: Path) -> None:
                 "byte_length": len(data),
             }
         )
+    for filename, source in RESEARCH_FILES.items():
+        destination = target / filename
+        shutil.copyfile(source, destination)
+        data = destination.read_bytes()
+        entries.append(
+            {
+                "path": f"data/{filename}",
+                "sha256": hashlib.sha256(data).hexdigest(),
+                "byte_length": len(data),
+            }
+        )
+    research_manifest = json.loads(
+        RESEARCH_FILES["chronology-research-manifest.json"].read_text(
+            encoding="utf-8"
+        )
+    )
     manifest = {
         "schema_version": 1,
         "skill_version": VERSION,
@@ -54,6 +76,12 @@ def build(target: Path) -> None:
         "record_count": source_manifest["record_count"],
         "coverage_scope_count": source_manifest["coverage_scope_count"],
         "canonical_data_sha256": source_manifest["canonical_data_sha256"],
+        "research_chronology": {
+            "semantic_status": research_manifest["semantic_status"],
+            "source_sha256": research_manifest["source_sha256"],
+            "data_row_count": research_manifest["data_row_count"],
+            "table_count": research_manifest["table_count"],
+        },
         "files": entries,
     }
     (target / "snapshot-manifest.json").write_text(

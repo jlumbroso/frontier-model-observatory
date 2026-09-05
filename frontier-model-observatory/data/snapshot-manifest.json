@@ -38,10 +38,26 @@
       "byte_length": 208896,
       "path": "data/fmo.sqlite",
       "sha256": "58e0564791bb12d42ad933f7e86e23f647310d3d74263e42096aaeb64614e4c7"
+    },
+    {
+      "byte_length": 553961,
+      "path": "data/chronology-research.jsonl",
+      "sha256": "9693f2f2b0d4d6841f2fa05e6e07319fc1af8eabd94aa2502d02458ab9e21146"
+    },
+    {
+      "byte_length": 398,
+      "path": "data/chronology-research-manifest.json",
+      "sha256": "23a182478fe8b7c766825294b9707d5829af797ac0ed6120eab17a79a01d840a"
     }
   ],
   "record_count": 146,
   "record_schema_version": "1.0.0",
+  "research_chronology": {
+    "data_row_count": 438,
+    "semantic_status": "research_projection_not_canonical",
+    "source_sha256": "69d8fed8147e0f4b89c3f335f881f8189927baecbe9d3a5671a1aba482e39cc0",
+    "table_count": 13
+  },
   "schema_version": 1,
   "skill_version": "0.1.0",
   "snapshot_date": "2026-09-05"

@@ -30,6 +30,15 @@ def load_manifest() -> dict:
     )
 
 
+def load_research_rows() -> list[dict]:
+    path = DATA / "chronology-research.jsonl"
+    return [
+        json.loads(line)
+        for line in path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+
+
 def search_text(record: dict) -> str:
     values = [
         record.get("canonical_key", ""),
@@ -212,6 +221,37 @@ def typed_miss(query: str, manifest: dict, as_json: bool) -> int:
     return 2
 
 
+def emit_research(rows: list[dict], manifest: dict, as_json: bool) -> None:
+    research = manifest["research_chronology"]
+    if as_json:
+        print(
+            json.dumps(
+                {
+                    "research_projection": research,
+                    "canonical": False,
+                    "results": rows,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return
+    print(
+        f"_Official-source research projection; "
+        f"{research['data_row_count']} data rows; not yet canonical._"
+    )
+    print()
+    print("| Section | Source line | Matching row |")
+    print("|---|---:|---|")
+    for row in rows:
+        values = list(row["cells"].values())
+        summary = " · ".join(values[:2])
+        summary = summary.replace("|", "\\|").replace("\n", " ")
+        print(
+            f"| {row['section']} | {row['source_line']} | {summary} |"
+        )
+
+
 def parse_date_floor(value: str) -> str:
     if re.fullmatch(r"\d{4}", value):
         return value + "-01-01"
@@ -258,11 +298,35 @@ def main(argv=None) -> int:
     id_parser.add_argument("identifier")
     add_common(id_parser)
 
+    research_parser = sub.add_parser("research")
+    research_parser.add_argument("query")
+    research_parser.add_argument("--section")
+    research_parser.add_argument("--limit", type=int, default=20)
+    add_common(research_parser)
+
     args = parser.parse_args(argv)
     records = load_records()
     manifest = load_manifest()
     by_id = {record["id"]: record for record in records}
     orgs, artifact_providers = provider_maps(records)
+
+    if args.command == "research":
+        needle = args.query.casefold()
+        matches = [
+            row
+            for row in load_research_rows()
+            if needle in json.dumps(
+                row["cells"], ensure_ascii=False
+            ).casefold()
+            and (
+                not args.section
+                or args.section.casefold() in row["section"].casefold()
+            )
+        ]
+        if not matches:
+            return typed_miss(args.query, manifest, args.json)
+        emit_research(matches[: args.limit], manifest, args.json)
+        return 0
 
     if args.command == "find":
         needle = args.query.casefold()

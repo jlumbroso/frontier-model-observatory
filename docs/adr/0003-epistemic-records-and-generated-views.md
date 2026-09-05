@@ -70,7 +70,7 @@ The representation must keep these distinctions:
 ## Questions
 
 ### QST-CANONICAL-FORM: Which record families should be authoritatively edited?
-- Status: unanswered — routing to Jérémie
+- Status: answered
 - Why asking: The repository can generate many views only if the editable source has stable natural joints.
 - Need: Approve or revise the proposed hybrid.
 
@@ -91,8 +91,8 @@ The representation must keep these distinctions:
 
 **Falsifier**: If calibration shows that the same fact must be edited in multiple canonical streams, or that identity cannot be maintained without graph-native transactions, the bounded hybrid is not sufficiently near-decomposable.
 
-**ANS:** (by Jérémie Lumbroso)
-[Fill this in]   <!-- literal placeholder — parser-significant, do not paraphrase -->
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+D — Bounded hybrid.
 
 ---
 

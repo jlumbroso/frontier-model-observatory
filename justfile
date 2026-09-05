@@ -475,3 +475,10 @@ adr TITLE:
     mkdir -p docs/adr
     cp docs/adr/templates/adr.md "$FILE"
     echo "$FILE"
+
+# List questions awaiting the human. The parser binds Status to its own QST
+# section and surfaces malformed/unknown statuses instead of hiding them.
+[group('adr')]
+[doc("List ADR questions awaiting the human, including malformed statuses")]
+unanswered:
+    python scripts/adr_questions.py --status unanswered docs/adr

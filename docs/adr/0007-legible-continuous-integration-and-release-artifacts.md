@@ -3,7 +3,7 @@
 # Legible Continuous Integration and Release Artifacts
 
 - **Date**: 2026-09-05
-- **Iteration**: 2
+- **Iteration**: 3
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -122,9 +122,9 @@ The current fine-grained PAT has repository-content authority but correctly reje
 
 - [x] Implement structured verification-result capture.
 - [x] Implement Markdown summary rendering with typed non-success states.
-- [ ] Add pinned verification and release workflows.
-- [ ] Implement deterministic skill packaging and checksums.
-- [ ] Add release-manifest schema and tests.
+- [x] Prepare and locally validate pinned verification and release workflows.
+- [x] Implement deterministic skill packaging and checksums.
+- [x] Add release-manifest generation and tests.
 - [ ] Land workflows using a credential or human commit with workflow authority.
 - [ ] Inspect the first hosted summary and preserve any resulting corrections.
 
@@ -134,6 +134,7 @@ The current fine-grained PAT has repository-content authority but correctly reje
 
 - [x] GPT 5.6 Sol at Perplexity Computer: Direct requirement is captured without reducing CI to pass/fail.
 - [x] Local verification scripts validate and render all four result states.
+- [x] Workflow YAML, immutable action pins, static contracts, and actionlint 1.7.12 validate locally.
 - [ ] Hosted push/PR run produces a complete failure-resistant summary.
 - [ ] Tagged release publishes a downloadable validated skill ZIP and checksums.
 
@@ -152,6 +153,12 @@ The current fine-grained PAT has repository-content authority but correctly reje
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: `just verify` now emits JSON and a complete Markdown report, appends to `GITHUB_STEP_SUMMARY` when present, and distinguishes passed, failed, not implemented, and not applicable checks.
 - Outcome: Accepted → Partially Implemented; workflows and release packaging remain.
+
+### Iteration 3 (2026-09-05)
+- Trigger: Skill, release bundle, and workflow candidates completed.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added deterministic skill and dataset release assets, SHA-256 manifests, immutable action pins, LFS checkout, always-on summary fallbacks, and GitHub Release publication. Both workflows pass YAML parsing, static tests, and actionlint 1.7.12.
+- Outcome: Remains Partially Implemented; workflow files need an authorized landing commit and first hosted-run inspection.
 
 ---
 

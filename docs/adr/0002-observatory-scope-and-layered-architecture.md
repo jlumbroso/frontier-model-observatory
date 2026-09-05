@@ -104,7 +104,7 @@ Option B. We can add to the terms of the license that no Meta-related product, c
 ---
 
 ### QST-V01-SCOPE: What is the smallest useful first corpus release?
-- Status: unanswered — routing to Jérémie
+- Status: answered
 - Why asking: “Small and useful” is agreed, but the first stable intermediate form needs a testable boundary.
 - Need: Pick an option or compose a narrower milestone.
 
@@ -124,8 +124,8 @@ Option B. We can add to the terms of the license that no Meta-related product, c
 
 **Falsifier**: If a chronology cannot be made reliable without fully reading each companion card, or if the primary intended user asks card-comparison questions before identity questions, B should lead.
 
-**ANS:** (by Jérémie Lumbroso)
-[Fill this in]   <!-- literal placeholder — parser-significant, do not paraphrase -->
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+I think you should just do the whole thing, but staking halfway or mid points is fine.
 
 ---
 

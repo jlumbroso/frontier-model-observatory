@@ -26,20 +26,25 @@ Completed:
   fixtures covering every record and entity kind.
 - the first evidence-grounded canonical bundle: 15 records and one
   content-addressed provider PDF stored through Git LFS.
+- all twelve minimum calibration subjects represented by 132 canonical records,
+  15 byte identities, and 14 materialized captures totaling 91,525,566 bytes;
+- deterministic Markdown, JSON, JSONL, CSV, and SQLite projections;
+- a validated 16-file progressive skill with deterministic ZIP, dataset assets,
+  release manifests, and SHA-256 checksums.
 
 In progress:
 
-- materialization and encoding of the twelve-artifact calibration corpus;
-- evidence-grounded canonical entity, artifact, retrieval, and coverage records;
-- coverage-ledger semantics;
-- archival manifests and storage measurement.
+- exact text extraction, evidence anchors, corrected evaluation claims, and
+  three optional documentary-variation probes;
+- authorized landing and hosted inspection of the prepared CI workflows;
+- provider-wide chronology and artifact inventory beyond calibration.
 
 Not yet claimed:
 
 - comprehensive provider coverage;
 - a stable public dataset release;
 - a complete artifact archive;
-- a distributable production skill.
+- comprehensive production-grade skill coverage beyond the calibration snapshot.
 
 ## Theory of the Case
 

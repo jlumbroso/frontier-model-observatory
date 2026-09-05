@@ -252,11 +252,10 @@ The repository preserves original artifacts where lawful and practical, separate
 
 ### Current focus:
 
-- Preserve the founding conversation as ADRs before implementation.
-- Materialize and encode the twelve-artifact primary-source calibration set selected in ADR-0006.
-- Decide archival, licensing, prompt-provenance, and "frontier" scope boundaries.
-- Establish stable schemas and validation before corpus-scale collection.
-- Draft the progressively disclosed skill only after evidence tests the architecture.
+- Deepen the twelve encoded calibration subjects with exact text anchors, correction claims, and optional variation probes.
+- Expand provider-wide chronology and artifact inventory beyond calibration.
+- Land the prepared GitHub workflows through an actor with workflow authority, then inspect the first hosted summaries.
+- Keep the generated views, bundled skill snapshot, and release assets synchronized with canonical records.
 
 ### Key decisions made:
 

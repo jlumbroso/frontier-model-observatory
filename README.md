@@ -22,11 +22,13 @@ Completed:
 - a local verification gate and repository exclusion-policy checker.
 - a primary-source disclosure-surface inventory and twelve-artifact calibration
   decision.
+- fifteen versioned JSON Schemas, layered semantic validation, and structural
+  fixtures covering every record and entity kind.
 
 In progress:
 
 - materialization and encoding of the twelve-artifact calibration corpus;
-- entity, event, artifact, and claim schemas;
+- evidence-grounded canonical entity, artifact, retrieval, and coverage records;
 - coverage-ledger semantics;
 - archival manifests and storage measurement.
 

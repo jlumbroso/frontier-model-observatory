@@ -3,8 +3,8 @@
 # Canonical Schema Package, Identifiers, and Validation Layers
 
 - **Date**: 2026-09-05
-- **Iteration**: 1
-- **Status**: Accepted
+- **Iteration**: 2
+- **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the continuing agency grant
 
 **TL;DR**: Use versioned JSON Schema 2020-12, type-homogeneous JSONL streams, opaque typed IDs plus human-readable canonical keys, and layered semantic validation beyond schema shape.
@@ -137,10 +137,11 @@ Each implemented layer registers a real check and summary metrics with `just ver
 
 ## Action Items
 
-- [ ] Implement and meta-validate the complete schema package.
-- [ ] Implement JSONL framing, schema, registry, and integrity validators.
+- [x] Implement and meta-validate the complete schema package.
+- [x] Implement JSONL framing, schema, registry, and initial integrity validators.
 - [ ] Add one non-contrived fixture bundle per calibration subject.
-- [ ] Register schema and canonical-record checks with the summary engine.
+- [x] Register schema checks with the summary engine.
+- [ ] Register canonical-record checks after the first canonical streams land.
 - [ ] Revisit artifact-version scope overrides only after all twelve bundles are encoded.
 
 ---
@@ -149,7 +150,9 @@ Each implemented layer registers a real check and summary metrics with `just ver
 
 - [x] Schema recommendation covers all documentary-variation dimensions.
 - [x] No blocking design question remains.
-- [ ] All schema files pass Draft 2020-12 meta-validation.
+- [x] All 15 schema files pass Draft 2020-12 meta-validation.
+- [x] Twenty-five cross-linked structural records exercise every record and entity kind.
+- [x] Eighteen repository tests pass, including graph, temporal, path-containment, claim-value, and native-vocabulary behavior.
 - [ ] All twelve fixture bundles pass layered validation.
 - [ ] Optional calibration subjects require no field overloading.
 
@@ -162,6 +165,12 @@ Each implemented layer registers a real check and summary metrics with `just ver
 - Contributors: Schema-design subagent; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Adopted package boundaries, homogeneous streams, layered validation, and dual opaque/readable identifiers.
 - Outcome: Accepted.
+
+### Iteration 2 (2026-09-05)
+- Trigger: Candidate implementation, parent audit, and repository integration.
+- Contributors: Schema-design subagent; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added 15 immutable-URN schemas, structural fixtures, layered validation, meaningful regressions, and a real schema check in the verification summary. Relaxed vocabulary mappings to preserve responsibly unmapped native terms and corrected multi-edge cycle handling.
+- Outcome: Accepted → Partially Implemented; evidence-grounded canonical streams and all twelve calibration bundles remain.
 
 ---
 

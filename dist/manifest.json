@@ -1,46 +1,46 @@
 {
-  "canonical_data_sha256": "2b3dc0d42406d046b0854e935f4f2c9981b542e1c4baf6b566282b625ea0c5e2",
+  "canonical_data_sha256": "0befe93cc69c201a5ea23ba62490dc16256e8022abf563319644e13bc6238ee6",
   "coverage_scope_count": 12,
   "files": [
     {
-      "byte_length": 2169,
+      "byte_length": 2155,
       "path": "dist/artifacts.csv",
-      "sha256": "74c45d04e1b5f91faffe8060c50b5291971102b96208a5ed6b2f093d6a22ba62"
+      "sha256": "70bf4826a0c20d4a1d1956915fb29bb6d3e7319d0d53882b6ed2b04327484e36"
     },
     {
-      "byte_length": 5724,
+      "byte_length": 5682,
       "path": "dist/chronology.csv",
-      "sha256": "340f1b06e49c3a71f0e141641bb81ad8731b81bcd25bf9cc9620627a3905c743"
+      "sha256": "bc3510734d55f5e5412f8aaa0e5d39ab7f11d56a0b08269d1527767ab7e2e917"
     },
     {
-      "byte_length": 2379,
+      "byte_length": 2381,
       "path": "dist/coverage.csv",
-      "sha256": "edf91f91c9e19086a2c512aa4b0c1ce76fec378e941e12819a1ac8a5fb766864"
+      "sha256": "d736769d209929efdb8f6a47b7b82ff27103dc9c14c324c681ea057ba9bedf47"
     },
     {
-      "byte_length": 5912,
+      "byte_length": 5871,
       "path": "dist/entities.csv",
-      "sha256": "3fa350e5582050c40e6fdca76dabf619462cd22486e0d6fe4a27b005080d97cc"
+      "sha256": "147ae590f15c126ba232225919fb5f93ea63887f80ad45dcdc86fbc7030d0312"
     },
     {
-      "byte_length": 137601,
+      "byte_length": 138746,
       "path": "dist/fmo-records.json",
-      "sha256": "a13c9b1bf3ea5350be5e092061de91068442bff1b7575d1ef9944f92212b8c64"
+      "sha256": "204a889c7d050edd7ea2ffca6637e70a2133c95360953f3469c5e4e05338afcb"
     },
     {
-      "byte_length": 107422,
+      "byte_length": 108354,
       "path": "dist/fmo-records.jsonl",
-      "sha256": "8460d7107f7ec8734d8f0d7376ab94c72622030aca3460098bc028a0dd3c8db2"
+      "sha256": "3b2755ab827d9ef251983d2645493714e82cf8980d4aad58bbcfc0ce198b17af"
     },
     {
-      "byte_length": 188416,
+      "byte_length": 192512,
       "path": "dist/fmo.sqlite",
-      "sha256": "ee53fb6c1740b4b1340777d6592263d58764989987175ed827c4ef2c706f99b6"
+      "sha256": "5293182770a6f62de8aa342d1d2b7f94369d838cb6d4e91ce1058e0ad559ce26"
     },
     {
       "byte_length": 474,
       "path": "views/README.md",
-      "sha256": "c829f19a07b22057477dc3ed40f36a4ab42a52bb533ad5fcaa5bba17ef5a36a4"
+      "sha256": "5719e98ccf29965309e3368c2d1397e929a30486e36767e08cc0da2f580d0efe"
     },
     {
       "byte_length": 1043,
@@ -48,9 +48,9 @@
       "sha256": "ebba660952a84e93ca5c8feec40bfa79128f9a73d9fb6648e858ded330fa924c"
     },
     {
-      "byte_length": 58776,
+      "byte_length": 58869,
       "path": "views/by-artifact-type/model_disclosure/records.jsonl",
-      "sha256": "7602d936e8d2b3decdc8005745432b9dc6d0276ce0773c11034826158cf65c7a"
+      "sha256": "9510cfe5f5b2f31843b68390b682cfd48bcbc5452eb1c307668c317e0818ddb7"
     },
     {
       "byte_length": 240,
@@ -118,9 +118,9 @@
       "sha256": "45b34cbafe3319c5d630f3b682ad4928a09c0d1df1b02e411b52c4b8bba05e8d"
     },
     {
-      "byte_length": 6014,
+      "byte_length": 6107,
       "path": "views/by-family/google-deepmind/veo-family/records.jsonl",
-      "sha256": "75cc40b58b71bb5e382fcb6d9f4702e8a3901a72e4f619158b87e040326625ce"
+      "sha256": "689c498aebf36bb84d77d253e14d66060713be0fe6166ffb483a6b85000da6e2"
     },
     {
       "byte_length": 226,
@@ -178,9 +178,9 @@
       "sha256": "3576b54f2965861dd8840feca1593ffbeb0e24c0f6d3463d4f177409660810af"
     },
     {
-      "byte_length": 39134,
+      "byte_length": 40066,
       "path": "views/by-provider/google-deepmind/records.jsonl",
-      "sha256": "88690703dffb8b52df72e3f01c86d9a6719700697ea68cbfc8d63817a660f24c"
+      "sha256": "58d1742cc64cb2f56a4275055b1ddbf484fd79e0a7691019b8bbb20db96e260b"
     },
     {
       "byte_length": 1166,
@@ -208,12 +208,12 @@
       "sha256": "7afd9f2af1e064fe6f10b6c0b278e97080abf368c4cc1c6f3db177f329cd5122"
     },
     {
-      "byte_length": 1843,
+      "byte_length": 1858,
       "path": "views/calibration/coverage.md",
-      "sha256": "84c8d8a32cb9fefb34c06d28fd85030de6e7d747b87f153e54d4d61a33e2e827"
+      "sha256": "1dd0c08e06fffc3094b82894d0faff52a6b677c8058ba00c2760819c5619c97e"
     }
   ],
   "generator_version": "1.0.0",
-  "record_count": 132,
+  "record_count": 133,
   "schema_version": 1
 }

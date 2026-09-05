@@ -306,6 +306,14 @@ def checks_for(root: Path) -> list[CheckResult]:
                 [sys.executable, "scripts/check_artifacts.py"],
             )
         )
+        checks.append(
+            run_check(
+                root,
+                "artifact_text_policy",
+                "Extracted artifact text policy",
+                [sys.executable, "scripts/extract_artifact_text.py"],
+            )
+        )
     else:
         checks.append(
             pending_check(

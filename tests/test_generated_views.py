@@ -88,6 +88,15 @@ class GeneratedViewsTests(unittest.TestCase):
             }
         self.assertEqual(listed, actual)
 
+    def test_csv_projections_use_lf_line_endings(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            generate_views(ROOT, root / "views", root / "dist")
+            csv_files = list((root / "dist").glob("*.csv"))
+            self.assertTrue(csv_files)
+            for path in csv_files:
+                self.assertNotIn(b"\r\n", path.read_bytes(), path.name)
+
 
 if __name__ == "__main__":
     unittest.main()

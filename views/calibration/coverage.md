@@ -9,7 +9,7 @@
 | `calibration/google-deepmind/gemini-3-pro` | partially_covered | Encode the alias redirect, date disagreement, and dependent-family scope. |
 | `calibration/google-deepmind/gemini-robotics-1-5` | covered | Resolve exact quote anchors and re-run the variation matrix with the three optional calibration subjects. |
 | `calibration/google-deepmind/gemma-4` | partially_covered | Extract allowed model-card claims from provider text without materializing prohibited raw bytes. |
-| `calibration/google-deepmind/veo-3` | partially_covered | Extract prospective-scope and modality claims without inventing future entities. |
+| `calibration/google-deepmind/veo-3` | partially_covered | Extract only policy-compliant claims from reviewed text without materializing the provider PDF. |
 | `calibration/openai/gpt-5-2` | partially_covered | Extract warning, update relation, model aliases, and preparedness claims. |
 | `calibration/openai/gpt-live` | partially_covered | Extract original and corrected evaluation claims from the added appendix. |
 | `calibration/openai/o1` | partially_covered | Encode the cross-pointer and preview/general-availability scope claims. |

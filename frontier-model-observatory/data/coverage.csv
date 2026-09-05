@@ -5,7 +5,7 @@ calibration/anthropic/claude-fable-5-1-mythos-5-1,partially_covered,ADR-0006 cal
 calibration/openai/o1,partially_covered,ADR-0006 calibration coverage for openai/o1,Encode the cross-pointer and preview/general-availability scope claims.
 calibration/openai/gpt-live,partially_covered,ADR-0006 calibration coverage for openai/gpt-live,Extract original and corrected evaluation claims from the added appendix.
 calibration/google-deepmind/gemini-3-pro,partially_covered,ADR-0006 calibration coverage for google-deepmind/gemini-3-pro,"Encode the alias redirect, date disagreement, and dependent-family scope."
-calibration/google-deepmind/veo-3,partially_covered,ADR-0006 calibration coverage for google-deepmind/veo-3,Extract prospective-scope and modality claims without inventing future entities.
+calibration/google-deepmind/veo-3,partially_covered,ADR-0006 calibration coverage for google-deepmind/veo-3,Extract only policy-compliant claims from reviewed text without materializing the provider PDF.
 calibration/anthropic/claude-4,partially_covered,ADR-0006 calibration coverage for anthropic/claude-4,Diff the two live versions and extract changed claims.
 calibration/anthropic/claude-opus-5-system-prompt,partially_covered,ADR-0006 calibration coverage for anthropic/claude-opus-5-system-prompt,"Extract the prompt block, product scope, API non-applicability, and model identifiers."
 calibration/openai/gpt-5-2,partially_covered,ADR-0006 calibration coverage for openai/gpt-5-2,"Extract warning, update relation, model aliases, and preparedness claims."

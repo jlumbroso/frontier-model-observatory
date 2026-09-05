@@ -504,7 +504,12 @@ def generate_views(root: Path, views: Path, dist: Path) -> None:
 def write_csv(path: Path, fields: list[str], rows: Iterable[dict]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     buffer = io.StringIO(newline="")
-    writer = csv.DictWriter(buffer, fieldnames=fields, extrasaction="ignore")
+    writer = csv.DictWriter(
+        buffer,
+        fieldnames=fields,
+        extrasaction="ignore",
+        lineterminator="\n",
+    )
     writer.writeheader()
     for row in rows:
         writer.writerow({field: row.get(field, "") for field in fields})

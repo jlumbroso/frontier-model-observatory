@@ -419,7 +419,11 @@ safe-commit message +files:
     set -f
     git restore --staged . 2>/dev/null || true
     for f in {{files}}; do
-        if [[ ! -e "$f" ]]; then echo "❌ File not found: $f" >&2; exit 1; fi
+        if [[ ! -e "$f" ]] && ! GIT_LITERAL_PATHSPECS=1 git ls-files \
+            --error-unmatch -- "$f" >/dev/null 2>&1; then
+            echo "❌ File not found or tracked: $f" >&2
+            exit 1
+        fi
     done
     GIT_LITERAL_PATHSPECS=1 git add -- {{files}}
     echo "📝 Staged for commit:"
@@ -492,6 +496,11 @@ check-exclusions:
 [doc("Verify materialized archive hashes, media types, paths, and LFS policy")]
 check-artifacts:
     python scripts/check_artifacts.py
+
+[group('verify')]
+[doc("Extract artifact text and audit binary/HTML contents against policy")]
+audit-artifact-text:
+    python scripts/extract_artifact_text.py
 
 [group('verify')]
 [doc("Run the repository verification gate")]

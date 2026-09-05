@@ -502,6 +502,17 @@ check-artifacts:
 audit-artifact-text:
     python scripts/extract_artifact_text.py
 
+[group('data')]
+[doc("Materialize policy-clean, content-addressed text derivatives")]
+materialize-text recorded_at observed_date:
+    python scripts/materialize_extracted_text.py --write \
+        --recorded-at "{{recorded_at}}" --observed-date "{{observed_date}}"
+
+[group('verify')]
+[doc("Verify every eligible archived source has a linked text derivative")]
+check-extracted-text:
+    python scripts/materialize_extracted_text.py
+
 [group('verify')]
 [doc("Run the repository verification gate")]
 verify:

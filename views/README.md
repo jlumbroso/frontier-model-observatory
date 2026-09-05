@@ -6,7 +6,7 @@
 | Google DeepMind | `google-deepmind` | 5 | 4 | 4 |
 | OpenAI | `openai` | 6 | 5 | 4 |
 
-- Canonical records projected: **133**
+- Canonical records projected: **146**
 - Calibration scopes: **12**
 - Artifact date assertions: **41**
 

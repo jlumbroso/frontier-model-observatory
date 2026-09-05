@@ -1,18 +1,18 @@
 {
-  "canonical_data_sha256": "0befe93cc69c201a5ea23ba62490dc16256e8022abf563319644e13bc6238ee6",
+  "canonical_data_sha256": "c61b6485829e1fd619de282de6a091397fe60b88f479766f686f3a14f18f9821",
   "comprehensive": false,
   "coverage_boundary": "Twelve ADR-0006 calibration subjects across three core providers.",
   "coverage_scope_count": 12,
   "files": [
     {
-      "byte_length": 108354,
+      "byte_length": 119035,
       "path": "data/fmo-records.jsonl",
-      "sha256": "3b2755ab827d9ef251983d2645493714e82cf8980d4aad58bbcfc0ce198b17af"
+      "sha256": "3a7138563afd5dbe679b139505ef1d1b65ba3bbc57654dfcc2c47c255c210c70"
     },
     {
-      "byte_length": 138746,
+      "byte_length": 151806,
       "path": "data/fmo-records.json",
-      "sha256": "204a889c7d050edd7ea2ffca6637e70a2133c95360953f3469c5e4e05338afcb"
+      "sha256": "593a0c1c730020dfe3544300f53d85e8b6d3dc8ea961a5898c3235c00543d20c"
     },
     {
       "byte_length": 5871,
@@ -35,12 +35,12 @@
       "sha256": "d736769d209929efdb8f6a47b7b82ff27103dc9c14c324c681ea057ba9bedf47"
     },
     {
-      "byte_length": 192512,
+      "byte_length": 208896,
       "path": "data/fmo.sqlite",
-      "sha256": "5293182770a6f62de8aa342d1d2b7f94369d838cb6d4e91ce1058e0ad559ce26"
+      "sha256": "58e0564791bb12d42ad933f7e86e23f647310d3d74263e42096aaeb64614e4c7"
     }
   ],
-  "record_count": 133,
+  "record_count": 146,
   "record_schema_version": "1.0.0",
   "schema_version": 1,
   "skill_version": "0.1.0",

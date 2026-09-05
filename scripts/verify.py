@@ -314,6 +314,14 @@ def checks_for(root: Path) -> list[CheckResult]:
                 [sys.executable, "scripts/extract_artifact_text.py"],
             )
         )
+        checks.append(
+            run_check(
+                root,
+                "extracted_text_completeness",
+                "Extracted-text completeness",
+                [sys.executable, "scripts/materialize_extracted_text.py"],
+            )
+        )
     else:
         checks.append(
             pending_check(

@@ -3,8 +3,8 @@
 # Legible Continuous Integration and Release Artifacts
 
 - **Date**: 2026-09-05
-- **Iteration**: 1
-- **Status**: Accepted
+- **Iteration**: 2
+- **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
 **TL;DR**: Continuous integration must make repository health legible through `GITHUB_STEP_SUMMARY`, and releases must publish validated, downloadable skill and dataset artifacts with integrity metadata.
@@ -120,8 +120,8 @@ The current fine-grained PAT has repository-content authority but correctly reje
 
 ## Action Items
 
-- [ ] Implement structured verification-result capture.
-- [ ] Implement Markdown summary rendering with typed non-success states.
+- [x] Implement structured verification-result capture.
+- [x] Implement Markdown summary rendering with typed non-success states.
 - [ ] Add pinned verification and release workflows.
 - [ ] Implement deterministic skill packaging and checksums.
 - [ ] Add release-manifest schema and tests.
@@ -133,7 +133,7 @@ The current fine-grained PAT has repository-content authority but correctly reje
 ## Validation
 
 - [x] GPT 5.6 Sol at Perplexity Computer: Direct requirement is captured without reducing CI to pass/fail.
-- [ ] Local workflow syntax and scripts validate.
+- [x] Local verification scripts validate and render all four result states.
 - [ ] Hosted push/PR run produces a complete failure-resistant summary.
 - [ ] Tagged release publishes a downloadable validated skill ZIP and checksums.
 
@@ -146,6 +146,12 @@ The current fine-grained PAT has repository-content authority but correctly reje
 - Contributors: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Defined verification, summary, release, security, and authorization contracts.
 - Outcome: Accepted.
+
+### Iteration 2 (2026-09-05)
+- Trigger: Structured verification runner and Markdown summary renderer implemented.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: `just verify` now emits JSON and a complete Markdown report, appends to `GITHUB_STEP_SUMMARY` when present, and distinguishes passed, failed, not implemented, and not applicable checks.
+- Outcome: Accepted → Partially Implemented; workflows and release packaging remain.
 
 ---
 

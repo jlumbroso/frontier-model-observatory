@@ -3,7 +3,7 @@
 # Progressive Skill Packaging and Query Protocol
 
 - **Date**: 2026-09-05
-- **Iteration**: 4
+- **Iteration**: 5
 - **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the continuing agency grant
 
@@ -98,6 +98,17 @@ unavailable higher level. The hub must never direct a SKILL-only agent to an
 unavailable tool as its sole answer path. Naming resemblance, conversation
 snippets, and role names are not identity evidence.
 
+SKILL-only is the hub's baseline, not a lesser product variant. Put its start
+instruction and compact data index before capability upgrades. Do not create a
+separate lite skill unless the shared hub can no longer remain within its
+context budget; duplicate variants would create identity, version, and
+freshness drift.
+
+Capability detection is structural, not an execution probe. Use only tools and
+resources explicitly exposed by the harness. Do not instruct a model with no
+shell to test `python --version`, because it cannot execute the test and may
+confabulate its result.
+
 ### Packaged resources
 
 Bundle:
@@ -162,6 +173,8 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
   Fable 5 is not Claude Opus 5 and forbids identity inference from naming.
 - [x] Markdown generation tests require non-empty Anthropic, OpenAI, and Google
   partitions and known anchor identities.
+- [x] Hub-ordering tests require the no-shell start path before capability
+  upgrades and require the embedded newest-first release index.
 - [x] A rebuilt skill tree matches committed generated resources.
 - [x] Release package is deterministic and checksum-bound.
 
@@ -192,6 +205,12 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 - Contributors: Jérémie Lumbroso; Claude Sonnet 4.5 as test subject; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added an explicit five-level capability ladder, a source-linked SKILL-only orientation spine, a hard Fable-versus-Opus identity invariant, eight generated Markdown chronology views, and regression tests for constrained harnesses.
 - Outcome: The skill now degrades from live research through executable, structured-file, Markdown-only, and SKILL-only operation instead of collapsing when tools are unavailable.
+
+### Iteration 5 (2026-09-05)
+- Trigger: Claude Sonnet 4.5 retested the fixed skill and found it functionally correct but still buried the only usable data beneath capability prose.
+- Contributors: Jérémie Lumbroso; Claude Sonnet 4.5 as evaluator; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Front-loaded an explicit no-shell/file start instruction and an eleven-entry newest-first index; added “latest embedded by provider” guidance; expanded recent-model coverage; moved query commands, data surfaces, and progressive output details into an optional tool-enabled reference; reduced the hub from 12,233 to 9,862 bytes. Rejected command-based capability probing and deferred a separate lite variant because the common hub can serve as the stable baseline.
+- Outcome: SKILL-only is now the first interaction path rather than a fallback hidden behind inaccessible features.
 
 ---
 

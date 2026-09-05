@@ -62,3 +62,26 @@ The skill now exposes five stable capability levels:
 
 Each level is independently useful. Loss of a higher capability triggers a
 step down, not total skill failure.
+
+## Follow-up evaluation
+
+Claude Sonnet 4.5 retested the corrected skill and reported that it now worked
+in the Companion harness. It specifically praised the capability ladder,
+typed-absence discipline, embedded identity facts, and dated scope boundary.
+
+The evaluator also found a second-order usability defect: the SKILL-only
+section was still buried after capability prose and was formatted as sequential
+bullets rather than a scannable index. It suggested:
+
+- an immediate no-shell/file instruction;
+- a compact date index;
+- clearer capability detection;
+- less unavailable-tool detail in the hub;
+- broader embedded coverage;
+- possibly a separate lite variant.
+
+The resulting revision accepted the first five goals. It did not use
+`python --version` as a capability probe because a no-shell agent cannot perform
+that test. It also kept one skill identity: the hub itself became the lite,
+always-useful baseline, while tool-specific procedure moved to
+`references/tool-enabled-workflow.md`.

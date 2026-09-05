@@ -31,9 +31,9 @@ Completed:
 - a 438-row comprehensive, official-source chronology research projection in
   JSONL, JSON, and CSV, with the distinct 464 Markdown-table-line count
   preserved;
-- a validated 19-file progressive skill with canonical and on-demand research
-  query modes, deterministic ZIP, dataset assets, release manifests, and
-  SHA-256 checksums.
+- a validated 29-file progressive skill with a front-loaded SKILL-only index,
+  eight Markdown-only chronology views, canonical and research query modes,
+  deterministic ZIP, dataset assets, release manifests, and SHA-256 checksums.
 
 In progress:
 

@@ -3,7 +3,7 @@
 # Observatory Scope and Layered Architecture
 
 - **Date**: 2026-09-05
-- **Iteration**: 3
+- **Iteration**: 4
 - **Status**: Draft
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -58,7 +58,7 @@ Use declared coverage waves rather than a vague global frontier predicate:
 - **Core wave**: Anthropic, OpenAI, and Google/Google DeepMind.
 - **Expansion wave**: DeepSeek, Moonshot AI/Kimi, Alibaba/Qwen, and additional families admitted by ADR.
 - **Open-model view**: A generated cross-provider view over open or open-weight records already in scope.
-- **Ethical exclusion**: Do not curate Meta models or archive Meta model artifacts.
+- **Ethical exclusion**: Apply the categorical exclusion selected in QST-META-BOUNDARY; the license/governance mechanism remains open in QST-EXCLUSION-TERMS.
 
 Within an admitted provider, model modality is not an exclusion criterion. Text, image, audio, video, robotics, embedding, moderation, and other publicly named model families may receive records.
 
@@ -129,20 +129,48 @@ I think you should just do the whole thing, but staking halfway or mid points is
 
 ---
 
+### QST-EXCLUSION-TERMS: How should the categorical exclusion bind this repository and downstream forks?
+- Status: unanswered — routing to Jérémie
+- Why asking: The selected zero-mention rule needs one narrow governance exception merely to state itself, and the inherited MIT License grants use and modification “without restriction.” A binding downstream restriction would change the project’s licensing category.
+- Need: Pick the intended legal/governance strength; counsel should review any custom license before public release.
+
+**Options**:
+
+- **A — Repository policy**: Keep standard licenses; prohibit excluded subject matter in this repository through `AGENTS.md`, contribution policy, and CI. Forks are requested, but not licensed, to preserve the policy.
+- **B — Custom restrictive license**: Replace MIT and other standard open licenses with custom terms intended to bind use, modification, and redistribution. Do not call the result open source; obtain legal review.
+- **C — Split architecture**: Keep reusable tooling under a standard software license, place data/docs/skill content under separately reviewed restrictive terms, and enforce a repository policy across the canonical project.
+
+**Recommendation**: (by GPT 5.6 Sol at Perplexity Computer)
+
+**C — Split architecture, with a narrow governance exception.**
+
+**Rationale**: The current `LICENSE` grants dealing in the software “without restriction.” The [Open Source Definition](https://opensource.org/osd) requires no discrimination against persons, groups, or fields of endeavor, while [Creative Commons guidance](https://wiki.creativecommons.org/wiki/Modifying_the_CC_licenses) says added restrictions cannot be presented as a standard CC license. Separate tooling from observatory content, reserve the excluded name for the policy/license/ADR provenance needed to define and audit the rule, and obtain legal review before claiming downstream enforceability.
+
+**Confidence**: Medium. The architectural incompatibility with standard open licensing is clear; the enforceability and best drafting of a custom downstream speech/content restriction are jurisdiction-specific legal questions.
+
+**Falsifier**: If categorical control over every downstream fork matters more than standard-license interoperability and reusable tooling, choose B and accept that the repository is source-available under custom terms rather than open source.
+
+**ANS:** (by Jérémie Lumbroso)
+[Fill this in]   <!-- literal placeholder — parser-significant, do not paraphrase -->
+
+---
+
 ## Consequences
 
 - “Frontier” becomes an explicit, inspectable coverage policy.
 - Provider admission and exclusion are versioned decisions.
 - A coverage ledger must distinguish absent, excluded, not-yet-collected, and not-found.
-- Meta references, if allowed by QST-META-BOUNDARY, never imply in-scope curation.
+- The selected categorical exclusion must be enforced by a documented policy and tests after QST-EXCLUSION-TERMS resolves its legal architecture.
+- Delivery covers the whole declared scope; intermediate stakes are resumable releases, not abandoned partial scope.
 
 ---
 
 ## Action Items
 
 - [ ] Confirm provider-name interpretations.
-- [ ] Record the Meta boundary answer.
-- [ ] Select the v0.1 stable intermediate form.
+- [x] Record the categorical exclusion answer.
+- [x] Replace a narrow v0.1 scope with whole-project delivery through intermediate stakes.
+- [ ] Resolve the license/governance mechanism and its necessary policy exception.
 - [ ] Create a coverage-ledger schema after ADR-0003 settles canonical records.
 
 ---
@@ -174,6 +202,12 @@ I think you should just do the whole thing, but staking halfway or mid points is
 - Contributors: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Marked the scope reading as confirmed without rewriting the originating quotation.
 - Outcome: Remains Draft pending boundary answers.
+
+### Iteration 4 (2026-09-05)
+- Trigger: All initial ORRCF answers arrived through ADRs4AI mobile.
+- Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Adopted zero mention and whole-scope delivery through intermediate stakes; surfaced the unresolved license and self-reference boundary as QST-EXCLUSION-TERMS.
+- Outcome: Remains Draft pending the licensing answer.
 
 ---
 

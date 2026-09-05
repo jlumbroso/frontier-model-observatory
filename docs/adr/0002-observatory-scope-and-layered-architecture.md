@@ -3,7 +3,7 @@
 # Observatory Scope and Layered Architecture
 
 - **Date**: 2026-09-05
-- **Iteration**: 6
+- **Iteration**: 7
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -164,7 +164,7 @@ Build the whole declared observatory through useful intermediate stakes. Begin w
 Apply the categorical excluded-company rule as repository governance, not as a custom copyright-license restriction:
 
 - keep the inherited standard software license unless a separate licensing ADR changes it;
-- prohibit excluded subject matter in the canonical repository through `AGENTS.md`, contribution policy, review, and CI;
+- prohibit excluded subject matter in the canonical repository through `AGENTS.md`, contribution policy, review, and the required `just verify` gate;
 - permit only the narrow governance and provenance references required to state, audit, and enforce the rule itself;
 - request that downstream forks preserve the policy, while not claiming that the standard license legally compels them to do so.
 
@@ -190,7 +190,8 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - [x] Record the categorical exclusion answer.
 - [x] Replace a narrow v0.1 scope with whole-project delivery through intermediate stakes.
 - [x] Resolve the license/governance mechanism and its necessary policy exception.
-- [x] Implement the repository policy and semantic CI guard before corpus ingestion.
+- [x] Implement the repository policy and semantic local verification guard before corpus ingestion.
+- [ ] Wire `just verify` into hosted CI when an authorized workflow change is available.
 - [ ] Create a coverage-ledger schema after ADR-0003 settles canonical records.
 
 ---
@@ -237,10 +238,16 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - Outcome: Draft → Accepted.
 
 ### Iteration 6 (2026-09-05)
-- Trigger: Repository policy, semantic checker, regression tests, and CI gate implemented.
+- Trigger: Repository policy, semantic checker, regression tests, and verification gate implemented.
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added the governance policy and `just check-exclusions`; refined the first false positive so epistemic “Meta-Observation” vocabulary remains legal.
 - Outcome: Accepted → Partially Implemented; corpus and coverage-ledger work remains.
+
+### Iteration 7 (2026-09-05)
+- Trigger: The scoped repository PAT correctly refused creation of a GitHub Actions workflow because it lacks workflow authority.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Removed the unpushed workflow rather than broadening credentials; retained `just verify` as the authoritative gate and recorded hosted CI wiring as open.
+- Outcome: Remains Partially Implemented.
 
 ---
 

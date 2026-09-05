@@ -28,7 +28,8 @@ generated views, examples, or marketing references.
 
 `just check-exclusions` scans candidate repository text and filenames using
 the patterns in `policy/exclusions.json`. `just verify` includes that check and
-is the required local and CI gate.
+is the required local gate. Hosted CI should invoke the same recipe when the
+repository credential used to add a workflow has that authority.
 
 The checker is a backstop, not a complete semantic oracle. Reviewers must also
 reject indirect or newly named excluded material that a finite term list does

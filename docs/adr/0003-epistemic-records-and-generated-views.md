@@ -97,7 +97,7 @@ D — Bounded hybrid.
 ---
 
 ### QST-HISTORICAL-TRUTH: How should corrections preserve what was previously believed?
-- Status: unanswered — routing to Jérémie
+- Status: answered
 - Why asking: Conversation attribution needs “what was true or documented as of date X,” while later research may correct earlier records.
 - Need: Approve or revise the proposed temporal policy.
 
@@ -117,8 +117,8 @@ D — Bounded hybrid.
 
 **Falsifier**: If real attribution cases require additional independent times, such as product-availability time distinct from announced and effective time, the temporal model must expand rather than overload either axis.
 
-**ANS:** (by Jérémie Lumbroso)
-[Fill this in]   <!-- literal placeholder — parser-significant, do not paraphrase -->
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+C — Bitemporal hybrid.
 
 ---
 

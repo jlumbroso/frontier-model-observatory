@@ -100,7 +100,7 @@ Also record model/product scope, date, version, deployment surface, locale, acco
 ## Questions
 
 ### QST-ARCHIVE-STORAGE: How should binary archival copies live in Git?
-- Status: unanswered — routing to Jérémie
+- Status: answered
 - Why asking: A PDF of every card is desirable, but ordinary Git history will duplicate changed binaries and eventually make every clone expensive.
 - Need: Pick a storage policy.
 
@@ -121,8 +121,8 @@ Also record model/product scope, date, version, deployment surface, locale, acco
 
 **Falsifier**: If the complete core-provider archive remains small enough that ordinary Git clones are operationally trivial, A is simpler and should be preferred.
 
-**ANS:** (by Jérémie Lumbroso)
-[Fill this in]   <!-- literal placeholder — parser-significant, do not paraphrase -->
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+D — Tiered.
 
 ---
 

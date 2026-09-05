@@ -1,0 +1,156 @@
+<!-- adr template version: "adr 3.10.0" -->
+
+# Legible Continuous Integration and Release Artifacts
+
+- **Date**: 2026-09-05
+- **Iteration**: 1
+- **Status**: Accepted
+- **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
+
+**TL;DR**: Continuous integration must make repository health legible through `GITHUB_STEP_SUMMARY`, and releases must publish validated, downloadable skill and dataset artifacts with integrity metadata.
+
+---
+
+## Originating Context
+
+**Source**: Direct human requirement in the founding conversation, 2026-09-05.
+
+> "Must have continuous integration with GITHUB_STEP_SUMMARY that provides complete legibility, and produces a downloadable version of the skill on releases, etc. And document everything in ADRs."
+
+**Agency Grant**: Design and implement the complete CI and release system; interrupt only if a credential or platform boundary prevents landing it.
+
+---
+
+## Explicitation
+
+**What I understand**:
+
+1. CI is not merely a pass/fail badge. Its output must explain what was checked, what changed, what remains incomplete, and where to inspect failures.
+2. `GITHUB_STEP_SUMMARY` is the primary human-readable run report.
+3. Release automation must produce a directly downloadable, validated skill package rather than requiring users to clone or build the repository.
+4. Release artifacts should be reproducible and carry checksums and build provenance.
+5. CI and release behavior are architectural decisions and must remain connected to ADRs.
+
+**Assumptions**:
+
+- GitHub Actions is the required hosted CI.
+- `just verify` remains the local/hosted parity command.
+- The skill package will be a ZIP because it contains multiple files.
+- Dataset distributions may be added to release assets as their generators stabilize.
+- A release is tag-driven and should fail closed when validation or packaging fails.
+
+**Confirm**: The direct requirement is sufficient to accept the architecture without a blocking question.
+
+---
+
+## Decision
+
+### Verification workflow
+
+Add a GitHub Actions workflow for pushes and pull requests that:
+
+1. checks out the exact revision;
+2. installs pinned toolchain dependencies;
+3. runs `just verify`;
+4. validates schemas, canonical records, generated views, links, artifact manifests, and the skill as those subsystems land;
+5. records machine-readable results for summary rendering;
+6. writes `GITHUB_STEP_SUMMARY` under `if: always()` so failure does not erase explanation;
+7. uploads diagnostic reports when a failure benefits from offline inspection.
+
+The summary should include, when applicable:
+
+- revision, ref, event, actor, and run links;
+- a check matrix with status, duration, and command;
+- changed canonical record families;
+- schema and referential-integrity counts;
+- artifact counts, byte totals, hash failures, and link-state changes;
+- provider and chronology coverage;
+- typed absence and quarantine counts;
+- generated-view freshness;
+- unanswered ADR question count;
+- skill validation, file count, and package size;
+- release-asset names and checksums;
+- precise failure locations and remediation commands.
+
+Summaries must distinguish “not run,” “not implemented,” “not applicable,” and “failed.”
+
+### Release workflow
+
+On version tags:
+
+1. run the full verification gate;
+2. build the distributable skill from canonical skill sources;
+3. validate the complete skill tree;
+4. build approved dataset and index distributions;
+5. produce deterministic archives where practical;
+6. generate SHA-256 checksums and a manifest containing source revision, schema version, generator version, and build time;
+7. upload the skill ZIP and diagnostics as workflow artifacts;
+8. attach the skill ZIP, checksums, manifest, and approved distributions to the GitHub Release.
+
+The release must not silently omit an expected asset. An unavailable distribution is represented as an explicit failed requirement or a versioned “not yet part of this release contract,” never as an accidental absence.
+
+### Security and reproducibility
+
+- Use least-privilege workflow permissions.
+- Pin third-party actions to immutable commit SHAs, with readable version comments.
+- Do not expose provider credentials to pull requests.
+- Keep build and validation commands in repository scripts or `justfile`; YAML orchestrates but does not become the only implementation.
+- Package from a clean checkout and reject untracked/generated drift.
+- Include integrity hashes for every released file.
+
+### Current authorization boundary
+
+The current fine-grained PAT has repository-content authority but correctly rejects creation or modification of `.github/workflows/*`. Workflow files may be designed and tested locally, but landing them requires a one-time actor with workflow authority. Do not broaden credentials until there is a reviewed workflow ready to commit.
+
+**Why**: CI must preserve epistemic legibility at the operational layer. A green badge without evidence is inconsistent with a repository whose purpose is inspectable claims and provenance.
+
+**Trade-offs accepted**: Rich summaries and deterministic releases require maintained reporting code. That logic belongs in tested scripts with thin workflow wrappers so it remains executable outside GitHub.
+
+---
+
+## Consequences
+
+- `just verify` is the shared local and hosted gate.
+- Every new canonical subsystem must register checks and summary metrics.
+- Release packaging becomes a tested product surface.
+- Workflow authorization remains a narrow landing dependency, not a reason to broaden the current token prematurely.
+- CI claims are not considered implemented until an actual hosted run is inspected.
+
+---
+
+## Action Items
+
+- [ ] Implement structured verification-result capture.
+- [ ] Implement Markdown summary rendering with typed non-success states.
+- [ ] Add pinned verification and release workflows.
+- [ ] Implement deterministic skill packaging and checksums.
+- [ ] Add release-manifest schema and tests.
+- [ ] Land workflows using a credential or human commit with workflow authority.
+- [ ] Inspect the first hosted summary and preserve any resulting corrections.
+
+---
+
+## Validation
+
+- [x] GPT 5.6 Sol at Perplexity Computer: Direct requirement is captured without reducing CI to pass/fail.
+- [ ] Local workflow syntax and scripts validate.
+- [ ] Hosted push/PR run produces a complete failure-resistant summary.
+- [ ] Tagged release publishes a downloadable validated skill ZIP and checksums.
+
+---
+
+## Iterations
+
+### Iteration 1 (2026-09-05)
+- Trigger: Human made CI summary legibility and downloadable release packaging mandatory.
+- Contributors: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Defined verification, summary, release, security, and authorization contracts.
+- Outcome: Accepted.
+
+---
+
+## Links
+
+- Related ADRs: `0001-portable-agent-instructions.md`, `0004-artifact-archive-and-prompt-provenance.md`, `0005-summonable-recurring-operations.md`, `0006-calibration-corpus-and-documentary-variation-stopping-rule.md`
+- Related code: future `.github/workflows/`, summary renderer, packaging scripts, and release manifest
+- Supersedes: none

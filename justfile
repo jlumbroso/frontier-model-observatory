@@ -542,3 +542,8 @@ check-skill:
 [doc("Build deterministic downloadable skill ZIP, checksum, and manifest")]
 package-skill:
     python scripts/package_skill.py
+
+[group('skill')]
+[doc("Build deterministic skill and dataset assets for a release")]
+package-release version="0.1.0":
+    python scripts/package_release.py --version "{{version}}"

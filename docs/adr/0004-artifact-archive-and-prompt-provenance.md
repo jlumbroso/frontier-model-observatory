@@ -3,8 +3,8 @@
 # Artifact Archive and Prompt Provenance
 
 - **Date**: 2026-09-05
-- **Iteration**: 3
-- **Status**: Accepted
+- **Iteration**: 4
+- **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
 **TL;DR**: Preserve repository-controlled copies, text extractions, summaries, hashes, and source metadata for cards and official prompts, while making provenance and redistribution status explicit.
@@ -208,7 +208,8 @@ Treat provider-published prompts as first-class corpus records. Store unofficial
 
 - [ ] Measure calibration-corpus artifact count and size before final storage choice.
 - [ ] Draft the artifact manifest and provenance enums.
-- [ ] Add link, hash, extraction, and generated-view checks as summonable recipes when implemented.
+- [x] Add byte hash, length, media-type, content-addressed-path, and Git LFS checks as a summonable recipe.
+- [ ] Add link, extraction, and generated-view checks when implemented.
 - [ ] Resolve redistribution and unofficial-prompt gates before any public release.
 
 ---
@@ -240,6 +241,12 @@ Treat provider-published prompts as first-class corpus records. Store unofficial
 - Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Adopted D, tiered storage; B, evidence-gated public release; and B, official prompts plus segregated quarantine.
 - Outcome: Draft → Accepted.
+
+### Iteration 4 (2026-09-05)
+- Trigger: First evidence-grounded artifact bundle materialized.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Stored a 39,642,839-byte provider PDF under its SHA-256 path through Git LFS and added independent archive-integrity validation.
+- Outcome: Accepted → Partially Implemented; complete calibration storage and extraction remain.
 
 ---
 

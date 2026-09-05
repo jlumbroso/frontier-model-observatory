@@ -3,8 +3,8 @@
 # Calibration Corpus and Documentary-Variation Stopping Rule
 
 - **Date**: 2026-09-05
-- **Iteration**: 1
-- **Status**: Accepted
+- **Iteration**: 2
+- **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the founding agency grant
 
 **TL;DR**: Calibrate the ontology against twelve primary-source artifacts, four per core provider, and add artifacts only when they introduce a new documentary variation or an unrepresentable combination.
@@ -140,8 +140,8 @@ Stop expansion on a provider surface after three consecutive candidates add no n
 
 - [ ] Materialize the twelve calibration artifacts under the tiered archival policy.
 - [ ] Record source URL, redirect chain, retrieval time, media type, byte size, and hash.
-- [ ] Draft entity, event, artifact, artifact-version, byte-object, claim, and relation schemas.
-- [ ] Encode each calibration subject and its documentary-variation vector.
+- [x] Draft entity, event, artifact, artifact-version, byte-object, claim, and relation schemas.
+- [ ] Encode each calibration subject and its documentary-variation vector. Current: 1 of 12.
 - [ ] Validate generated provider, year, family, artifact-type, and as-of projections.
 - [ ] Re-run the variation test against the three optional fifth artifacts.
 
@@ -153,6 +153,7 @@ Stop expansion on a provider surface after three consecutive candidates add no n
 - [x] The repository exclusion-policy checker passes.
 - [x] Four artifacts per provider cover the observed minimum variation.
 - [ ] All twelve artifacts validate against the first schema candidate.
+- [x] The report-embedded-card subject validates as 15 canonical records with materialized bytes.
 - [ ] Three optional artifacts add no unrepresentable dimension.
 
 ---
@@ -164,6 +165,12 @@ Stop expansion on a provider surface after three consecutive candidates add no n
 - Contributors: Research subagent; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Selected the minimum corpus, defined the variation vector, and established evidence-based stop and reopen rules.
 - Outcome: Accepted.
+
+### Iteration 2 (2026-09-05)
+- Trigger: First canonical calibration bundle implemented.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Encoded the Gemini Robotics 1.5 report and embedded model-card part as 15 records across 11 streams, using actual PDF bytes, hash, size, media type, URL, date assertions, subjects, typed absence, and coverage.
+- Outcome: Accepted → Partially Implemented; 1 of 12 subjects encoded.
 
 ---
 

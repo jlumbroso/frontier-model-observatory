@@ -3,7 +3,7 @@
 # Canonical Schema Package, Identifiers, and Validation Layers
 
 - **Date**: 2026-09-05
-- **Iteration**: 3
+- **Iteration**: 4
 - **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the continuing agency grant
 
@@ -141,7 +141,7 @@ Each implemented layer registers a real check and summary metrics with `just ver
 - [x] Implement JSONL framing, schema, registry, and initial integrity validators.
 - [ ] Add one non-contrived fixture bundle per calibration subject.
 - [x] Register schema checks with the summary engine.
-- [ ] Register canonical-record checks after the first canonical streams land.
+- [x] Register canonical-record and archive-integrity checks after the first canonical streams land.
 - [ ] Revisit artifact-version scope overrides only after all twelve bundles are encoded.
 
 ---
@@ -177,6 +177,12 @@ Each implemented layer registers a real check and summary metrics with `just ver
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Converted the bundle to explicit synthetic fixture names and reserved `.invalid` hosts; added a regression that prevents provider domains from masquerading as structural examples.
 - Outcome: Remains Partially Implemented; the evidence/fixture boundary is now machine-checked.
+
+### Iteration 4 (2026-09-05)
+- Trigger: First evidence-grounded canonical records exercised the schema package.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added URL-fragment support omitted by the candidate, enforced homogeneous ID-sorted streams, and validated 15 canonical records plus one content-addressed LFS object.
+- Outcome: Remains Partially Implemented; 1 of 12 evidence bundles is canonical.
 
 ---
 

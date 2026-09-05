@@ -24,6 +24,8 @@ Completed:
   decision.
 - fifteen versioned JSON Schemas, layered semantic validation, and structural
   fixtures covering every record and entity kind.
+- the first evidence-grounded canonical bundle: 15 records and one
+  content-addressed provider PDF stored through Git LFS.
 
 In progress:
 

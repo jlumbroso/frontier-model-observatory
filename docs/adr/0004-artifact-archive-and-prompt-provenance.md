@@ -153,7 +153,7 @@ B — Evidence-gated public release.
 ---
 
 ### QST-UNOFFICIAL-PROMPTS: What belongs in the first prompt corpus?
-- Status: unanswered — routing to Jérémie
+- Status: answered
 - Why asking: Unofficial prompts can aid attribution and metacognition but create provenance, privacy, and integrity risks.
 - Need: Confirm the interpreted boundary.
 
@@ -173,8 +173,8 @@ B — Evidence-gated public release.
 
 **Falsifier**: If the project’s first release has no concrete use case requiring unofficial material, quarantine adds surface area without value and A should govern until such a case appears.
 
-**ANS:** (by Jérémie Lumbroso)
-[Fill this in]   <!-- literal placeholder — parser-significant, do not paraphrase -->
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+B — Official plus quarantine.
 
 ---
 

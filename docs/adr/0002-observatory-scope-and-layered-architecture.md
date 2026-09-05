@@ -3,7 +3,7 @@
 # Observatory Scope and Layered Architecture
 
 - **Date**: 2026-09-05
-- **Iteration**: 8
+- **Iteration**: 9
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -155,6 +155,31 @@ Thanks for being transparent about your confidence of Medium because it helped m
 
 ---
 
+### QST-HISTORY-CONFORMANCE: Should the already-pushed policy-incompatible LFS object be removed from Git history now?
+- Status: unanswered
+- Why asking: The current tree is clean and the source is remote-only, but the original bytes remain reachable through earlier private-repository commits. Removing them requires rewriting `main` and force-pushing, which changes existing commit identities and cannot be treated as routine cleanup.
+- Need: Authorize one history policy; Option A also serves as explicit confirmation for the destructive rewrite.
+
+**Options**:
+
+- **A — Rewrite now**: Create a safety bundle, rewrite all reachable repository history to remove the one object and its LFS pointer, verify the rewritten repository, then force-push `main` with lease.
+- **B — Current-tree conformance**: Keep history intact; document that the categorical policy governs current and future trees, not already-published private commits.
+- **C — Rewrite before public release**: Keep the private history temporarily, but make a verified rewrite a release gate before changing visibility or publishing a stable release.
+
+**Recommendation**: (by GPT 5.6 Sol at Perplexity Computer)
+
+**A — Rewrite now.**
+
+**Rationale**: The repository is young, private, and currently has one known historical violation. Rewriting now minimizes downstream disruption and aligns the categorical policy with the whole reachable repository rather than only HEAD. A local safety bundle and `--force-with-lease` bound the operational risk, but the old commit identities will still be intentionally replaced.
+
+**Confidence**: High if no other collaborator has based work on the current commit graph; medium otherwise because their branches would require recovery or rebasing.
+
+**Falsifier**: If another collaborator or automation already depends on current commit SHAs, choose C, coordinate a rewrite window, and do not force-push yet.
+
+**ANS:** (by Jérémie Lumbroso)
+
+---
+
 ## Final Decision
 
 ### Chosen: Comprehensive declared scope with a repository-governance exclusion
@@ -256,6 +281,12 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Extended enforcement from repository-visible text to extracted PDF/HTML text, dematerialized the affected provider bytes, retained their hash and source metadata, and recorded a typed `excluded_by_policy` absence. The original Git LFS object remains reachable from already-pushed history until a separately confirmed history rewrite.
 - Outcome: The current tree is policy-clean; complete repository-history conformance remains authorization-gated.
+
+### Iteration 9 (2026-09-05)
+- Trigger: Current-tree remediation was pushed while the original LFS object remained reachable from earlier commits.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added QST-HISTORY-CONFORMANCE with explicit rewrite, current-tree, and pre-public-release choices. Option A is intentionally framed as the destructive-action authorization gate.
+- Outcome: Current-tree conformance remains verified; history conformance awaits the human answer.
 
 ---
 

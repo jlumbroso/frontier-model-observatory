@@ -3,7 +3,7 @@
 # Legible Continuous Integration and Release Artifacts
 
 - **Date**: 2026-09-05
-- **Iteration**: 4
+- **Iteration**: 5
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -108,6 +108,33 @@ The current fine-grained PAT has repository-content authority but correctly reje
 
 ---
 
+## Questions
+
+### QST-WORKFLOW-LANDING: Which narrow authorization path should land the validated GitHub Actions workflows?
+- Status: unanswered
+- Why asking: `.github/workflows/verify.yml` and `release.yml` pass YAML parsing, static contract tests, and actionlint, but the current fine-grained PAT correctly lacks workflow-write authority. Hosted validation and release publication cannot begin until those two files and their regression test are committed.
+- Need: Choose the one-time landing mechanism.
+
+**Options**:
+
+- **A — Narrow workflow PAT**: Provide a short-lived fine-grained token for only this repository with Contents read/write and Workflows read/write; the agent commits, pushes, inspects the hosted run, and continues.
+- **B — Human landing commit**: The agent provides the exact three prepared files and commit message; Jérémie commits them through GitHub or a local clone, after which the agent inspects and iterates on hosted runs.
+- **C — Defer hosted CI**: Keep local `just verify-complete` authoritative and postpone workflow landing and releases.
+
+**Recommendation**: (by GPT 5.6 Sol at Perplexity Computer)
+
+**A — Narrow workflow PAT.**
+
+**Rationale**: It preserves the established least-privilege model while allowing the same agent that prepared and tested the workflows to complete the hosted feedback loop. The token can be repository-scoped and short-lived, then revoked immediately after the first green hosted run and release dry run.
+
+**Confidence**: High. The prepared workflow diff is already bounded and locally validated; only GitHub’s workflow-write permission is missing.
+
+**Falsifier**: If the available token UI cannot grant workflow write without materially broader repository access, choose B and land the reviewed files manually.
+
+**ANS:** (by Jérémie Lumbroso)
+
+---
+
 ## Consequences
 
 - `just verify` is the shared local and hosted gate.
@@ -167,6 +194,12 @@ The current fine-grained PAT has repository-content authority but correctly reje
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added a deterministic `fmo-extracted-text-<version>.zip` release asset containing 13 full-text derivatives and an in-archive manifest that binds each text hash to its source byte identity. Kept the text archive separate so the skill remains compact and progressively loadable.
 - Outcome: The local release contract is complete for current assets; hosted publication and inspection remain authorization-gated.
+
+### Iteration 5 (2026-09-05)
+- Trigger: All non-workflow release and verification work became complete while the token boundary remained.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added QST-WORKFLOW-LANDING with narrow-token, human-commit, and defer options.
+- Outcome: Hosted CI and release publication await one explicit landing choice; local validation remains green.
 
 ---
 

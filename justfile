@@ -507,3 +507,8 @@ schema-examples:
 [doc("Validate structural records against schema and semantic rules")]
 validate-schema:
     python scripts/validate_records.py tests/fixtures/schema --exclusion-policy policy/exclusions.json
+
+[group('schema')]
+[doc("Mint an opaque typed canonical identifier: just mint-id <kind>")]
+mint-id kind:
+    python scripts/mint_id.py "{{kind}}"

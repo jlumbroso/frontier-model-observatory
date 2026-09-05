@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:coverage-ledger-entry",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "scope_key", "scope_description", "coverage_status", "assessed_at", "observed_time", "coverage_basis"],
+      "properties": {
+        "record_type": {"const": "coverage_ledger_entry"},
+        "id": {"pattern": "^fmo:coverage:"},
+        "scope_key": {"type": "string", "pattern": "^[a-z0-9]+(?:[._/-][a-z0-9]+)*$"},
+        "scope_description": {"type": "string", "minLength": 1},
+        "coverage_status": {"enum": ["covered", "partially_covered", "not_yet_collected", "not_found", "confirmed_absent", "excluded_by_policy", "out_of_scope", "blocked", "unknown"]},
+        "assessed_at": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/timeValue"},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+        "coverage_basis": {"type": "string", "minLength": 1},
+        "subject_ids": {"type": "array", "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"}},
+        "provider_org_id": {"type": "string", "pattern": "^fmo:org:"},
+        "surface_url_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:url:"}},
+        "desired_artifact_classes": {"type": "array", "items": {"type": "string"}},
+        "covered_record_ids": {"type": "array", "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"}},
+        "absence_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:absence:"}},
+        "expected_count": {"type": "integer", "minimum": 0},
+        "observed_count": {"type": "integer", "minimum": 0},
+        "next_action": {"type": "string"},
+        "next_review_at": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/timeValue"}
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

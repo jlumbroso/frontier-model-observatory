@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:artifact-part",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "artifact_version_id", "part_kind", "locator", "label_native", "observed_time"],
+      "properties": {
+        "record_type": {"const": "artifact_part"},
+        "id": {"pattern": "^fmo:part:"},
+        "artifact_version_id": {"type": "string", "pattern": "^fmo:artifact-version:"},
+        "part_kind": {"enum": ["page_range", "section", "subsection", "table", "appendix", "anchor", "passage", "prompt_block", "other"]},
+        "part_kind_native": {"type": "string"},
+        "locator": {"type": "object", "minProperties": 1},
+        "label_native": {"type": "string", "minLength": 1},
+        "parent_part_id": {"type": "string", "pattern": "^fmo:part:"},
+        "subject_ids": {"type": "array", "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"}},
+        "byte_object_id": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/byteId"},
+        "artifact_class_override": {"enum": ["model_disclosure", "system_prompt", "behavior_specification", "technical_report", "risk_report", "governance_policy", "legal_terms", "evaluation_methodology", "index", "release_post", "other"]},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"}
+      },
+      "if": {"properties": {"part_kind": {"const": "other"}}},
+      "then": {"required": ["part_kind_native"]}
+    }
+  ],
+  "unevaluatedProperties": false
+}

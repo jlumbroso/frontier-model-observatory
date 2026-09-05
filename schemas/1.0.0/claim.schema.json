@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:claim",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "claim_kind", "subject_refs", "predicate", "object", "statement_native", "attribution", "epistemic_status", "lifecycle", "valid_time", "observed_time", "evidence"],
+      "properties": {
+        "record_type": {"const": "claim"},
+        "id": {"pattern": "^fmo:claim:"},
+        "claim_kind": {"enum": ["assertion", "evaluation"]},
+        "subject_refs": {"type": "array", "minItems": 1, "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedRef"}},
+        "predicate": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/vocabularyValue"},
+        "object": {
+          "type": "object", "required": ["type", "value"],
+          "properties": {
+            "type": {"enum": ["text", "number", "boolean", "entity_ref", "artifact_ref", "quantity", "list", "structured"]},
+            "value": {}
+          },
+          "allOf": [
+            {
+              "if": {"properties": {"type": {"const": "number"}}},
+              "then": {"properties": {"value": {"type": "number"}}}
+            },
+            {
+              "if": {"properties": {"type": {"const": "boolean"}}},
+              "then": {"properties": {"value": {"type": "boolean"}}}
+            },
+            {
+              "if": {
+                "properties": {
+                  "type": {"enum": ["text", "entity_ref", "artifact_ref"]}
+                }
+              },
+              "then": {"properties": {"value": {"type": "string"}}}
+            },
+            {
+              "if": {"properties": {"type": {"const": "list"}}},
+              "then": {"properties": {"value": {"type": "array"}}}
+            },
+            {
+              "if": {"properties": {"type": {"const": "structured"}}},
+              "then": {"properties": {"value": {"type": "object"}}}
+            },
+            {
+              "if": {"properties": {"type": {"const": "quantity"}}},
+              "then": {
+                "properties": {
+                  "value": {
+                    "type": "object",
+                    "required": ["amount", "unit_native"],
+                    "properties": {
+                      "amount": {"type": "number"},
+                      "unit_native": {"type": "string"}
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              }
+            }
+          ],
+          "additionalProperties": false
+        },
+        "statement_native": {"type": "string", "minLength": 1},
+        "statement_normalized": {"type": "string"},
+        "attribution": {
+          "type": "object", "required": ["actor_type"],
+          "properties": {
+            "actor_type": {"enum": ["provider", "publisher", "evaluator", "observatory", "other"]},
+            "actor_type_native": {"type": "string"},
+            "actor_org_id": {"type": "string", "pattern": "^fmo:org:"},
+            "actor_name_native": {"type": "string"}
+          },
+          "anyOf": [{"required": ["actor_org_id"]}, {"required": ["actor_name_native"]}],
+          "additionalProperties": false
+        },
+        "epistemic_status": {"enum": ["stated", "measured", "derived", "inferred", "disputed", "unknown"]},
+        "lifecycle": {"enum": ["current", "superseded", "withdrawn", "unclear"]},
+        "valid_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/temporalExtent"},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/evidenceLocator"}},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "supersedes_claim_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:claim:"}},
+        "derived_from_claim_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:claim:"}},
+        "evaluation": {
+          "type": "object",
+          "required": ["evaluated_subject_id", "benchmark", "metric", "reported_value", "evaluation_context", "asserted_at", "artifact_version_id"],
+          "properties": {
+            "evaluated_subject_id": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"},
+            "benchmark": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/vocabularyValue"},
+            "metric": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/vocabularyValue"},
+            "reported_value": {"type": "string"},
+            "normalized_value": {"type": ["number", "string", "boolean"]},
+            "artifact_version_id": {"type": "string", "pattern": "^fmo:artifact-version:"},
+            "asserted_at": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/timeValue"},
+            "evaluation_context": {
+              "type": "object",
+              "properties": {
+                "harness_native": {"type": "string"},
+                "harness_unreported": {"const": true},
+                "split_native": {"type": "string"},
+                "aggregation_native": {"type": "string"},
+                "pass_k": {"type": "integer", "minimum": 1},
+                "unit_native": {"type": "string"},
+                "unit_normalized": {"enum": ["proportion", "percent", "score", "seconds", "tokens", "count", "other"]}
+              },
+              "anyOf": [{"required": ["harness_native"]}, {"required": ["harness_unreported"]}],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "allOf": [
+        {"if": {"properties": {"claim_kind": {"const": "evaluation"}}}, "then": {"required": ["evaluation"]}},
+        {"if": {"properties": {"claim_kind": {"const": "assertion"}}}, "then": {"not": {"required": ["evaluation"]}}},
+        {
+          "if": {"properties": {"epistemic_status": {"const": "inferred"}}},
+          "then": {
+            "required": ["confidence"],
+            "properties": {
+              "attribution": {
+                "properties": {"actor_type": {"const": "observatory"}}
+              }
+            }
+          },
+          "else": {"not": {"required": ["confidence"]}}
+        },
+        {
+          "if": {
+            "properties": {
+              "attribution": {
+                "properties": {"actor_type": {"const": "other"}}
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "attribution": {"required": ["actor_type_native"]}
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "unevaluatedProperties": false
+}

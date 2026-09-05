@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:artifact-version",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "artifact_id", "version_ordinal", "title_native", "representation_kinds", "date_assertions", "observed_time", "lifecycle"],
+      "properties": {
+        "record_type": {"const": "artifact_version"},
+        "id": {"pattern": "^fmo:artifact-version:"},
+        "artifact_id": {"type": "string", "pattern": "^fmo:artifact:"},
+        "version_ordinal": {"type": "integer", "minimum": 1},
+        "title_native": {"type": "string", "minLength": 1},
+        "version_label_native": {"type": "string"},
+        "representation_kinds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["pdf", "html", "markdown", "plain_text", "repository_file", "document_part", "other"]}},
+        "representation_kind_native": {"type": "string"},
+        "date_assertions": {"type": "array", "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/dateAssertion"}},
+        "dates_unreported_reason": {"type": "string"},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+        "lifecycle": {"enum": ["current", "superseded", "withdrawn", "unclear"]},
+        "byte_object_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/byteId"}},
+        "url_alias_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^fmo:url:"}},
+        "supersedes_version_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:artifact-version:"}},
+        "page_count": {"type": "integer", "minimum": 1},
+        "revision_notes_native": {"type": "string"}
+      },
+      "allOf": [
+        {"if": {"properties": {"date_assertions": {"maxItems": 0}}}, "then": {"required": ["dates_unreported_reason"]}},
+        {"if": {"properties": {"representation_kinds": {"contains": {"const": "other"}}}}, "then": {"required": ["representation_kind_native"]}}
+      ]
+    }
+  ],
+  "unevaluatedProperties": false
+}

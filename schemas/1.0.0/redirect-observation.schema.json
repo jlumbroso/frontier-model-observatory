@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:redirect-observation",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "retrieval_event_id", "hop_index", "from_url_id", "to_url_id", "mechanism", "observed_time"],
+      "properties": {
+        "record_type": {"const": "redirect_observation"},
+        "id": {"pattern": "^fmo:redirect:"},
+        "retrieval_event_id": {"type": "string", "pattern": "^fmo:retrieval:"},
+        "hop_index": {"type": "integer", "minimum": 0},
+        "from_url_id": {"type": "string", "pattern": "^fmo:url:"},
+        "to_url_id": {"type": "string", "pattern": "^fmo:url:"},
+        "mechanism": {"enum": ["http", "meta_refresh", "javascript", "other"]},
+        "mechanism_native": {"type": "string"},
+        "status_code": {"type": "integer", "minimum": 300, "maximum": 399},
+        "location_native": {"type": "string"},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+        "is_terminal": {"type": "boolean"}
+      },
+      "if": {"properties": {"mechanism": {"const": "other"}}},
+      "then": {"required": ["mechanism_native"]}
+    }
+  ],
+  "unevaluatedProperties": false
+}

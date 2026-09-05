@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:event",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "event_kind", "title", "subject_ids", "valid_time", "observed_time", "evidence", "attributed_to_org_ids"],
+      "properties": {
+        "record_type": {"const": "event"},
+        "id": {"pattern": "^fmo:event:"},
+        "event_kind": {"enum": ["announcement", "preview", "release", "general_availability", "publication", "update", "correction", "rename", "deprecation", "retirement", "withdrawal", "move", "supersession", "other"]},
+        "event_kind_native": {"type": "string"},
+        "title": {"type": "string", "minLength": 1},
+        "description": {"type": "string"},
+        "subject_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"}},
+        "attributed_to_org_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^fmo:org:"}},
+        "valid_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/temporalExtent"},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/evidenceLocator"}},
+        "related_event_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:event:"}},
+        "supersedes_event_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:event:"}},
+        "resulting_state": {"type": "string"}
+      },
+      "if": {"properties": {"event_kind": {"const": "other"}}},
+      "then": {"required": ["event_kind_native"]}
+    }
+  ],
+  "unevaluatedProperties": false
+}

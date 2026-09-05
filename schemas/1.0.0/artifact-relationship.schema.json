@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:artifact-relationship",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "source_ref", "target_ref", "relationship_type", "relationship_type_native", "valid_time", "observed_time", "evidence"],
+      "properties": {
+        "record_type": {"const": "artifact_relationship"},
+        "id": {"pattern": "^fmo:artifact-relationship:"},
+        "source_ref": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedRef"},
+        "target_ref": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedRef"},
+        "relationship_type": {"enum": ["addendum_to", "updates", "supersedes", "supersedes_with_pointer", "companion_to", "governed_by", "depends_on", "defers_to", "part_of", "duplicate_of", "alternate_representation_of", "derived_from", "same_series_as", "corrects", "other"]},
+        "relationship_type_native": {"type": "string", "minLength": 1},
+        "valid_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/temporalExtent"},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/evidenceLocator"}},
+        "scope": {"type": "string"}
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

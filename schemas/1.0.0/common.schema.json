@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:common",
+  "$defs": {
+    "uuid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "typedId": {
+      "type": "string",
+      "pattern": "^fmo:(org|family|model|checkpoint|configuration|product|deployment|endpoint|alias|event|artifact|artifact-version|url|redirect|part|artifact-relationship|claim|retrieval|absence|coverage):[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "byteId": {
+      "type": "string",
+      "pattern": "^fmo:sha256:[0-9a-f]{64}$"
+    },
+    "canonicalKey": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 200,
+      "pattern": "^[a-z0-9]+(?:[._/-][a-z0-9]+)*$"
+    },
+    "recordEnvelope": {
+      "type": "object",
+      "required": ["schema_version", "record_type", "id", "canonical_key", "recorded_at", "record_status"],
+      "properties": {
+        "schema_version": {"const": "1.0.0"},
+        "record_type": {"type": "string"},
+        "id": {"$ref": "#/$defs/typedId"},
+        "canonical_key": {"$ref": "#/$defs/canonicalKey"},
+        "recorded_at": {"type": "string", "format": "date-time"},
+        "updated_at": {"type": "string", "format": "date-time"},
+        "record_status": {"enum": ["active", "superseded", "withdrawn"]},
+        "superseded_by_ids": {"type": "array", "items": {"$ref": "#/$defs/typedId"}, "uniqueItems": true},
+        "notes": {"type": "string"},
+        "extensions": {
+          "type": "object",
+          "propertyNames": {"pattern": "^[a-z0-9]+(?:\\.[a-z0-9-]+)+$"},
+          "additionalProperties": true
+        }
+      }
+    },
+    "vocabularyValue": {
+      "type": "object",
+      "required": ["native"],
+      "properties": {
+        "native": {"type": "string", "minLength": 1},
+        "normalized": {"type": "string", "minLength": 1},
+        "vocabulary": {"type": "string"},
+        "language": {"type": "string", "pattern": "^[A-Za-z]{2,3}(?:-[A-Za-z0-9]{2,8})*$"}
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["normalized"],
+            "properties": {"normalized": {"const": "other"}}
+          },
+          "then": {"required": ["native"]}
+        }
+      ],
+      "additionalProperties": false
+    },
+    "timeValue": {
+      "type": "object",
+      "required": ["value", "precision"],
+      "properties": {
+        "value": {"type": "string"},
+        "precision": {"enum": ["instant", "day", "month", "year"]},
+        "raw": {"type": "string"},
+        "qualifier": {"enum": ["exact", "approximate", "before", "after", "uncertain"]},
+        "basis": {"enum": ["artifact_body", "artifact_cover", "artifact_metadata", "index_surface", "transport_header", "retrieval", "observatory_inference", "other"]},
+        "basis_native": {"type": "string"}
+      },
+      "allOf": [
+        {"if": {"properties": {"precision": {"const": "instant"}}}, "then": {"properties": {"value": {"format": "date-time"}}}},
+        {"if": {"properties": {"precision": {"const": "day"}}}, "then": {"properties": {"value": {"format": "date"}}}},
+        {"if": {"properties": {"precision": {"const": "month"}}}, "then": {"properties": {"value": {"pattern": "^\\d{4}-(0[1-9]|1[0-2])$"}}}},
+        {"if": {"properties": {"precision": {"const": "year"}}}, "then": {"properties": {"value": {"pattern": "^\\d{4}$"}}}},
+        {"if": {"required": ["basis"], "properties": {"basis": {"const": "other"}}}, "then": {"required": ["basis_native"]}}
+      ],
+      "additionalProperties": false
+    },
+    "temporalExtent": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["known", "unknown", "open"]},
+        "start": {"$ref": "#/$defs/timeValue"},
+        "end": {"$ref": "#/$defs/timeValue"},
+        "reason": {"type": "string"}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"const": "known"}}}, "then": {"anyOf": [{"required": ["start"]}, {"required": ["end"]}]}},
+        {"if": {"properties": {"status": {"const": "unknown"}}}, "then": {"required": ["reason"], "not": {"anyOf": [{"required": ["start"]}, {"required": ["end"]}]}}},
+        {"if": {"properties": {"status": {"const": "open"}}}, "then": {"required": ["start"], "not": {"required": ["end"]}}}
+      ],
+      "additionalProperties": false
+    },
+    "observationExtent": {
+      "type": "object",
+      "required": ["first_observed"],
+      "properties": {
+        "first_observed": {"$ref": "#/$defs/timeValue"},
+        "last_observed": {"$ref": "#/$defs/timeValue"}
+      },
+      "additionalProperties": false
+    },
+    "name": {
+      "type": "object",
+      "required": ["value", "name_type"],
+      "properties": {
+        "value": {"type": "string", "minLength": 1},
+        "name_type": {"enum": ["provider_preferred", "provider_identifier", "marketing_name", "former_name", "observatory_preferred", "other"]},
+        "name_type_native": {"type": "string"},
+        "language": {"type": "string"},
+        "valid_time": {"$ref": "#/$defs/temporalExtent"}
+      },
+      "if": {"properties": {"name_type": {"const": "other"}}},
+      "then": {"required": ["name_type_native"]},
+      "additionalProperties": false
+    },
+    "typedRef": {
+      "type": "object",
+      "required": ["id", "record_type"],
+      "properties": {
+        "id": {"$ref": "#/$defs/typedId"},
+        "record_type": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "evidenceLocator": {
+      "type": "object",
+      "required": ["artifact_version_id"],
+      "properties": {
+        "artifact_version_id": {"type": "string", "pattern": "^fmo:artifact-version:"},
+        "artifact_part_id": {"type": "string", "pattern": "^fmo:part:"},
+        "byte_object_id": {"$ref": "#/$defs/byteId"},
+        "url_alias_id": {"type": "string", "pattern": "^fmo:url:"},
+        "page": {"type": "integer", "minimum": 1},
+        "page_range": {
+          "type": "object",
+          "required": ["scheme", "start", "end"],
+          "properties": {
+            "scheme": {"enum": ["printed", "pdf_index", "other"]},
+            "start": {"type": "integer", "minimum": 1},
+            "end": {"type": "integer", "minimum": 1}
+          },
+          "additionalProperties": false
+        },
+        "section": {"type": "string"},
+        "table": {"type": "string"},
+        "anchor": {"type": "string"},
+        "json_pointer": {"type": "string"},
+        "text_quote": {"type": "string"},
+        "quote_prefix": {"type": "string"},
+        "quote_suffix": {"type": "string"},
+        "selector_native": {"type": "string"},
+        "extraction_method": {"type": "string"}
+      },
+      "anyOf": [
+        {"required": ["artifact_part_id"]}, {"required": ["url_alias_id"]},
+        {"required": ["page"]}, {"required": ["page_range"]}, {"required": ["section"]},
+        {"required": ["table"]}, {"required": ["anchor"]}, {"required": ["json_pointer"]},
+        {"required": ["text_quote"]}
+      ],
+      "additionalProperties": false
+    },
+    "dateAssertion": {
+      "type": "object",
+      "required": ["date_role", "value"],
+      "properties": {
+        "date_role": {"enum": ["published", "revised", "index_listed", "cover_date", "effective", "transport_last_modified", "platform_last_updated", "other"]},
+        "date_role_native": {"type": "string"},
+        "value": {"$ref": "#/$defs/timeValue"},
+        "evidence": {"$ref": "#/$defs/evidenceLocator"}
+      },
+      "if": {"properties": {"date_role": {"const": "other"}}},
+      "then": {"required": ["date_role_native"]},
+      "additionalProperties": false
+    }
+  }
+}

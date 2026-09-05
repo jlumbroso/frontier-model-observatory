@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:url-alias",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "url", "url_normalized", "url_role", "target_refs", "observed_time"],
+      "properties": {
+        "record_type": {"const": "url_alias"},
+        "id": {"pattern": "^fmo:url:"},
+        "url": {"type": "string", "format": "uri"},
+        "url_normalized": {"type": "string", "format": "uri"},
+        "url_role": {"enum": ["canonical", "vanity", "landing", "asset", "download", "index", "snapshot", "mirror", "part_locator", "download_candidate", "other"]},
+        "url_role_native": {"type": "string"},
+        "target_refs": {"type": "array", "minItems": 1, "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedRef"}},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+        "valid_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/temporalExtent"},
+        "host_org_id": {"type": "string", "pattern": "^fmo:org:"},
+        "is_provider_controlled": {"type": "boolean"},
+        "canonicality": {"enum": ["provider_declared", "observatory_preferred", "alias", "unknown"]},
+        "lifecycle": {"enum": ["active", "redirecting", "broken", "moved", "unknown"]}
+      },
+      "if": {"properties": {"url_role": {"const": "other"}}},
+      "then": {"required": ["url_role_native"]}
+    }
+  ],
+  "unevaluatedProperties": false
+}

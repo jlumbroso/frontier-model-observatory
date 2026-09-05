@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:entity",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "kind", "preferred_name", "names", "observed_time"],
+      "properties": {
+        "record_type": {"const": "entity"},
+        "kind": {"enum": ["organization", "model_family", "model", "checkpoint", "configuration", "product", "deployment", "endpoint", "alias"]},
+        "preferred_name": {"type": "string", "minLength": 1},
+        "names": {"type": "array", "minItems": 1, "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/name"}},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+        "valid_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/temporalExtent"},
+        "description": {"type": "string"},
+        "roles": {"type": "array", "uniqueItems": true, "items": {"enum": ["provider", "publisher", "developer", "evaluator", "platform_operator", "rights_holder", "other"]}},
+        "roles_native": {"type": "array", "items": {"type": "string"}},
+        "provider_org_id": {"type": "string", "pattern": "^fmo:org:"},
+        "parent_org_id": {"type": "string", "pattern": "^fmo:org:"},
+        "family_id": {"type": "string", "pattern": "^fmo:family:"},
+        "parent_family_id": {"type": "string", "pattern": "^fmo:family:"},
+        "model_id": {"type": "string", "pattern": "^fmo:model:"},
+        "checkpoint_id": {"type": "string", "pattern": "^fmo:checkpoint:"},
+        "configures_id": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"},
+        "configuration_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:configuration:"}, "uniqueItems": true},
+        "product_id": {"type": "string", "pattern": "^fmo:product:"},
+        "stage": {"enum": ["experimental", "preview", "general_availability", "snapshot", "other"]},
+        "stage_native": {"type": "string"},
+        "configuration_class": {"enum": ["safeguard", "tuning", "size", "mode", "input_modality", "account_tier", "experiment_cohort", "other"]},
+        "configuration_class_native": {"type": "string"},
+        "endpoint_class": {"enum": ["api", "web", "mobile", "desktop", "repository", "other"]},
+        "endpoint_class_native": {"type": "string"},
+        "alias_value": {"type": "string", "minLength": 1},
+        "alias_type": {"enum": ["provider_model_id", "marketing_name", "former_name", "product_label", "endpoint_model_id", "other"]},
+        "alias_type_native": {"type": "string"},
+        "target_id": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"},
+        "source_claim_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:claim:"}, "uniqueItems": true},
+        "modalities": {"type": "array", "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/vocabularyValue"}},
+        "lifecycle": {"enum": ["announced", "preview", "available", "deprecated", "retired", "unknown"]}
+      },
+      "allOf": [
+        {"if": {"properties": {"kind": {"const": "organization"}}}, "then": {"required": ["roles"], "properties": {"id": {"pattern": "^fmo:org:"}}}},
+        {
+          "if": {
+            "properties": {"roles": {"contains": {"const": "other"}}},
+            "required": ["roles"]
+          },
+          "then": {"required": ["roles_native"]}
+        },
+        {"if": {"properties": {"kind": {"const": "model_family"}}}, "then": {"required": ["provider_org_id"], "properties": {"id": {"pattern": "^fmo:family:"}}}},
+        {"if": {"properties": {"kind": {"const": "model"}}}, "then": {"required": ["provider_org_id", "family_id"], "properties": {"id": {"pattern": "^fmo:model:"}}}},
+        {"if": {"properties": {"kind": {"const": "checkpoint"}}}, "then": {"required": ["model_id", "stage"], "properties": {"id": {"pattern": "^fmo:checkpoint:"}}}},
+        {"if": {"properties": {"kind": {"const": "configuration"}}}, "then": {"required": ["configures_id", "configuration_class"], "properties": {"id": {"pattern": "^fmo:configuration:"}}}},
+        {"if": {"properties": {"kind": {"const": "product"}}}, "then": {"required": ["provider_org_id"], "properties": {"id": {"pattern": "^fmo:product:"}}}},
+        {"if": {"properties": {"kind": {"const": "deployment"}}}, "then": {"required": ["product_id"], "anyOf": [{"required": ["model_id"]}, {"required": ["checkpoint_id"]}], "properties": {"id": {"pattern": "^fmo:deployment:"}}}},
+        {"if": {"properties": {"kind": {"const": "endpoint"}}}, "then": {"required": ["provider_org_id", "endpoint_class"], "properties": {"id": {"pattern": "^fmo:endpoint:"}}}},
+        {"if": {"properties": {"kind": {"const": "alias"}}}, "then": {"required": ["alias_value", "alias_type", "target_id", "valid_time"], "properties": {"id": {"pattern": "^fmo:alias:"}}}},
+        {"if": {"properties": {"stage": {"const": "other"}}, "required": ["stage"]}, "then": {"required": ["stage_native"]}},
+        {"if": {"properties": {"configuration_class": {"const": "other"}}, "required": ["configuration_class"]}, "then": {"required": ["configuration_class_native"]}},
+        {"if": {"properties": {"endpoint_class": {"const": "other"}}, "required": ["endpoint_class"]}, "then": {"required": ["endpoint_class_native"]}},
+        {"if": {"properties": {"alias_type": {"const": "other"}}, "required": ["alias_type"]}, "then": {"required": ["alias_type_native"]}}
+      ]
+    }
+  ],
+  "unevaluatedProperties": false
+}

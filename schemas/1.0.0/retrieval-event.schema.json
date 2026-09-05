@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:retrieval-event",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "requested_url_id", "retrieved_at", "method", "agent", "outcome", "cache_status"],
+      "properties": {
+        "record_type": {"const": "retrieval_event"},
+        "id": {"pattern": "^fmo:retrieval:"},
+        "requested_url_id": {"type": "string", "pattern": "^fmo:url:"},
+        "final_url_id": {"type": "string", "pattern": "^fmo:url:"},
+        "retrieved_at": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/timeValue"},
+        "method": {"enum": ["http_get", "http_head", "browser", "managed_fetch", "repository_checkout", "local_parse", "other"]},
+        "method_native": {"type": "string"},
+        "agent": {"type": "string", "minLength": 1},
+        "outcome": {"enum": ["success", "redirected_success", "not_modified", "http_error", "timeout", "too_large", "blocked", "parse_error", "other"]},
+        "outcome_native": {"type": "string"},
+        "cache_status": {"enum": ["live", "cache_hit", "cache_miss", "bypassed", "unknown"]},
+        "status_code": {"type": "integer", "minimum": 100, "maximum": 599},
+        "redirect_observation_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:redirect:"}},
+        "byte_object_id": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/byteId"},
+        "error_class": {"type": "string"},
+        "error_native": {"type": "string"},
+        "retry_of_retrieval_id": {"type": "string", "pattern": "^fmo:retrieval:"}
+      },
+      "allOf": [
+        {"if": {"properties": {"method": {"const": "other"}}}, "then": {"required": ["method_native"]}},
+        {"if": {"properties": {"outcome": {"const": "other"}}}, "then": {"required": ["outcome_native"]}}
+      ]
+    }
+  ],
+  "unevaluatedProperties": false
+}

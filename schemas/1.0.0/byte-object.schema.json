@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:byte-object",
+  "type": "object",
+  "required": ["schema_version", "record_type", "id", "recorded_at", "record_status", "sha256", "byte_length", "media_type_detected", "storage", "observed_time"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "record_type": {"const": "byte_object"},
+    "id": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/byteId"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "record_status": {"enum": ["active", "superseded", "withdrawn"]},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "byte_length": {"type": "integer", "minimum": 0},
+    "media_type_detected": {"type": "string", "minLength": 1},
+    "media_type_declared": {"type": "string"},
+    "content_disposition_filename": {"type": "string"},
+    "storage": {
+      "type": "object", "required": ["backend", "availability"],
+      "properties": {
+        "backend": {"enum": ["git", "git_lfs", "object_store", "external_only", "none"]},
+        "availability": {"enum": ["materialized", "pointer_only", "remote_only", "missing", "quarantined"]},
+        "locator": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+    "derivation": {"enum": ["provider_original", "captured_html", "extracted_text", "observatory_rendering", "summary", "other"]},
+    "derivation_native": {"type": "string"},
+    "derived_from_byte_ids": {"type": "array", "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/byteId"}}
+  },
+  "allOf": [
+    {"if": {"properties": {"derivation": {"const": "other"}}}, "then": {"required": ["derivation_native"]}}
+  ],
+  "additionalProperties": false
+}

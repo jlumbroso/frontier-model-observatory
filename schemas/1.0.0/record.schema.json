@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:record",
+  "oneOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:entity"},
+    {"$ref": "urn:fmo:schema:1.0.0:event"},
+    {"$ref": "urn:fmo:schema:1.0.0:artifact"},
+    {"$ref": "urn:fmo:schema:1.0.0:artifact-version"},
+    {"$ref": "urn:fmo:schema:1.0.0:byte-object"},
+    {"$ref": "urn:fmo:schema:1.0.0:url-alias"},
+    {"$ref": "urn:fmo:schema:1.0.0:redirect-observation"},
+    {"$ref": "urn:fmo:schema:1.0.0:artifact-part"},
+    {"$ref": "urn:fmo:schema:1.0.0:artifact-relationship"},
+    {"$ref": "urn:fmo:schema:1.0.0:claim"},
+    {"$ref": "urn:fmo:schema:1.0.0:retrieval-event"},
+    {"$ref": "urn:fmo:schema:1.0.0:absence"},
+    {"$ref": "urn:fmo:schema:1.0.0:coverage-ledger-entry"}
+  ]
+}

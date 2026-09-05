@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:fmo:schema:1.0.0:absence",
+  "allOf": [
+    {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/recordEnvelope"},
+    {
+      "type": "object",
+      "required": ["record_type", "absence_type", "target", "search_scope", "checked_at", "observed_time", "basis", "lifecycle"],
+      "properties": {
+        "record_type": {"const": "absence"},
+        "id": {"pattern": "^fmo:absence:"},
+        "absence_type": {"enum": ["not_reported", "not_found", "not_evaluated", "withheld", "not_applicable", "not_retrieved", "not_fetched", "not_resolved", "unverified", "confirmed_absent", "not_yet_collected", "excluded_by_policy", "other"]},
+        "absence_type_native": {"type": "string"},
+        "target": {
+          "type": "object",
+          "properties": {"subject_id": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"}, "description_native": {"type": "string"}},
+          "anyOf": [{"required": ["subject_id"]}, {"required": ["description_native"]}],
+          "additionalProperties": false
+        },
+        "expected_record_type": {"type": "string"},
+        "expected_artifact_class": {"type": "string"},
+        "search_scope": {"type": "object", "required": ["description"], "properties": {"description": {"type": "string"}, "surface_url_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:url:"}}}, "additionalProperties": false},
+        "checked_at": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/timeValue"},
+        "observed_time": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/observationExtent"},
+        "basis": {"type": "string", "minLength": 1},
+        "lifecycle": {"enum": ["current", "superseded", "resolved", "unclear"]},
+        "retrieval_event_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:retrieval:"}},
+        "evidence": {"type": "array", "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/evidenceLocator"}},
+        "next_check_at": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/timeValue"},
+        "resolved_by_record_ids": {"type": "array", "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"}}
+      },
+      "allOf": [
+        {"anyOf": [{"required": ["expected_record_type"]}, {"required": ["expected_artifact_class"]}]},
+        {"if": {"properties": {"absence_type": {"const": "other"}}}, "then": {"required": ["absence_type_native"]}}
+      ]
+    }
+  ],
+  "unevaluatedProperties": false
+}

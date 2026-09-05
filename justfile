@@ -482,3 +482,15 @@ adr TITLE:
 [doc("List ADR questions awaiting the human, including malformed statuses")]
 unanswered:
     python scripts/adr_questions.py --status unanswered docs/adr
+
+[group('verify')]
+[doc("Check the canonical repository exclusion policy")]
+check-exclusions:
+    python scripts/check_exclusions.py
+
+[group('verify')]
+[doc("Run the repository verification gate")]
+verify:
+    git diff --check
+    python -m unittest discover -s tests
+    just check-exclusions

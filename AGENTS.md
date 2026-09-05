@@ -88,15 +88,15 @@ Tests should:
 **RUN THIS PROJECT'S VERIFICATION GATE BEFORE EVERY COMMIT**
 
 Before serving any change:
-1. Run the project's verification gate: `git diff --check` plus the repository validation commands introduced with each executable subsystem
+1. Run the project's verification gate: `just verify`
 2. Fix any failures before committing
 3. Never serve changes with a failing gate
 
-**Why**: `git diff --check` catches malformed patches and conflict residue now. Every later parser, generator, schema, and archival workflow must add a meaningful behavioral check before it can be considered implemented.
+**Why**: The gate catches malformed patches, ADR queue regressions, and violations of the repository exclusion policy. Every later parser, generator, schema, and archival workflow must add a meaningful behavioral check before it can be considered implemented.
 
 **Process**:
 ```bash
-git diff --check               # Baseline gate; extend as executable subsystems land
+just verify                    # Must be green; extend as executable subsystems land
 git add <explicit paths>       # never -A: stage by path, commit by pathspec — see CONVENTIONS.md, shared-worktree awareness
 git commit -m "..." -- <paths>
 ```

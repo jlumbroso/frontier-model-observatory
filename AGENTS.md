@@ -272,6 +272,7 @@ The repository preserves original artifacts where lawful and practical, separate
 - Schema calibration uses twelve primary-source artifacts, four per core provider, and a documentary-variation stopping rule. See `docs/adr/0006-calibration-corpus-and-documentary-variation-stopping-rule.md`.
 - Hosted CI must write a complete failure-resistant `GITHUB_STEP_SUMMARY`; version tags must publish a validated downloadable skill ZIP with checksums and build metadata. See `docs/adr/0007-legible-continuous-integration-and-release-artifacts.md`.
 - Canonical records use versioned JSON Schema 2020-12, homogeneous JSONL streams, opaque typed IDs plus immutable human-readable canonical keys, and layered semantic validation. See `docs/adr/0008-canonical-schema-package-identifiers-and-validation-layers.md`.
+- The distributable skill is a thin progressive protocol bundled with a generated canonical snapshot, compact indexes, and deterministic query tool; archival binaries remain repository evidence. See `docs/adr/0009-progressive-skill-packaging-and-query-protocol.md`.
 
 ### Open questions:
 

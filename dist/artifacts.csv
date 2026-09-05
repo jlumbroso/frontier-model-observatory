@@ -1,0 +1,14 @@
+id,canonical_key,preferred_title,artifact_class,native_type,redistribution_status
+fmo:artifact:01a0706c-ee14-76c6-b3c7-a86492682718,google-deepmind/gemini-robotics-1-5-technical-report,Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots,technical_report,technical report,review_required
+fmo:artifact:01a07073-5121-70e0-8081-1e07ba2b75f3,anthropic/claude-opus-4-6-system-card,Claude Opus 4.6 System Card,model_disclosure,System Card,review_required
+fmo:artifact:01a07073-5138-71cc-a851-cccee80a9667,anthropic/claude-fable-5-1-mythos-5-1-system-card,Claude Fable 5.1 & Claude Mythos 5.1 System Card,model_disclosure,System Card,review_required
+fmo:artifact:01a07073-5155-7565-a2d3-aacc0b5955b2,openai/o1-system-card,OpenAI o1 System Card,model_disclosure,System Card,review_required
+fmo:artifact:01a07073-5164-742f-a28e-fc1ce64af12c,openai/gpt-live-system-card,GPT-Live System Card,model_disclosure,System Card,review_required
+fmo:artifact:01a07073-5164-742f-a28e-fc2166fc5e64,google-deepmind/gemini-3-pro-model-card,Gemini 3 Pro Model Card,model_disclosure,Model Card,review_required
+fmo:artifact:01a07073-5166-7742-80e1-92846b9d6cdc,google-deepmind/veo-3-model-card,Veo 3 Model Card,model_disclosure,Model Card,review_required
+fmo:artifact:01a07078-ecf1-75b4-9b5a-c0943548ade4,anthropic/claude-4-system-card,Claude 4 System Card,model_disclosure,System Card,review_required
+fmo:artifact:01a07078-ed03-70e4-b949-3123f8932edd,anthropic/claude-opus-5-system-prompt,Claude Opus 5 system prompts,system_prompt,system prompts,review_required
+fmo:artifact:01a07078-ed04-76cd-8a7c-850f27d67c65,openai/gpt-5-system-card,GPT-5 System Card,model_disclosure,System Card,review_required
+fmo:artifact:01a07078-ed04-76cd-8a7c-8510c0b99baf,openai/gpt-5-2-system-card-update,Update to GPT-5 System Card: GPT-5.2,model_disclosure,Update to GPT-5 System Card,review_required
+fmo:artifact:01a07078-ed08-76da-a1b2-a46622eecc25,openai/sora-2-system-card,Sora 2 System Card,model_disclosure,System Card,review_required
+fmo:artifact:01a07078-ed08-76da-a1b2-a474b5d2f636,google-deepmind/gemma-4-model-card,Gemma 4 model card,model_disclosure,model card,review_required

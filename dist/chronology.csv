@@ -1,0 +1,42 @@
+year,date,precision,date_role,date_basis,artifact_title,artifact_version_id
+2024,2024-09-12,day,cover_date,artifact_cover,OpenAI o1 System Card,fmo:artifact-version:01a07073-5155-7565-a2d3-aacdbf9a6957
+2024,2024-09-12,day,cover_date,artifact_cover,OpenAI o1 System Card,fmo:artifact-version:01a07073-5159-7103-bd69-93c5fa75d1bb
+2024,2024-09-13T05:44:59Z,instant,other,artifact_metadata,OpenAI o1 System Card,fmo:artifact-version:01a07073-5155-7565-a2d3-aacdbf9a6957
+2024,2024-09-14,day,transport_last_modified,transport_header,OpenAI o1 System Card,fmo:artifact-version:01a07073-5155-7565-a2d3-aacdbf9a6957
+2024,2024-12-04,day,transport_last_modified,transport_header,OpenAI o1 System Card,fmo:artifact-version:01a07073-5159-7103-bd69-93c5fa75d1bb
+2024,2024-12-04T01:55:31Z,instant,other,artifact_metadata,OpenAI o1 System Card,fmo:artifact-version:01a07073-5159-7103-bd69-93c5fa75d1bb
+2024,2024-12-05,day,cover_date,artifact_cover,OpenAI o1 System Card,fmo:artifact-version:01a07073-515c-7540-9419-1390a4979cd4
+2025,2025-02-14T23:44:40Z,instant,other,artifact_metadata,OpenAI o1 System Card,fmo:artifact-version:01a07073-515c-7540-9419-1390a4979cd4
+2025,2025-02-15,day,transport_last_modified,transport_header,OpenAI o1 System Card,fmo:artifact-version:01a07073-515c-7540-9419-1390a4979cd4
+2025,2025-05,month,cover_date,artifact_cover,Claude 4 System Card,fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0951c44306f
+2025,2025-05,month,cover_date,artifact_cover,Claude 4 System Card,fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0960ea04f55
+2025,2025-05-22,day,transport_last_modified,transport_header,Claude 4 System Card,fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0951c44306f
+2025,2025-05-23,day,published,artifact_body,Veo 3 Model Card,fmo:artifact-version:01a07073-5166-7742-80e1-9285184289d2
+2025,2025-07-15,day,transport_last_modified,transport_header,Claude 4 System Card,fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0960ea04f55
+2025,2025-09-24T22:47:47Z,instant,other,artifact_metadata,Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots,fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7
+2025,2025-09-25,day,index_listed,index_surface,Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots,fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7
+2025,2025-09-25,day,transport_last_modified,transport_header,Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots,fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7
+2025,2025-09-30,day,other,artifact_metadata,Sora 2 System Card,fmo:artifact-version:01a07078-ed08-76da-a1b2-a467aa605471
+2025,2025-11,month,published,artifact_body,Gemini 3 Pro Model Card,fmo:artifact-version:01a07073-5164-742f-a28e-fc22ac41f457
+2025,2025-11-18,day,index_listed,index_surface,Gemini 3 Pro Model Card,fmo:artifact-version:01a07073-5164-742f-a28e-fc22ac41f457
+2025,2025-12-11,day,published,artifact_cover,Update to GPT-5 System Card: GPT-5.2,fmo:artifact-version:01a07078-ed04-76cd-8a7c-85113f9d163e
+2025,2025-12-11,day,transport_last_modified,transport_header,Update to GPT-5 System Card: GPT-5.2,fmo:artifact-version:01a07078-ed04-76cd-8a7c-85113f9d163e
+2025,2025-12-11T16:46:24Z,instant,other,artifact_metadata,Update to GPT-5 System Card: GPT-5.2,fmo:artifact-version:01a07078-ed04-76cd-8a7c-85113f9d163e
+2025,2025-12-17T19:27:05Z,instant,other,artifact_metadata,GPT-Live System Card,fmo:artifact-version:01a07073-5164-742f-a28e-fc1d56cbbf56
+2026,2026-01-13,day,index_listed,index_surface,Veo 3 Model Card,fmo:artifact-version:01a07073-5166-7742-80e1-9285184289d2
+2026,2026-01-13,day,revised,artifact_body,Veo 3 Model Card,fmo:artifact-version:01a07073-5166-7742-80e1-9285184289d2
+2026,2026-02,month,index_listed,index_surface,Claude Opus 4.6 System Card,fmo:artifact-version:01a07073-5121-70e0-8081-1e08863f9399
+2026,2026-03-06,day,revised,artifact_body,Claude Opus 4.6 System Card,fmo:artifact-version:01a07073-5121-70e0-8081-1e08863f9399
+2026,2026-03-06T17:06:30Z,instant,other,artifact_metadata,Claude Opus 4.6 System Card,fmo:artifact-version:01a07073-5121-70e0-8081-1e08863f9399
+2026,2026-03-26,day,transport_last_modified,transport_header,Veo 3 Model Card,fmo:artifact-version:01a07073-5166-7742-80e1-9285184289d2
+2026,2026-04-02,day,index_listed,index_surface,Gemma 4 model card,fmo:artifact-version:01a07078-ed08-76da-a1b2-a47555ddd795
+2026,2026-05,month,revised,artifact_body,Gemini 3 Pro Model Card,fmo:artifact-version:01a07073-5164-742f-a28e-fc22ac41f457
+2026,2026-05-22,day,transport_last_modified,transport_header,Gemini 3 Pro Model Card,fmo:artifact-version:01a07073-5164-742f-a28e-fc22ac41f457
+2026,2026-07-08,day,cover_date,artifact_cover,GPT-Live System Card,fmo:artifact-version:01a07073-5164-742f-a28e-fc1d56cbbf56
+2026,2026-07-08,day,index_listed,index_surface,GPT-Live System Card,fmo:artifact-version:01a07073-5164-742f-a28e-fc1d56cbbf56
+2026,2026-07-24,day,published,artifact_body,Claude Opus 5 system prompts,fmo:artifact-version:01a07078-ed03-70e4-b949-3124eca4e9df
+2026,2026-07-30,day,platform_last_updated,artifact_metadata,Gemma 4 model card,fmo:artifact-version:01a07078-ed08-76da-a1b2-a47555ddd795
+2026,2026-08-04,day,revised,artifact_body,GPT-Live System Card,fmo:artifact-version:01a07073-5164-742f-a28e-fc1d56cbbf56
+2026,2026-09,month,index_listed,index_surface,Claude Fable 5.1 & Claude Mythos 5.1 System Card,fmo:artifact-version:01a07073-5138-71cc-a851-cccfafd85401
+2026,2026-09-01,day,published,artifact_cover,Claude Fable 5.1 & Claude Mythos 5.1 System Card,fmo:artifact-version:01a07073-5138-71cc-a851-cccfafd85401
+2026,2026-09-05,day,transport_last_modified,transport_header,GPT-Live System Card,fmo:artifact-version:01a07073-5164-742f-a28e-fc1d56cbbf56

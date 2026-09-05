@@ -1,0 +1,219 @@
+{
+  "canonical_data_sha256": "2b3dc0d42406d046b0854e935f4f2c9981b542e1c4baf6b566282b625ea0c5e2",
+  "coverage_scope_count": 12,
+  "files": [
+    {
+      "byte_length": 2169,
+      "path": "dist/artifacts.csv",
+      "sha256": "74c45d04e1b5f91faffe8060c50b5291971102b96208a5ed6b2f093d6a22ba62"
+    },
+    {
+      "byte_length": 5724,
+      "path": "dist/chronology.csv",
+      "sha256": "340f1b06e49c3a71f0e141641bb81ad8731b81bcd25bf9cc9620627a3905c743"
+    },
+    {
+      "byte_length": 2379,
+      "path": "dist/coverage.csv",
+      "sha256": "edf91f91c9e19086a2c512aa4b0c1ce76fec378e941e12819a1ac8a5fb766864"
+    },
+    {
+      "byte_length": 5912,
+      "path": "dist/entities.csv",
+      "sha256": "3fa350e5582050c40e6fdca76dabf619462cd22486e0d6fe4a27b005080d97cc"
+    },
+    {
+      "byte_length": 137601,
+      "path": "dist/fmo-records.json",
+      "sha256": "a13c9b1bf3ea5350be5e092061de91068442bff1b7575d1ef9944f92212b8c64"
+    },
+    {
+      "byte_length": 107422,
+      "path": "dist/fmo-records.jsonl",
+      "sha256": "8460d7107f7ec8734d8f0d7376ab94c72622030aca3460098bc028a0dd3c8db2"
+    },
+    {
+      "byte_length": 188416,
+      "path": "dist/fmo.sqlite",
+      "sha256": "ee53fb6c1740b4b1340777d6592263d58764989987175ed827c4ef2c706f99b6"
+    },
+    {
+      "byte_length": 474,
+      "path": "views/README.md",
+      "sha256": "c829f19a07b22057477dc3ed40f36a4ab42a52bb533ad5fcaa5bba17ef5a36a4"
+    },
+    {
+      "byte_length": 1043,
+      "path": "views/by-artifact-type/model_disclosure/README.md",
+      "sha256": "ebba660952a84e93ca5c8feec40bfa79128f9a73d9fb6648e858ded330fa924c"
+    },
+    {
+      "byte_length": 58776,
+      "path": "views/by-artifact-type/model_disclosure/records.jsonl",
+      "sha256": "7602d936e8d2b3decdc8005745432b9dc6d0276ce0773c11034826158cf65c7a"
+    },
+    {
+      "byte_length": 240,
+      "path": "views/by-artifact-type/system_prompt/README.md",
+      "sha256": "2fcf0c41b2a8d1c1d9b02b646e1b99d2bec6eb8905ea7aa8d086f7247e45219b"
+    },
+    {
+      "byte_length": 4671,
+      "path": "views/by-artifact-type/system_prompt/records.jsonl",
+      "sha256": "d02d26dac2388251b4d0a190fea33861c0060ee3e1126f92881bbddeeea6fa5b"
+    },
+    {
+      "byte_length": 294,
+      "path": "views/by-artifact-type/technical_report/README.md",
+      "sha256": "fb1acffbdf16723e000b6be194f5e8ac89112374204bc4255b4e9e7c9b55f0ac"
+    },
+    {
+      "byte_length": 10524,
+      "path": "views/by-artifact-type/technical_report/records.jsonl",
+      "sha256": "a867f6609246b2b43996c43d55bdf3e32e697a36c8fa7347bf8dfa530cb3972f"
+    },
+    {
+      "byte_length": 477,
+      "path": "views/by-family/anthropic/claude-family/README.md",
+      "sha256": "b78c20196b0d32e1ede229cb226f4c51a625b41107e4e35bf029a719e991c220"
+    },
+    {
+      "byte_length": 25838,
+      "path": "views/by-family/anthropic/claude-family/records.jsonl",
+      "sha256": "62d80c2d20d38263527ae2e024e4af4a8a79427188518bc2bdf91071885e4a3c"
+    },
+    {
+      "byte_length": 173,
+      "path": "views/by-family/google-deepmind/gemini-family/README.md",
+      "sha256": "a2be7e33b5a9a2e38b86f8da0c7a3afe2f847b68e8e3151ffce76dedf5ebcfcc"
+    },
+    {
+      "byte_length": 6027,
+      "path": "views/by-family/google-deepmind/gemini-family/records.jsonl",
+      "sha256": "5771bfbf430086dd3493c61937ced281190a38f2f4003cdb8212f8d7db1703c4"
+    },
+    {
+      "byte_length": 274,
+      "path": "views/by-family/google-deepmind/gemini-robotics/README.md",
+      "sha256": "299af9526f0bf684f4b4b1cf8947ccf08c92233087e4d60dfbd3539b30ff0726"
+    },
+    {
+      "byte_length": 12403,
+      "path": "views/by-family/google-deepmind/gemini-robotics/records.jsonl",
+      "sha256": "3f537106d94c0900d732ee34856003197435688f86e021fe78da6f26e40b468a"
+    },
+    {
+      "byte_length": 661,
+      "path": "views/by-family/google-deepmind/gemma-family/README.md",
+      "sha256": "deadd877a8f64d6238df5eaf22ebb2cecd06eaf6e34e549272c6d58b60e9c42c"
+    },
+    {
+      "byte_length": 10745,
+      "path": "views/by-family/google-deepmind/gemma-family/records.jsonl",
+      "sha256": "8e98c5caf037d17c005d533b4ab0cdc5de16619426c0a1fe978f7e2f4ed476f8"
+    },
+    {
+      "byte_length": 156,
+      "path": "views/by-family/google-deepmind/veo-family/README.md",
+      "sha256": "45b34cbafe3319c5d630f3b682ad4928a09c0d1df1b02e411b52c4b8bba05e8d"
+    },
+    {
+      "byte_length": 6014,
+      "path": "views/by-family/google-deepmind/veo-family/records.jsonl",
+      "sha256": "75cc40b58b71bb5e382fcb6d9f4702e8a3901a72e4f619158b87e040326625ce"
+    },
+    {
+      "byte_length": 226,
+      "path": "views/by-family/openai/gpt-5-family/README.md",
+      "sha256": "067e21ec23286b4ee738ab77c5e69f3010939a8442681bf545290ab78bbe07b9"
+    },
+    {
+      "byte_length": 8422,
+      "path": "views/by-family/openai/gpt-5-family/records.jsonl",
+      "sha256": "d9966c4c76c49f75bda9df3d22e8615d82ed10c690cee2b32b09f2ca9d813bb4"
+    },
+    {
+      "byte_length": 217,
+      "path": "views/by-family/openai/gpt-live-family/README.md",
+      "sha256": "27522b110af769d5a5de60b9b976b98028860c94da880e7d26e990fa689c1278"
+    },
+    {
+      "byte_length": 6652,
+      "path": "views/by-family/openai/gpt-live-family/records.jsonl",
+      "sha256": "2025ed80066a9cd92309094c631ab866697daaed2e495d175eab378fca40c585"
+    },
+    {
+      "byte_length": 154,
+      "path": "views/by-family/openai/o1-family/README.md",
+      "sha256": "115e5caef1d612b11c67560c4f463d2f50c27fd1002b5132b25b31e97b65b6f0"
+    },
+    {
+      "byte_length": 1058,
+      "path": "views/by-family/openai/o1-family/records.jsonl",
+      "sha256": "c9e83c65787ae7f471517bd556c9ae7ea6e0fdbf33bc9904d0e3e93b0cf34c9a"
+    },
+    {
+      "byte_length": 150,
+      "path": "views/by-family/openai/sora-family/README.md",
+      "sha256": "d5570f29a85ae51d501b43db92bff6b598ca5f1ff5c58ed2f7b6c99af5052f48"
+    },
+    {
+      "byte_length": 5716,
+      "path": "views/by-family/openai/sora-family/records.jsonl",
+      "sha256": "2fd5daf62499d592af783bdc32186714236c606361217c4070ef2fb16c9c07c3"
+    },
+    {
+      "byte_length": 1081,
+      "path": "views/by-provider/anthropic/README.md",
+      "sha256": "73d43c0a2130cab2bdf7f481f1803ca6e6748c00b29f272a464a15f677689292"
+    },
+    {
+      "byte_length": 30015,
+      "path": "views/by-provider/anthropic/records.jsonl",
+      "sha256": "703c550c9329822e249370ff28104addd06a9d3de97374a0228ea6b583636a3f"
+    },
+    {
+      "byte_length": 1179,
+      "path": "views/by-provider/google-deepmind/README.md",
+      "sha256": "3576b54f2965861dd8840feca1593ffbeb0e24c0f6d3463d4f177409660810af"
+    },
+    {
+      "byte_length": 39134,
+      "path": "views/by-provider/google-deepmind/records.jsonl",
+      "sha256": "88690703dffb8b52df72e3f01c86d9a6719700697ea68cbfc8d63817a660f24c"
+    },
+    {
+      "byte_length": 1166,
+      "path": "views/by-provider/openai/README.md",
+      "sha256": "6226d151f8673a5c1e8ae24f3a1cebe91b965175828af1fef572675e77f2a76e"
+    },
+    {
+      "byte_length": 38273,
+      "path": "views/by-provider/openai/records.jsonl",
+      "sha256": "72616c0ba38c52a7c5d1f18d347a19fda41a3c3a58b3b5ab1c658f371670faa6"
+    },
+    {
+      "byte_length": 851,
+      "path": "views/by-year/2024/README.md",
+      "sha256": "bb493da9f59cfcda39e3bad3078669c5bc3c8307d504ed35655a233f751c1623"
+    },
+    {
+      "byte_length": 1821,
+      "path": "views/by-year/2025/README.md",
+      "sha256": "825b59b81e73e1c13e3b3648c289ba1f579d72703299db817d5826bc3aa7b9f3"
+    },
+    {
+      "byte_length": 1659,
+      "path": "views/by-year/2026/README.md",
+      "sha256": "7afd9f2af1e064fe6f10b6c0b278e97080abf368c4cc1c6f3db177f329cd5122"
+    },
+    {
+      "byte_length": 1843,
+      "path": "views/calibration/coverage.md",
+      "sha256": "84c8d8a32cb9fefb34c06d28fd85030de6e7d747b87f153e54d4d61a33e2e827"
+    }
+  ],
+  "generator_version": "1.0.0",
+  "record_count": 132,
+  "schema_version": 1
+}

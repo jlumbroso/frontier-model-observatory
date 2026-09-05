@@ -3,7 +3,7 @@
 # Progressive Skill Packaging and Query Protocol
 
 - **Date**: 2026-09-05
-- **Iteration**: 3
+- **Iteration**: 4
 - **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the continuing agency grant
 
@@ -16,6 +16,15 @@
 **Source**: Founding conversation and implemented architecture in ADR-0003, ADR-0006, ADR-0007, and ADR-0008.
 
 The human requires a broad-ranging skill usable by models with stale training, redundant access paths for context loading and manipulation, and downloadable skill artifacts on releases. The repository now has 146 canonical calibration records and a comprehensive 438-row official-source chronology research projection.
+
+An operational test in a Companion harness exposed a false assumption: that a
+loaded skill can necessarily execute Python or read bundled sub-files. The
+harness loaded only `SKILL.md`. Asked “Do you know who Fable 5 is?”, the model
+first conflated Fable 5 with Opus 5, then invented an identifier, release date,
+and government takedown. After being directed to the skill, it discovered that
+it could neither run `query.py` nor read the referenced data and concluded the
+skill was architecturally incompatible. See
+`docs/vignettes/2026-09-05-skill-only-fable-5-failure.md`.
 
 **Agency Grant**: Build the best model-usable skill and release surface without waiting for another blocking question.
 
@@ -68,6 +77,27 @@ Support:
 
 The model should produce the smallest sufficient mode and deepen only when compression would erase a decisive distinction.
 
+### Runtime capability ladder
+
+The package must remain useful at five independently testable levels:
+
+1. **SKILL-only**: `SKILL.md` explains the capability and embeds a small,
+   source-linked identity and chronology spine for load-bearing recent models.
+2. **Markdown-only**: generated provider and task views under
+   `references/chronology/` expose the comprehensive research corpus without
+   requiring code or structured-file access.
+3. **Structured-file access**: JSONL, JSON, CSV, and SQLite support direct
+   manipulation.
+4. **Executable access**: `query.py` supplies deterministic filtering and typed
+   misses.
+5. **Live-source access**: provider-controlled sources update or extend the
+   dated snapshot.
+
+Agents step down when a capability is absent; they do not stop at an
+unavailable higher level. The hub must never direct a SKILL-only agent to an
+unavailable tool as its sole answer path. Naming resemblance, conversation
+snippets, and role names are not identity evidence.
+
 ### Packaged resources
 
 Bundle:
@@ -99,6 +129,10 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 ## Consequences
 
 - Skill installation works without cloning the archive.
+- Loading only `SKILL.md` still explains the skill and resolves its embedded
+  anchor identities without pretending to access unavailable resources.
+- Markdown-readable harnesses can browse comprehensive provider chronology
+  without shell or Python.
 - Packaged data remains inspectable and grep-friendly.
 - The skill cannot imply that current calibration coverage is comprehensive.
 - Comprehensive research rows remain usable without being silently promoted to canonical identity claims.
@@ -115,6 +149,7 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 - [x] Implement deterministic ZIP, checksum, and release manifest generation.
 - [x] Register skill freshness, validation, and packaging with `just verify`.
 - [x] Bundle and query the comprehensive chronology behind an explicit non-canonical boundary.
+- [x] Add and test SKILL-only and Markdown-only graceful-degradation paths.
 
 ---
 
@@ -123,6 +158,10 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 - [x] Architecture distinguishes skill context from archival evidence.
 - [x] Agent Skills validator passes the complete 19-file tree.
 - [x] Query tests cover lookup, chronology, as-of, coverage, typed misses, and non-canonical research lookup.
+- [x] SKILL-only regression test requires the explicit statement that Claude
+  Fable 5 is not Claude Opus 5 and forbids identity inference from naming.
+- [x] Markdown generation tests require non-empty Anthropic, OpenAI, and Google
+  partitions and known anchor identities.
 - [x] A rebuilt skill tree matches committed generated resources.
 - [x] Release package is deterministic and checksum-bound.
 
@@ -147,6 +186,12 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added a 438-row chronology JSONL and manifest, an on-demand `research` query mode, a required epistemic reference, and explicit canonical-versus-research output status. The deterministic skill ZIP is now 138,192 bytes across 19 files.
 - Outcome: Broader-than-calibration chronology is immediately usable by models without weakening canonical identity constraints; semantic promotion and hosted publication remain.
+
+### Iteration 4 (2026-09-05)
+- Trigger: Companion-harness test loaded only `SKILL.md`, misidentified Fable 5 as Opus 5, fabricated chronology, and could not access referenced files or Python.
+- Contributors: Jérémie Lumbroso; Claude Sonnet 4.5 as test subject; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added an explicit five-level capability ladder, a source-linked SKILL-only orientation spine, a hard Fable-versus-Opus identity invariant, eight generated Markdown chronology views, and regression tests for constrained harnesses.
+- Outcome: The skill now degrades from live research through executable, structured-file, Markdown-only, and SKILL-only operation instead of collapsing when tools are unavailable.
 
 ---
 

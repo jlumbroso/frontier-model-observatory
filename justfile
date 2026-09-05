@@ -517,3 +517,13 @@ validate-schema:
 [doc("Mint an opaque typed canonical identifier: just mint-id <kind>")]
 mint-id kind:
     python scripts/mint_id.py "{{kind}}"
+
+[group('data')]
+[doc("Regenerate Markdown, JSONL, JSON, CSV, and SQLite projections")]
+views:
+    python scripts/generate_views.py
+
+[group('verify')]
+[doc("Check generated views and distributions against canonical records")]
+check-views:
+    python scripts/generate_views.py --check

@@ -314,8 +314,24 @@ def checks_for(root: Path) -> list[CheckResult]:
                 "artifacts or data/byte-objects.jsonl does not exist yet.",
             )
         )
+    if (root / "views").exists() and (root / "dist").exists():
+        checks.append(
+            run_check(
+                root,
+                "views",
+                "Generated-view freshness",
+                [sys.executable, "scripts/generate_views.py", "--check"],
+            )
+        )
+    else:
+        checks.append(
+            pending_check(
+                "views",
+                "Generated-view freshness",
+                "views or dist does not exist yet.",
+            )
+        )
     subsystems = [
-        ("views", "Generated-view freshness", root / "views"),
         ("skill", "Skill validation and packaging", root / "frontier-model-observatory"),
     ]
     for key, label, path in subsystems:

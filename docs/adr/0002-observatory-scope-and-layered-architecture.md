@@ -130,7 +130,7 @@ I think you should just do the whole thing, but staking halfway or mid points is
 ---
 
 ### QST-EXCLUSION-TERMS: How should the categorical exclusion bind this repository and downstream forks?
-- Status: unanswered — routing to Jérémie
+- Status: answered
 - Why asking: The selected zero-mention rule needs one narrow governance exception merely to state itself, and the inherited MIT License grants use and modification “without restriction.” A binding downstream restriction would change the project’s licensing category.
 - Need: Pick the intended legal/governance strength; counsel should review any custom license before public release.
 
@@ -150,8 +150,8 @@ I think you should just do the whole thing, but staking halfway or mid points is
 
 **Falsifier**: If categorical control over every downstream fork matters more than standard-license interoperability and reusable tooling, choose B and accept that the repository is source-available under custom terms rather than open source.
 
-**ANS:** (by Jérémie Lumbroso)
-[Fill this in]   <!-- literal placeholder — parser-significant, do not paraphrase -->
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+Thanks for being transparent about your confidence of Medium because it helped me be more confident about my wanting to Option A. Let me explain I think that after what you said that it’s not like it’s silly of me to want to change the license for this or I don’t know if it’s silly, but it’s understandable, but it is the wrong place to be making this statement, so instead, I think that it’s exactly what option a describes which I find much more reasonable than what I initially thank you for helping me broaden my options.
 
 ---
 

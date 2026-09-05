@@ -156,7 +156,7 @@ Thanks for being transparent about your confidence of Medium because it helped m
 ---
 
 ### QST-HISTORY-CONFORMANCE: Should the already-pushed policy-incompatible LFS object be removed from Git history now?
-- Status: unanswered
+- Status: answered
 - Why asking: The current tree is clean and the source is remote-only, but the original bytes remain reachable through earlier private-repository commits. Removing them requires rewriting `main` and force-pushing, which changes existing commit identities and cannot be treated as routine cleanup.
 - Need: Authorize one history policy; Option A also serves as explicit confirmation for the destructive rewrite.
 
@@ -176,7 +176,8 @@ Thanks for being transparent about your confidence of Medium because it helped m
 
 **Falsifier**: If another collaborator or automation already depends on current commit SHAs, choose C, coordinate a rewrite window, and do not force-push yet.
 
-**ANS:** (by Jérémie Lumbroso)
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+A — Rewrite now.
 
 ---
 

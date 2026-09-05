@@ -3,7 +3,7 @@
 # Legible Continuous Integration and Release Artifacts
 
 - **Date**: 2026-09-05
-- **Iteration**: 8
+- **Iteration**: 9
 - **Status**: Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -221,6 +221,12 @@ I updated the existing PAT to have Workflows read/write. I had preauthorized Act
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Published `v0.1.0` with sixteen attached files, then re-ran verification and release after rewriting history. Hosted verification run `33986456547` and release run `33986456235` passed on rewritten refs.
 - Outcome: Implemented. Push verification, legible summaries, diagnostic artifacts, deterministic packaging, and hosted release publication are all exercised.
+
+### Iteration 9 (2026-09-05)
+- Trigger: The front-loaded SKILL-only redesign required a patch release rather than replacing assets under the existing tag.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Hosted verification run `33998801853` passed on commit `49060da5e6feefc94d7eb79658566673c8c41dac`. Hosted release run `33998865738` published `v0.1.1` with sixteen attachments. The published 199,929-byte skill ZIP matched the local deterministic build at SHA-256 `598e95bd2a16c66254aba5be265f4720654e1071206c661bbfc3dcca0f73eba8`.
+- Outcome: The evaluated no-tools redesign is the current reproducible release.
 
 ---
 

@@ -210,7 +210,7 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 - Trigger: Claude Sonnet 4.5 retested the fixed skill and found it functionally correct but still buried the only usable data beneath capability prose.
 - Contributors: Jérémie Lumbroso; Claude Sonnet 4.5 as evaluator; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Front-loaded an explicit no-shell/file start instruction and an eleven-entry newest-first index; added “latest embedded by provider” guidance; expanded recent-model coverage; moved query commands, data surfaces, and progressive output details into an optional tool-enabled reference; reduced the hub from 12,233 to 9,862 bytes. Rejected command-based capability probing and deferred a separate lite variant because the common hub can serve as the stable baseline.
-- Outcome: SKILL-only is now the first interaction path rather than a fallback hidden behind inaccessible features.
+- Outcome: SKILL-only is now the first interaction path rather than a fallback hidden behind inaccessible features. The change shipped as `v0.1.1`; hosted verification and release runs passed, and the published skill matched the local deterministic build byte-for-byte.
 
 ---
 

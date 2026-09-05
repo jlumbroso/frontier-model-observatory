@@ -271,6 +271,7 @@ The repository preserves original artifacts where lawful and practical, separate
 - The categorical excluded-company rule is repository governance, not a custom license restriction. Keep standard licensing; enforce the rule in the canonical repository and request continuity from forks. Governance and provenance may name the exclusion only as needed to state and audit it. See `docs/adr/0002-observatory-scope-and-layered-architecture.md`.
 - Schema calibration uses twelve primary-source artifacts, four per core provider, and a documentary-variation stopping rule. See `docs/adr/0006-calibration-corpus-and-documentary-variation-stopping-rule.md`.
 - Hosted CI must write a complete failure-resistant `GITHUB_STEP_SUMMARY`; version tags must publish a validated downloadable skill ZIP with checksums and build metadata. See `docs/adr/0007-legible-continuous-integration-and-release-artifacts.md`.
+- Canonical records use versioned JSON Schema 2020-12, homogeneous JSONL streams, opaque typed IDs plus immutable human-readable canonical keys, and layered semantic validation. See `docs/adr/0008-canonical-schema-package-identifiers-and-validation-layers.md`.
 
 ### Open questions:
 

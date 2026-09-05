@@ -79,7 +79,7 @@ Each layer should remain useful before the next is complete. A chronology record
 ## Questions
 
 ### QST-META-BOUNDARY: Does the ethical Meta ban forbid even minimal contextual references?
-- Status: unanswered — routing to Jérémie
+- Status: answered
 - Why asking: Conversation attribution or source quotation may require saying that a candidate was a Meta model, even if the observatory refuses to curate Meta records.
 - Need: Pick A or B, with any boundary conditions.
 
@@ -98,8 +98,8 @@ Each layer should remain useful before the next is complete. A chronology record
 
 **Falsifier**: If any appearance of a Meta model name materially undermines the intended ethical stance, choose B and accept that some historical and attribution answers will be intentionally incomplete.
 
-**ANS:** (by Jérémie Lumbroso)
-[Fill this in]   <!-- literal placeholder — parser-significant, do not paraphrase -->
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+Option B. We can add to the terms of the license that no Meta-related product, company, model, weights, event can be mentioned in this repo, or any forks of if. Something categorical.
 
 ---
 

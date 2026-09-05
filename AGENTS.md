@@ -268,10 +268,10 @@ The repository preserves original artifacts where lawful and practical, separate
 - Canonical data is a bounded hybrid of entity, event, artifact, and claim streams with bitemporal historical semantics. See `docs/adr/0003-epistemic-records-and-generated-views.md`.
 - Archival storage is tiered; public redistribution is evidence-gated; unofficial prompts are quarantined outside ordinary views. See `docs/adr/0004-artifact-archive-and-prompt-provenance.md`.
 - The intended provider scope is comprehensive and delivered through useful intermediate stakes rather than reduced to a permanently narrow v0.1.
+- The categorical excluded-company rule is repository governance, not a custom license restriction. Keep standard licensing; enforce the rule in the canonical repository and request continuity from forks. Governance and provenance may name the exclusion only as needed to state and audit it. See `docs/adr/0002-observatory-scope-and-layered-architecture.md`.
 
 ### Open questions:
 
-- How should the categorical excluded-company policy be expressed and licensed without contradicting its own statement or the inherited MIT grant?
 - Which fields survive calibration across providers without creating false equivalence?
 
 ---

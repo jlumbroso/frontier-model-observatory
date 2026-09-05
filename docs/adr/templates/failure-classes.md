@@ -239,7 +239,7 @@ Testing failures occur when **tests don't catch what they should**, or create fa
 - Test real behavior, not implementation
 - End-to-end tests for critical paths
 
-**See:** Fourth Directive in CLAUDE.md
+**See:** Fourth Directive in AGENTS.md
 
 ---
 

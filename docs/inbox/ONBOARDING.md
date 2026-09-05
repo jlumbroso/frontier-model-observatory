@@ -61,7 +61,7 @@ the tmux hive.
 coordination layer?), where implementation happens.]
 
 **Read first**, in order:
-1. `CLAUDE.md` — directives, project context, workflow
+1. `AGENTS.md` — directives, project context, workflow
 2. `docs/inbox/INBOX-PROTOCOL.md` — how participants coordinate
 3. `docs/inbox/CONVENTIONS.md` — attribution, catchability, routing catches
 4. `docs/inbox/ENCODING-MAP.md` — where each kind of knowledge lives
@@ -69,7 +69,7 @@ coordination layer?), where implementation happens.]
 
 ---
 
-## 2. The directives (in `CLAUDE.md`)
+## 2. The directives (in `AGENTS.md`)
 
 - **Prime**: Commit discussions to ADRs immediately
 - **Second**: Surface doubts — they are generative
@@ -153,7 +153,7 @@ an expired or killed wait carries no message; re-arm freely.
   plausibly load-bearing morale work.
 - Decisions: **ORJ** — Options, Recommendation (attributed, bold pick),
   Justification from evidence. Stopping at Options is not showing up fully.
-- **Don't restate standing state** — point to `CLAUDE.md` / the registry.
+- **Don't restate standing state** — point to `AGENTS.md` / the registry.
 - Load-bearing briefs get an **RFC pass** by a peer before dispatch.
 - Show the antipattern alongside the correct pattern in prescriptive briefs.
 - **Catchability over correctness**: surface what you couldn't verify; receive
@@ -164,7 +164,7 @@ an expired or killed wait carries no message; re-arm freely.
 
 ## 6. Live state
 
-[Keep this section current — or better, point at living state (`CLAUDE.md`
+[Keep this section current — or better, point at living state (`AGENTS.md`
 current-focus section, a `just status` recipe) instead of duplicating it.]
 
 ---

@@ -266,7 +266,7 @@ The core insight remains: **conversations have value, preserve them**.
 
 ## For AI Instances
 
-When you load CLAUDE.md at session start:
+When you load AGENTS.md at session start:
 1. Read the project context (what/where/why)
 2. Check for open questions and current focus
 3. Look for HANDOFF.md if previous session ended mid-work

@@ -8,7 +8,7 @@ Four templates exist under `docs/adr/templates/` (plus `failure-classes.md`, a r
 
 ## D2. Why the form matters, expanded (the corpus evidence)
 
-- **Presence isn't reading**: 88% of non-adherent documents were in repos where the template file was already present — often the same commit that added a CLAUDE.md pointer to it. A *pointer* competes for a model's attention and reliably loses; a *skill* loads without competing for that decision.
+- **Presence isn't reading**: 88% of non-adherent documents were in repos where the template file was already present — often the same commit that added a AGENTS.md pointer to it. A *pointer* competes for a model's attention and reliably loses; a *skill* loads without competing for that decision.
 - **Unenforced rules lose**: among documents that clearly attempt the template, 76% skip `TL;DR` anyway, despite it being marked mandatory. Teach it as load-bearing, not decorative.
 - **Buried decisions**: a real ADR once hid a genuine yes/no decision inside an Open-Follow-ups checklist bullet — technically non-blocking by the letter, substantively blocking in fact. If a document's `Status` isn't `Accepted` for a reason that needs a human, that reason belongs in a `### QST:`, full stop — never a bare checklist bullet.
 - **Exemplars beat prose**: two sibling projects, same author, same templates available — the one that reached near-canonical form got there by copying an *already-compliant sibling's real ADRs*, not by reading the abstract template harder. When in doubt, find a good recent ADR in the same repo and match its shape.

@@ -34,7 +34,7 @@ A minimal system for turning conversations into persistent artifacts:
 
 ```
 project/
-├── CLAUDE.md                      # Customize per project
+├── AGENTS.md                      # Customize per project
 ├── docs/
 │   ├── adr/
 │   │   └── templates/
@@ -89,7 +89,7 @@ Just fill in the `ANS:` blocks. No special format.
 
 ## The Files
 
-### `CLAUDE.md`
+### `AGENTS.md`
 Project-specific guidance loaded at each Claude Code session.
 
 **Contains**:
@@ -192,7 +192,7 @@ This system optimized for the reality of Claude Code:
 - Can't waste tokens on repetition
 - Handoffs happen when context fills
 
-- **`CLAUDE.md` tells you**: What to do
+- **`AGENTS.md` tells you**: What to do
 - **`METHODOLOGY.md` explains**: Why we do it
 - **Templates provide**: Structure when needed
 
@@ -203,7 +203,7 @@ This system optimized for the reality of Claude Code:
 ### For Your Project
 
 1. Copy files to your repo
-2. Fill in `CLAUDE.md` project context:
+2. Fill in `AGENTS.md` project context:
    - What you're building
    - Current focus
    - Key decisions made
@@ -267,7 +267,7 @@ slightly more complex flow. 7-day expiry seems reasonable.
 ## Getting Help
 
 1. Read `METHODOLOGY.md` for the "why"
-2. Check `CLAUDE.md` for the "what"
+2. Check `AGENTS.md` for the "what"
 3. Look at templates for the "how"
 4. Adapt to your needs
 

@@ -3,8 +3,8 @@
 # Portable Agent Instructions
 
 - **Date**: 2026-09-05
-- **Iteration**: 1
-- **Status**: Accepted
+- **Iteration**: 2
+- **Status**: Implemented
 - **Deciders**: Jérémie Lumbroso; Perplexity Computer
 
 **TL;DR**: Use `AGENTS.md` as the canonical, model-agnostic project instruction surface and retain tool-specific directories only for genuinely tool-specific integration.
@@ -62,15 +62,15 @@ Keep `.claude/` files whose paths are interfaces to Claude tooling. If a future 
 ## Open Follow-ups
 
 - [ ] Verify each intended harness discovers `AGENTS.md`; add only evidence-driven adapters.
-- [ ] Keep template-update tooling aware that the inherited `CLAUDE.md` was deliberately renamed locally.
+- [x] Keep template-update tooling aware that the inherited `CLAUDE.md` was deliberately renamed locally.
 
 ---
 
 ## Action Items
 
-- [ ] Rename and specialize the root instruction file.
-- [ ] Update all semantic references, the substrate hook, the crew read order, and the Kintsugi manifest.
-- [ ] Verify that no canonical-guidance reference still points to `CLAUDE.md`.
+- [x] Rename and specialize the root instruction file.
+- [x] Update all semantic references, the substrate hook, the crew read order, and the Kintsugi manifest.
+- [x] Verify that no live canonical-guidance reference still points to `CLAUDE.md`.
 
 ---
 
@@ -80,7 +80,7 @@ Keep `.claude/` files whose paths are interfaces to Claude tooling. If a future 
 - [x] Perplexity Computer: Prime and Secondary Directives remain load-bearing.
 - [ ] Jérémie Lumbroso: Resulting instruction surface matches intent.
 
-**Notes**: `just adr` could not be used because `just` is not installed in the execution environment. The ADR was manually minted as `0001`, after confirming that the repository contained no prior numbered ADR.
+**Notes**: `just adr` could not initially be used because `just` was absent. The ADR was manually minted as `0001` after confirming that the repository contained no prior numbered ADR; `just 1.58.0` was then installed for subsequent records.
 
 ---
 
@@ -91,6 +91,12 @@ Keep `.claude/` files whose paths are interfaces to Claude tooling. If a future 
 - Contributors: Jérémie Lumbroso; Perplexity Computer.
 - Changes: Recorded the portable instruction decision before modifying the inherited substrate.
 - Outcome: Accepted.
+
+### Iteration 2 (2026-09-05)
+- Trigger: Implementation and repository-wide reference audit.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Renamed and specialized the root guidance, updated live references and the substrate hook, and made the intentional Kintsugi divergence explicit.
+- Outcome: Accepted → Implemented.
 
 ---
 

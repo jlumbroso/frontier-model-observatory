@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Opt-in Stop-hook backstop for the CLAUDE.md "commit substrate immediately"
+"""Opt-in Stop-hook backstop for the AGENTS.md "commit substrate immediately"
 corollary (Coordinator Duties / Prime Directive).
 
 Ported from system3/companion-thinking-stream-etude (2026-07-06). Co-authored
@@ -54,7 +54,7 @@ WATCHED_PREFIXES = (
     "docs/inbox/",
     "docs/seeds/",
 )
-WATCHED_FILES = ("CLAUDE.md",)
+WATCHED_FILES = ("AGENTS.md",)
 EDIT_TOOLS = {"Write", "Edit", "NotebookEdit"}
 SESSIONS_REL = os.path.join("docs", "inbox", "agent-sessions.json")
 # Per-session setting values (in agent-sessions.json → aliases.<a>.settings):
@@ -98,7 +98,7 @@ def main() -> None:
         f"{SESSIONS_REL} (you turned it on; you turn it off)."
     )
     msg = (
-        "Substrate self-check (you opted into this — CLAUDE.md Prime Directive "
+        "Substrate self-check (you opted into this — AGENTS.md Prime Directive "
         "corollary): these substrate file(s) you edited this session are still "
         "uncommitted:\n  - "
         + "\n  - ".join(sorted(dirty))

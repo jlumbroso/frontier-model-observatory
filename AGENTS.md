@@ -1,9 +1,9 @@
-# CLAUDE.md - Project Guidance
+# AGENTS.md - Project Guidance
 
-- **Project**: [Project Name]
-- **Human**: [Human collaborator(s)]
-- **AI**: [AI participant(s) — with the crew layer, the roster lives in docs/inbox/agent-sessions.json; name the coordinator seat here]
-- **Last Updated**: [Date]
+- **Project**: Frontier Model Observatory
+- **Human**: Jérémie Lumbroso
+- **AI**: Model-agnostic collaborators; the active roster belongs in `docs/inbox/agent-sessions.json`
+- **Last Updated**: 2026-09-05
 
 ---
 
@@ -88,15 +88,15 @@ Tests should:
 **RUN THIS PROJECT'S VERIFICATION GATE BEFORE EVERY COMMIT**
 
 Before serving any change:
-1. Run the project's verification gate: [name it here at instantiation — test suite, build, linter, or a combination; e.g. `npm test`, `uv run pytest`, `hugo && bin/check`]
+1. Run the project's verification gate: `git diff --check` plus the repository validation commands introduced with each executable subsystem
 2. Fix any failures before committing
 3. Never serve changes with a failing gate
 
-**Why**: [State what this project's gate actually catches — real classes of bug, real numbers if you have them. A directive that names a real gate gets followed; an unfollowable one teaches every seat that directives are decorative, and that lesson generalizes.]
+**Why**: `git diff --check` catches malformed patches and conflict residue now. Every later parser, generator, schema, and archival workflow must add a meaningful behavioral check before it can be considered implemented.
 
 **Process**:
 ```bash
-<your gate command>            # Must be green before commit
+git diff --check               # Baseline gate; extend as executable subsystems land
 git add <explicit paths>       # never -A: stage by path, commit by pathspec — see CONVENTIONS.md, shared-worktree awareness
 git commit -m "..." -- <paths>
 ```
@@ -241,25 +241,45 @@ If the script was successfully used, append as comments how, and what the outcom
 ## Project Context
 
 ### What we're building:
-[1-2 sentences describing the project goal]
+
+The Frontier Model Observatory is a provenance-first, versioned knowledge substrate for frontier AI models, model families, releases, deployed systems, system/model cards, technical and safety reports, disclosed prompts, evaluations, and historical evidence. It serves both humans and models: older models can recover post-training chronology and current terminology; researchers can audit disclosure and reconstruct likely model attribution for conversations.
+
+The repository preserves original artifacts where lawful and practical, separates source-native evidence from normalized claims, and generates redundant access views such as Markdown, JSONL, JSON, CSV, and eventually SQLite from canonical structured records. The skill is the query and reasoning protocol over this substrate, not the substrate itself.
 
 ### Current focus:
-[What's being worked on right now]
+
+- Preserve the founding conversation as ADRs before implementation.
+- Calibrate the ontology against representative primary-source cards and release artifacts.
+- Decide archival, licensing, prompt-provenance, and "frontier" scope boundaries.
+- Establish stable schemas and validation before corpus-scale collection.
+- Draft the progressively disclosed skill only after evidence tests the architecture.
 
 ### Key decisions made:
-- [Decision 1] - See `docs/adr/0001-*.md`
-- [Decision 2] - See `docs/adr/0002-*.md`
+
+- Project-wide guidance is canonical in `AGENTS.md`; provider-specific instruction files are adapters, not duplicate truth. See `docs/adr/0001-portable-agent-instructions.md`.
+- The Prime Directive and Secondary Directive remain load-bearing.
+- Primary artifacts, claim-level provenance, explicit uncertainty, and temporal/version identity are foundational rather than optional enrichment.
+- Human-readable and machine-readable views must derive from common canonical records.
 
 ### Open questions:
-- [Question 1]
-- [Question 2]
+
+- What operational inclusion rule should define "frontier" without freezing a provider list?
+- What may the repository redistribute versus index and materialize locally?
+- How should system prompts with official, observed, reconstructed, or leaked provenance be separated?
+- Which fields survive calibration across providers without creating false equivalence?
 
 ---
 
 ## File Structure
 
 ```
-project/
+frontier-model-observatory/
+├── AGENTS.md                  # Canonical project guidance
+├── frontier-model-observatory/ # Distributable skill; introduced after calibration
+├── data/                      # Canonical structured records
+├── artifacts/                 # Original and preservation artifacts, policy permitting
+├── views/                     # Generated human- and model-readable projections
+├── schemas/                   # Versioned validation schemas
 ├── docs/
 │   ├── adr/
 │   │   ├── 0001-*.md           # ADRs numbered sequentially
@@ -278,9 +298,9 @@ project/
 │   ├── tmux/seat.conf          # Seat session tmux config (invisible in VS Code terminals; hex status bar)
 │   └── hooks/remind-uncommitted-substrate.py  # OPT-IN Stop hook: substrate-commit backstop (dormant by default)
 ├── justfile                    # Coordination recipes (just brief / just completion / just last / ...)
-├── src/                        # Source code
-├── tests/                      # Tests
-└── CLAUDE.md                   # This file
+├── src/                        # Collection, normalization, and rendering code
+├── tests/                      # Evidence-driven fixtures and regressions
+└── dist/                       # Reproducible compiled datasets
 ```
 
 ## Inbox protocol — see `docs/inbox/`
@@ -310,7 +330,7 @@ Recipes (from the seed `justfile`):
 - `just stamp` — print current UTC + ET timestamps
 - `just launch <seat>` / `just wake <seat> "<msg>"` / `just seats` / `just update-seat-titles` — wake infrastructure (requires `tmux`; optional): seats live in detached tmux sessions and can be push-notified instead of polling. Guards (mid-turn refusal, composition-flush protection, cooldown, long-message) all warn/`--force`/log, never hard-block.
 
-**Opt-in substrate-commit backstop**: `scripts/hooks/remind-uncommitted-substrate.py` ships dormant. To offer it in your project, register it as a Stop hook in `.claude/settings.json`; it stays zero-effect until a seat sets its own `settings.substrate_backstop` in `agent-sessions.json`. Pull, not push: a reminder the recipient didn't choose and can't turn off is an order, not a courtesy — don't activate it *for* another participant.
+**Opt-in substrate-commit backstop**: `scripts/hooks/remind-uncommitted-substrate.py` ships dormant. To offer it in your project, register it as a Stop hook in a harness-specific settings file; it stays zero-effect until a seat sets its own `settings.substrate_backstop` in `agent-sessions.json`. Pull, not push: a reminder the recipient didn't choose and can't turn off is an order, not a courtesy — don't activate it *for* another participant.
 
 ---
 
@@ -363,7 +383,7 @@ Types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `style`, `perf`, `met
 
 Example: `feat: implement JWT authentication per ADR-0014`
 
-`meta:` commits are relative to `AGENTS.md`/`CLAUDE.md`, `.claude` settings, and meta-configuration of the repository.
+`meta:` commits are relative to `AGENTS.md`, harness settings, and meta-configuration of the repository.
 
 ---
 
@@ -384,9 +404,14 @@ If context window fills mid-work, create `docs/HANDOFF-datetime.md`:
 
 ## Project-Specific Notes
 
-[Add anything specific to this project that doesn't fit above]
-
 - It's possible the user uses `asdf` for Node.js and Python and the runtime of most languages. You can `source .claude/agent.env` before calling the runtimes, like `python` or `node` to access them through `asdf`'s shims. See: https://asdf-vm.com/manage/configuration.html
+- Do not collapse a provider assertion, an evaluation result, an independent verification, and an observatory inference into one epistemic category.
+- "Not reported," "not found," "not evaluated," "withheld," and "not applicable" are different values.
+- Treat model, model family, checkpoint, deployment, system, product, endpoint, and alias as distinct entities until evidence supports identity.
+- Never infer a release date, predecessor, capability, or prompt provenance from a model name alone.
+- Preserve source-native terminology alongside normalized terminology.
+- Generated views are disposable; canonical evidence records and original artifacts are not.
+- Prefer a small inspectable calibration corpus before a broad shallow harvest.
 
 ---
 

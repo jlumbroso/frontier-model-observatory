@@ -14,7 +14,7 @@ This system preserves valuable conversations by turning them into persistent art
 
 ## Essential Files (3)
 
-1. **CLAUDE.md** (87 lines) - Claude reads this at session start
+1. **AGENTS.md** (87 lines) - Claude reads this at session start
 2. **seed.md** (12 lines) - For brain dumps
 3. **adr.md** (~120 lines) - For decisions
 
@@ -51,7 +51,7 @@ NOT:  # Notes, remarks, comments, observations → grep 'NOT:' docs/adr/
 
 ```
 project/
-├── CLAUDE.md              # Customize this per project
+├── AGENTS.md              # Customize this per project
 ├── docs/adr/
 │   ├── seed-*.md          # Brain dumps
 │   ├── 0001-*.md          # ADRs (numbered)
@@ -72,7 +72,7 @@ project/
 
 ---
 
-## Customize CLAUDE.md
+## Customize AGENTS.md
 
 Replace these sections:
 ```markdown

@@ -3,8 +3,8 @@
 # Observatory Scope and Layered Architecture
 
 - **Date**: 2026-09-05
-- **Iteration**: 5
-- **Status**: Accepted
+- **Iteration**: 6
+- **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
 **TL;DR**: Build a multimodal model observatory beginning with Anthropic, OpenAI, and Google, expanding to selected Asian and open-model families, while explicitly excluding Meta on ethical grounds.
@@ -190,7 +190,7 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - [x] Record the categorical exclusion answer.
 - [x] Replace a narrow v0.1 scope with whole-project delivery through intermediate stakes.
 - [x] Resolve the license/governance mechanism and its necessary policy exception.
-- [ ] Implement the repository policy and semantic CI guard before corpus ingestion.
+- [x] Implement the repository policy and semantic CI guard before corpus ingestion.
 - [ ] Create a coverage-ledger schema after ADR-0003 settles canonical records.
 
 ---
@@ -199,6 +199,7 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 
 - [x] GPT 5.6 Sol at Perplexity Computer: Human scope answer is preserved.
 - [x] Jérémie "Sonnet 4.5" Lumbroso: Selected comprehensive scope, categorical repository exclusion, and standard-license governance.
+- [x] `just verify`: Semantic exclusion guard passes, including the `Meta-Observation` false-positive regression.
 - [ ] Calibration corpus: Provider and modality boundaries are implementable.
 
 ---
@@ -234,6 +235,12 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Adopted Option A, keeping standard licensing while enforcing the categorical exclusion through repository governance and requesting downstream continuity.
 - Outcome: Draft → Accepted.
+
+### Iteration 6 (2026-09-05)
+- Trigger: Repository policy, semantic checker, regression tests, and CI gate implemented.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added the governance policy and `just check-exclusions`; refined the first false positive so epistemic “Meta-Observation” vocabulary remains legal.
+- Outcome: Accepted → Partially Implemented; corpus and coverage-ledger work remains.
 
 ---
 

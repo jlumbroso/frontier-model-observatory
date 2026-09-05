@@ -19,7 +19,15 @@
         "provider_org_id": {"type": "string", "pattern": "^fmo:org:"},
         "surface_url_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:url:"}},
         "desired_artifact_classes": {"type": "array", "items": {"type": "string"}},
-        "covered_record_ids": {"type": "array", "items": {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"}},
+        "covered_record_ids": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/typedId"},
+              {"$ref": "urn:fmo:schema:1.0.0:common#/$defs/byteId"}
+            ]
+          }
+        },
         "absence_ids": {"type": "array", "items": {"type": "string", "pattern": "^fmo:absence:"}},
         "expected_count": {"type": "integer", "minimum": 0},
         "observed_count": {"type": "integer", "minimum": 0},

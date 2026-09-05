@@ -186,5 +186,35 @@ class CandidateTests(unittest.TestCase):
         self.assertTrue(any("expects entity" in error for error in errors))
         self.assertTrue(any("not sorted by id" in error for error in errors))
 
+    def test_entity_canonical_key_is_unique_across_entity_kinds(self):
+        """A family and model cannot silently share one grep-facing handle."""
+        mutated = copy.deepcopy(self.raw)
+        family = next(r for r in mutated if r.get("kind") == "model_family")
+        model = next(r for r in mutated if r.get("kind") == "model")
+        model["canonical_key"] = family["canonical_key"]
+        errors = validate.semantic_validate(
+            [(Path("memory"), i, record) for i, record in enumerate(mutated)]
+        )
+        self.assertTrue(any("duplicate canonical_key" in error for error in errors))
+
+    def test_coverage_can_reference_content_addressed_bytes(self):
+        """Coverage evidence includes both UUID records and SHA-256 byte objects."""
+        schemas, registry = validate.load_schemas()
+        record = copy.deepcopy(
+            next(
+                r
+                for r in self.raw
+                if r["record_type"] == "coverage_ledger_entry"
+            )
+        )
+        byte_id = next(
+            r["id"] for r in self.raw if r["record_type"] == "byte_object"
+        )
+        record["covered_record_ids"].append(byte_id)
+        errors = validate.schema_validate(
+            [(Path("memory"), 1, record)], schemas, registry
+        )
+        self.assertEqual([], errors)
+
 if __name__ == "__main__":
     unittest.main()

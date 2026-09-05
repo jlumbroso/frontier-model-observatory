@@ -347,6 +347,32 @@ def checks_for(root: Path) -> list[CheckResult]:
                 "views or dist does not exist yet.",
             )
         )
+    if (
+        root
+        / "docs"
+        / "research"
+        / "2026-09-05-primary-source-model-release-chronology.md"
+    ).exists():
+        checks.append(
+            run_check(
+                root,
+                "chronology_research_projections",
+                "Chronology research projection freshness",
+                [
+                    sys.executable,
+                    "scripts/generate_chronology_research.py",
+                    "--check",
+                ],
+            )
+        )
+    else:
+        checks.append(
+            pending_check(
+                "chronology_research_projections",
+                "Chronology research projection freshness",
+                "the primary-source chronology report does not exist yet.",
+            )
+        )
     if (root / "frontier-model-observatory" / "SKILL.md").exists():
         checks.append(
             run_check(

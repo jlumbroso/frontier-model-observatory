@@ -543,6 +543,16 @@ mint-id kind:
 views:
     python scripts/generate_views.py
 
+[group('data')]
+[doc("Generate JSONL, JSON, and CSV projections of the chronology research")]
+chronology-projections:
+    python scripts/generate_chronology_research.py
+
+[group('verify')]
+[doc("Check chronology research projections against the source report")]
+check-chronology-projections:
+    python scripts/generate_chronology_research.py --check
+
 [group('verify')]
 [doc("Check generated views and distributions against canonical records")]
 check-views:

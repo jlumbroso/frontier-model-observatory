@@ -1,0 +1,14 @@
+{
+  "data_row_count": 438,
+  "formats": [
+    "jsonl",
+    "json",
+    "csv"
+  ],
+  "markdown_table_line_count": 464,
+  "schema_version": 1,
+  "semantic_status": "research_projection_not_canonical",
+  "source_report": "docs/research/2026-09-05-primary-source-model-release-chronology.md",
+  "source_sha256": "69d8fed8147e0f4b89c3f335f881f8189927baecbe9d3a5671a1aba482e39cc0",
+  "table_count": 13
+}

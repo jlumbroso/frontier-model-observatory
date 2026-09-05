@@ -527,3 +527,18 @@ views:
 [doc("Check generated views and distributions against canonical records")]
 check-views:
     python scripts/generate_views.py --check
+
+[group('skill')]
+[doc("Build the skill's generated canonical data snapshot")]
+skill:
+    python scripts/build_skill.py
+
+[group('verify')]
+[doc("Check the bundled skill snapshot against canonical distributions")]
+check-skill:
+    python scripts/check_skill.py
+
+[group('skill')]
+[doc("Build deterministic downloadable skill ZIP, checksum, and manifest")]
+package-skill:
+    python scripts/package_skill.py

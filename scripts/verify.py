@@ -331,9 +331,24 @@ def checks_for(root: Path) -> list[CheckResult]:
                 "views or dist does not exist yet.",
             )
         )
-    subsystems = [
-        ("skill", "Skill validation and packaging", root / "frontier-model-observatory"),
-    ]
+    if (root / "frontier-model-observatory" / "SKILL.md").exists():
+        checks.append(
+            run_check(
+                root,
+                "skill",
+                "Skill validation and packaging",
+                [sys.executable, "scripts/check_skill.py"],
+            )
+        )
+    else:
+        checks.append(
+            pending_check(
+                "skill",
+                "Skill validation and packaging",
+                "frontier-model-observatory/SKILL.md does not exist yet.",
+            )
+        )
+    subsystems = []
     for key, label, path in subsystems:
         if not path.exists():
             checks.append(

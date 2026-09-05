@@ -3,7 +3,7 @@
 # Calibration Corpus and Documentary-Variation Stopping Rule
 
 - **Date**: 2026-09-05
-- **Iteration**: 2
+- **Iteration**: 3
 - **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the founding agency grant
 
@@ -138,11 +138,11 @@ Stop expansion on a provider surface after three consecutive candidates add no n
 
 ## Action Items
 
-- [ ] Materialize the twelve calibration artifacts under the tiered archival policy.
+- [x] Materialize or explicitly record a policy-blocked byte state for all twelve calibration subjects.
 - [ ] Record source URL, redirect chain, retrieval time, media type, byte size, and hash.
 - [x] Draft entity, event, artifact, artifact-version, byte-object, claim, and relation schemas.
-- [ ] Encode each calibration subject and its documentary-variation vector. Current: 1 of 12.
-- [ ] Validate generated provider, year, family, artifact-type, and as-of projections.
+- [x] Encode each calibration subject and its documentary-variation vector. Current: 12 of 12.
+- [x] Validate generated provider, year, family, artifact-type, and date-assertion projections.
 - [ ] Re-run the variation test against the three optional fifth artifacts.
 
 ---
@@ -152,7 +152,7 @@ Stop expansion on a provider surface after three consecutive candidates add no n
 - [x] All factual selection grounds are linked to official sources in the calibration report.
 - [x] The repository exclusion-policy checker passes.
 - [x] Four artifacts per provider cover the observed minimum variation.
-- [ ] All twelve artifacts validate against the first schema candidate.
+- [x] All twelve calibration subjects validate against the first schema candidate.
 - [x] The report-embedded-card subject validates as 15 canonical records with materialized bytes.
 - [ ] Three optional artifacts add no unrepresentable dimension.
 
@@ -171,6 +171,12 @@ Stop expansion on a provider surface after three consecutive candidates add no n
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Encoded the Gemini Robotics 1.5 report and embedded model-card part as 15 records across 11 streams, using actual PDF bytes, hash, size, media type, URL, date assertions, subjects, typed absence, and coverage.
 - Outcome: Accepted → Partially Implemented; 1 of 12 subjects encoded.
+
+### Iteration 3 (2026-09-05)
+- Trigger: Remaining calibration artifacts retrieved, policy-checked, and encoded.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Encoded all twelve subjects as 132 canonical records; materialized 14 byte objects and retained one policy-blocked HTML capture as remote-only hash evidence; generated all required access projections.
+- Outcome: Remains Partially Implemented; deep claims, exact text anchors, and three optional variation probes remain.
 
 ---
 

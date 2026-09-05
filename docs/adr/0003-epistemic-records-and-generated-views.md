@@ -3,8 +3,8 @@
 # Epistemic Records and Generated Views
 
 - **Date**: 2026-09-05
-- **Iteration**: 3
-- **Status**: Accepted
+- **Iteration**: 4
+- **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
 **TL;DR**: Keep canonical, versioned evidence records in the repository and generate many redundant path-oriented views for humans, models, grep, and data tools.
@@ -168,9 +168,9 @@ Generate Markdown, JSON, CSV, SQLite, and redundant path-oriented views from the
 ## Action Items
 
 - [x] Resolve canonical record families and temporal policy.
-- [ ] Draft schemas against a representative calibration corpus.
-- [ ] Define projection manifests and deterministic generation.
-- [ ] Add validation that generated outputs match canonical source records.
+- [x] Draft schemas against a representative calibration corpus.
+- [x] Define projection manifests and deterministic generation.
+- [x] Add validation that generated outputs match canonical source records.
 
 ---
 
@@ -201,6 +201,12 @@ Generate Markdown, JSON, CSV, SQLite, and redundant path-oriented views from the
 - Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Adopted D, bounded hybrid canonical streams, and C, bitemporal historical semantics.
 - Outcome: Draft → Accepted.
+
+### Iteration 4 (2026-09-05)
+- Trigger: Canonical calibration records and redundant projections implemented.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added 132 canonical records plus deterministic provider, year, family, artifact-type, calibration, JSON, JSONL, CSV, and SQLite projections with a hash manifest and freshness check.
+- Outcome: Accepted → Partially Implemented; deeper claim extraction and full as-of semantics remain.
 
 ---
 

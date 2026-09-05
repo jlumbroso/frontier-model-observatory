@@ -27,6 +27,21 @@ TYPE_SCHEMA = {
     "claim": "claim.schema.json", "retrieval_event": "retrieval-event.schema.json",
     "absence": "absence.schema.json", "coverage_ledger_entry": "coverage-ledger-entry.schema.json"
 }
+CANONICAL_STREAM_TYPES = {
+    "entities.jsonl": "entity",
+    "events.jsonl": "event",
+    "artifacts.jsonl": "artifact",
+    "artifact-versions.jsonl": "artifact_version",
+    "byte-objects.jsonl": "byte_object",
+    "url-aliases.jsonl": "url_alias",
+    "redirect-observations.jsonl": "redirect_observation",
+    "artifact-parts.jsonl": "artifact_part",
+    "artifact-relationships.jsonl": "artifact_relationship",
+    "claims.jsonl": "claim",
+    "retrieval-events.jsonl": "retrieval_event",
+    "absences.jsonl": "absence",
+    "coverage-ledger.jsonl": "coverage_ledger_entry",
+}
 
 def load_schemas():
     schemas = [json.loads(p.read_text(encoding="utf-8")) for p in SCHEMA_DIR.glob("*.schema.json")]
@@ -80,6 +95,33 @@ def schema_validate(records, schemas, registry):
         for err in sorted(validators[rtype].iter_errors(record), key=lambda e: list(e.absolute_path)):
             loc = "/".join(str(x) for x in err.absolute_path)
             errors.append(f"{path}:{line}:{loc}: {err.message}")
+    return errors
+
+
+def canonical_stream_validate(records):
+    errors = []
+    by_path = {}
+    for path, line, record in records:
+        try:
+            path.resolve().relative_to((ROOT / "data").resolve())
+        except ValueError:
+            continue
+        by_path.setdefault(path, []).append((line, record))
+
+    for path, rows in by_path.items():
+        expected = CANONICAL_STREAM_TYPES.get(path.name)
+        if expected is None:
+            errors.append(f"{path}: unknown canonical stream filename")
+            continue
+        for line, record in rows:
+            if record.get("record_type") != expected:
+                errors.append(
+                    f"{path}:{line}: canonical stream expects {expected}, "
+                    f"found {record.get('record_type')!r}"
+                )
+        ids = [record.get("id", "") for _, record in rows]
+        if ids != sorted(ids):
+            errors.append(f"{path}: canonical records are not sorted by id")
     return errors
 
 def walk_values(value, key=None):
@@ -267,6 +309,7 @@ def validate(inputs, exclusion_policy=None):
         records.extend(found)
         errors.extend(framing)
     errors.extend(schema_validate(records, schemas, registry))
+    errors.extend(canonical_stream_validate(records))
     errors.extend(semantic_validate(records))
     errors.extend(exclusion_validate(paths, exclusion_policy))
     return records, errors

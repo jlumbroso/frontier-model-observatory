@@ -152,5 +152,39 @@ class CandidateTests(unittest.TestCase):
         ):
             self.assertNotIn(provider_host, text)
 
+    def test_url_alias_preserves_identity_bearing_fragment(self):
+        """A page anchor is evidence and must not be normalized away."""
+        schemas, registry = validate.load_schemas()
+        record = copy.deepcopy(
+            next(r for r in self.raw if r["record_type"] == "url_alias")
+        )
+        record["url"] = record["url"].rstrip("/") + "/report.pdf#page=30"
+        record["url_normalized"] = record["url"]
+        record["fragment"] = "page=30"
+        errors = validate.schema_validate(
+            [(Path("memory"), 1, record)], schemas, registry
+        )
+        self.assertEqual([], errors)
+
+    def test_canonical_stream_rejects_wrong_type_and_order(self):
+        """Homogeneous, ID-sorted streams are part of the canonical contract."""
+        with tempfile.TemporaryDirectory(dir=ROOT) as directory:
+            data = Path(directory) / "data"
+            data.mkdir()
+            path = data / "entities.jsonl"
+            rows = [
+                (path, 1, {"id": "fmo:model:z", "record_type": "entity"}),
+                (path, 2, {"id": "fmo:model:a", "record_type": "artifact"}),
+            ]
+            old_root = validate.ROOT
+            try:
+                validate.ROOT = Path(directory)
+                errors = validate.canonical_stream_validate(rows)
+            finally:
+                validate.ROOT = old_root
+
+        self.assertTrue(any("expects entity" in error for error in errors))
+        self.assertTrue(any("not sorted by id" in error for error in errors))
+
 if __name__ == "__main__":
     unittest.main()

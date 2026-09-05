@@ -3,7 +3,7 @@
 # Canonical Schema Package, Identifiers, and Validation Layers
 
 - **Date**: 2026-09-05
-- **Iteration**: 4
+- **Iteration**: 5
 - **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the continuing agency grant
 
@@ -153,7 +153,8 @@ Each implemented layer registers a real check and summary metrics with `just ver
 - [x] All 15 schema files pass Draft 2020-12 meta-validation.
 - [x] Twenty-five cross-linked structural records exercise every record and entity kind.
 - [x] Nineteen repository tests pass, including graph, temporal, path-containment, claim-value, native-vocabulary, and synthetic-fixture provenance behavior.
-- [ ] All twelve fixture bundles pass layered validation.
+- [x] All twelve calibration subjects have schema-valid canonical identity, artifact, retrieval, byte-state, and coverage records.
+- [ ] All twelve subjects have deep claim/evidence fixture bundles.
 - [ ] Optional calibration subjects require no field overloading.
 
 ---
@@ -183,6 +184,12 @@ Each implemented layer registers a real check and summary metrics with `just ver
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added URL-fragment support omitted by the candidate, enforced homogeneous ID-sorted streams, and validated 15 canonical records plus one content-addressed LFS object.
 - Outcome: Remains Partially Implemented; 1 of 12 evidence bundles is canonical.
+
+### Iteration 5 (2026-09-05)
+- Trigger: Full minimum calibration set encoded.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Validated 132 records across 11 canonical streams, 15 byte-object identities, 14 materialized objects, typed policy non-materialization, and deterministic projections.
+- Outcome: Remains Partially Implemented; deep claims and evidence locators are intentionally incomplete.
 
 ---
 

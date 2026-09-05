@@ -127,7 +127,7 @@ Also record model/product scope, date, version, deployment surface, locale, acco
 ---
 
 ### QST-REDISTRIBUTION: Should private preservation and public redistribution use different gates?
-- Status: unanswered — routing to Jérémie
+- Status: answered
 - Why asking: Public availability does not prove an unrestricted redistribution license, and “strongly epistemic” requires recording rather than assuming that permission.
 - Need: Approve a gate or explicitly accept a different policy.
 
@@ -147,8 +147,8 @@ Also record model/product scope, date, version, deployment surface, locale, acco
 
 **Falsifier**: If counsel or provider terms establish a uniform right to redistribute all in-scope artifacts, the per-artifact gate is unnecessary overhead and A becomes justified.
 
-**ANS:** (by Jérémie Lumbroso)
-[Fill this in]   <!-- literal placeholder — parser-significant, do not paraphrase -->
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+B — Evidence-gated public release.
 
 ---
 

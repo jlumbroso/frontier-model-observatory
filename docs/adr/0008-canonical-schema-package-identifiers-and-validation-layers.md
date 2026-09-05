@@ -3,7 +3,7 @@
 # Canonical Schema Package, Identifiers, and Validation Layers
 
 - **Date**: 2026-09-05
-- **Iteration**: 2
+- **Iteration**: 3
 - **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the continuing agency grant
 
@@ -152,7 +152,7 @@ Each implemented layer registers a real check and summary metrics with `just ver
 - [x] No blocking design question remains.
 - [x] All 15 schema files pass Draft 2020-12 meta-validation.
 - [x] Twenty-five cross-linked structural records exercise every record and entity kind.
-- [x] Eighteen repository tests pass, including graph, temporal, path-containment, claim-value, and native-vocabulary behavior.
+- [x] Nineteen repository tests pass, including graph, temporal, path-containment, claim-value, native-vocabulary, and synthetic-fixture provenance behavior.
 - [ ] All twelve fixture bundles pass layered validation.
 - [ ] Optional calibration subjects require no field overloading.
 
@@ -171,6 +171,12 @@ Each implemented layer registers a real check and summary metrics with `just ver
 - Contributors: Schema-design subagent; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added 15 immutable-URN schemas, structural fixtures, layered validation, meaningful regressions, and a real schema check in the verification summary. Relaxed vocabulary mappings to preserve responsibly unmapped native terms and corrected multi-edge cycle handling.
 - Outcome: Accepted → Partially Implemented; evidence-grounded canonical streams and all twelve calibration bundles remain.
+
+### Iteration 3 (2026-09-05)
+- Trigger: Parent audit found that structural fixtures used real provider names while asserting an unsupported redirect, deployment, and numeric result.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Converted the bundle to explicit synthetic fixture names and reserved `.invalid` hosts; added a regression that prevents provider domains from masquerading as structural examples.
+- Outcome: Remains Partially Implemented; the evidence/fixture boundary is now machine-checked.
 
 ---
 

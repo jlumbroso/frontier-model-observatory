@@ -491,6 +491,9 @@ check-exclusions:
 [group('verify')]
 [doc("Run the repository verification gate")]
 verify:
-    git diff --check
-    python -m unittest discover -s tests
-    just check-exclusions
+    python scripts/verify.py
+
+[group('verify')]
+[doc("Require every registered subsystem to be implemented and green")]
+verify-complete:
+    python scripts/verify.py --require-complete

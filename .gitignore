@@ -7,3 +7,6 @@
 # Python temporary files
 __pycache__/
 *.py[cod]
+
+# Reproducible local verification output
+/build/

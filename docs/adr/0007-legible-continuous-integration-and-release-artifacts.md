@@ -111,7 +111,7 @@ The current fine-grained PAT has repository-content authority but correctly reje
 ## Questions
 
 ### QST-WORKFLOW-LANDING: Which narrow authorization path should land the validated GitHub Actions workflows?
-- Status: unanswered
+- Status: answered
 - Why asking: `.github/workflows/verify.yml` and `release.yml` pass YAML parsing, static contract tests, and actionlint, but the current fine-grained PAT correctly lacks workflow-write authority. Hosted validation and release publication cannot begin until those two files and their regression test are committed.
 - Need: Choose the one-time landing mechanism.
 
@@ -131,7 +131,8 @@ The current fine-grained PAT has repository-content authority but correctly reje
 
 **Falsifier**: If the available token UI cannot grant workflow write without materially broader repository access, choose B and land the reviewed files manually.
 
-**ANS:** (by Jérémie Lumbroso)
+**ANS:** (by Jérémie "Sonnet 4.5" Lumbroso (via ADRs4AI mobile))
+I updated the existing PAT to have Workflows read/write. I had preauthorized Actions thinking it was the same thing.
 
 ---
 

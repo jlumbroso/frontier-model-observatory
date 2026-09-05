@@ -13,7 +13,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "frontier-model-observatory"
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 ARCHIVE_NAME = f"frontier-model-observatory-{VERSION}.zip"
 FIXED_TIME = (1980, 1, 1, 0, 0, 0)
 

@@ -582,5 +582,5 @@ package-skill:
 
 [group('skill')]
 [doc("Build deterministic skill and dataset assets for a release")]
-package-release version="0.1.0":
+package-release version="0.1.1":
     python scripts/package_release.py --version "{{version}}"

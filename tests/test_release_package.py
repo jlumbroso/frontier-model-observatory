@@ -15,8 +15,8 @@ class ReleasePackageTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as first_dir, tempfile.TemporaryDirectory() as second_dir:
             first = Path(first_dir)
             second = Path(second_dir)
-            package_release.build(first, "0.1.0")
-            package_release.build(second, "0.1.0")
+            package_release.build(first, "0.1.1")
+            package_release.build(second, "0.1.1")
             first_files = {
                 path.name: path.read_bytes()
                 for path in first.iterdir()
@@ -29,8 +29,8 @@ class ReleasePackageTests(unittest.TestCase):
             }
 
         self.assertEqual(first_files, second_files)
-        self.assertIn("frontier-model-observatory-0.1.0.zip", first_files)
-        self.assertIn("fmo-extracted-text-0.1.0.zip", first_files)
+        self.assertIn("frontier-model-observatory-0.1.1.zip", first_files)
+        self.assertIn("fmo-extracted-text-0.1.1.zip", first_files)
         self.assertIn("fmo-records.jsonl", first_files)
         self.assertIn("fmo.sqlite", first_files)
         self.assertIn("dataset-manifest.json", first_files)
@@ -41,7 +41,7 @@ class ReleasePackageTests(unittest.TestCase):
         self.assertIn("release-manifest.json", first_files)
         self.assertIn("SHA256SUMS", first_files)
         with zipfile.ZipFile(
-            BytesIO(first_files["fmo-extracted-text-0.1.0.zip"])
+            BytesIO(first_files["fmo-extracted-text-0.1.1.zip"])
         ) as archive:
             names = archive.namelist()
             manifest = json.loads(archive.read("manifest.json"))

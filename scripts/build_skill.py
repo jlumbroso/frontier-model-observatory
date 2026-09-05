@@ -13,7 +13,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "frontier-model-observatory"
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 SNAPSHOT_DATE = "2026-09-05"
 FILES = [
     "fmo-records.jsonl",

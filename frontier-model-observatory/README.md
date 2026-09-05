@@ -31,5 +31,5 @@ Queries beyond it should escalate to current official-source research.
 The canonical repository is
 `https://github.com/jlumbroso/frontier-model-observatory`.
 
-Version: 0.1.0  
+Version: 0.1.1
 License: MIT

@@ -5,7 +5,7 @@ license: MIT
 compatibility: "Bundled snapshot queries require Python 3.10+. Live updates require web access. The snapshot is useful without either."
 metadata:
   author: "Jérémie Lumbroso and GPT 5.6 Sol at Perplexity Computer"
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Frontier Model Observatory

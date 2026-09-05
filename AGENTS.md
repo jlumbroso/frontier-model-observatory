@@ -236,6 +236,10 @@ and commit them separately with `chore: script for ...` and qualify the purpose.
 
 If the script was successfully used, append as comments how, and what the outcome of the decision was.
 
+### Promote repetition into the `justfile`
+
+The `justfile` is an open, evolving operational interface. When code or a shell sequence is executed more than once, evaluate it for promotion into a named, documented recipe so it is summonable without reconstruction. Keep substantial logic in tested scripts or source modules; keep recipes thin and discoverable with `doc()`. See `docs/adr/0005-summonable-recurring-operations.md`.
+
 ---
 
 ## Project Context
@@ -257,6 +261,7 @@ The repository preserves original artifacts where lawful and practical, separate
 ### Key decisions made:
 
 - Project-wide guidance is canonical in `AGENTS.md`; provider-specific instruction files are adapters, not duplicate truth. See `docs/adr/0001-portable-agent-instructions.md`.
+- Repeated operations graduate into documented `justfile` recipes. See `docs/adr/0005-summonable-recurring-operations.md`.
 - The Prime Directive and Secondary Directive remain load-bearing.
 - Primary artifacts, claim-level provenance, explicit uncertainty, and temporal/version identity are foundational rather than optional enrichment.
 - Human-readable and machine-readable views must derive from common canonical records.

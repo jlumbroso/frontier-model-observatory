@@ -274,9 +274,47 @@ def checks_for(root: Path) -> list[CheckResult]:
         checks.append(
             pending_check("schemas", "Schema validation", "schemas does not exist yet.")
         )
+    if (root / "data").exists():
+        checks.append(
+            run_check(
+                root,
+                "canonical",
+                "Canonical record validation",
+                [
+                    sys.executable,
+                    "scripts/validate_records.py",
+                    "data",
+                    "--exclusion-policy",
+                    "policy/exclusions.json",
+                ],
+            )
+        )
+    else:
+        checks.append(
+            pending_check(
+                "canonical",
+                "Canonical record validation",
+                "data does not exist yet.",
+            )
+        )
+    if (root / "artifacts").exists() and (root / "data" / "byte-objects.jsonl").exists():
+        checks.append(
+            run_check(
+                root,
+                "archive",
+                "Artifact integrity",
+                [sys.executable, "scripts/check_artifacts.py"],
+            )
+        )
+    else:
+        checks.append(
+            pending_check(
+                "archive",
+                "Artifact integrity",
+                "artifacts or data/byte-objects.jsonl does not exist yet.",
+            )
+        )
     subsystems = [
-        ("canonical", "Canonical record validation", root / "data"),
-        ("archive", "Artifact integrity", root / "artifacts"),
         ("views", "Generated-view freshness", root / "views"),
         ("skill", "Skill validation and packaging", root / "frontier-model-observatory"),
     ]

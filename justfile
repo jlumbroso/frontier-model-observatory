@@ -489,6 +489,11 @@ check-exclusions:
     python scripts/check_exclusions.py
 
 [group('verify')]
+[doc("Verify materialized archive hashes, media types, paths, and LFS policy")]
+check-artifacts:
+    python scripts/check_artifacts.py
+
+[group('verify')]
 [doc("Run the repository verification gate")]
 verify:
     python scripts/verify.py

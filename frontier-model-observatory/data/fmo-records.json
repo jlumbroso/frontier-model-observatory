@@ -1,0 +1,4406 @@
+[
+  {
+    "absence_type": "not_found",
+    "basis": "The provider index addresses the model card as a page-located part of the larger technical report; no standalone model-card artifact was found in the bounded calibration search.",
+    "canonical_key": "google-deepmind/gemini-robotics-1-5/standalone-model-card/not-found/2026-09-05",
+    "checked_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "expected_artifact_class": "model_disclosure",
+    "id": "fmo:absence:01a0706c-ef58-70f6-b668-6439f84c5592",
+    "lifecycle": "current",
+    "next_check_at": {
+      "basis": "observatory_inference",
+      "precision": "month",
+      "qualifier": "approximate",
+      "value": "2027-03"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "absence",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "retrieval_event_ids": [
+      "fmo:retrieval:01a0706c-efaa-7285-a7a0-fbd1353e721a"
+    ],
+    "schema_version": "1.0.0",
+    "search_scope": {
+      "description": "Google DeepMind model-card index and the official technical-report target checked during calibration",
+      "surface_url_ids": [
+        "fmo:url:01a0706c-ee8d-7095-ab23-bf2a940e888f"
+      ]
+    },
+    "target": {
+      "description_native": "standalone model card document for Gemini Robotics 1.5 and Gemini Robotics-ER 1.5"
+    }
+  },
+  {
+    "absence_type": "excluded_by_policy",
+    "basis": "Raw provider-page bytes contain excluded subject matter; retain URL, retrieval, and hash records without committing the capture.",
+    "canonical_key": "google-deepmind/gemma-4/raw-html-materialization/excluded-by-policy",
+    "checked_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "expected_record_type": "materialized_byte_object",
+    "id": "fmo:absence:01a07078-ed08-76da-a1b2-a478a051e37c",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "absence",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "search_scope": {
+      "description": "The fetched official HTML capture was checked against the canonical repository exclusion policy."
+    },
+    "target": {
+      "description_native": "raw HTML capture materialization",
+      "subject_id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550"
+    }
+  },
+  {
+    "artifact_class": "technical_report",
+    "canonical_key": "google-deepmind/gemini-robotics-1-5-technical-report",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7"
+    ],
+    "id": "fmo:artifact:01a0706c-ee14-76c6-b3c7-a86492682718",
+    "native_artifact_type": {
+      "native": "technical report",
+      "normalized": "technical_report"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots",
+    "publisher_org_ids": [
+      "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a0706c-edc2-711d-8771-383ccfb5a2dc"
+      },
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a0706c-edec-7255-a68b-80d535b91a64"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "anthropic/claude-opus-4-6-system-card",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07073-5121-70e0-8081-1e08863f9399"
+    ],
+    "id": "fmo:artifact:01a07073-5121-70e0-8081-1e07ba2b75f3",
+    "native_artifact_type": {
+      "native": "System Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "Claude Opus 4.6 System Card",
+    "publisher_org_ids": [
+      "fmo:org:01a07073-5120-721d-866f-22c6b3df1226"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07073-5120-721d-866f-22c800eb0fe5"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07073-5138-71cc-a851-cccfafd85401"
+    ],
+    "id": "fmo:artifact:01a07073-5138-71cc-a851-cccee80a9667",
+    "native_artifact_type": {
+      "native": "System Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "Claude Fable 5.1 & Claude Mythos 5.1 System Card",
+    "publisher_org_ids": [
+      "fmo:org:01a07073-5120-721d-866f-22c6b3df1226"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "configuration",
+        "subject_id": "fmo:configuration:01a07073-5120-721d-866f-22c94c59d570"
+      },
+      {
+        "scope_role": "configuration",
+        "subject_id": "fmo:configuration:01a07073-5120-721d-866f-22ca52786b23"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "openai/o1-system-card",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07073-515c-7540-9419-1390a4979cd4"
+    ],
+    "id": "fmo:artifact:01a07073-5155-7565-a2d3-aacc0b5955b2",
+    "native_artifact_type": {
+      "native": "System Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "OpenAI o1 System Card",
+    "publisher_org_ids": [
+      "fmo:org:01a07073-5120-721d-866f-22cbdc29d637"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "checkpoint",
+        "subject_id": "fmo:checkpoint:01a07073-5120-721d-866f-22ce42a209f3"
+      },
+      {
+        "scope_role": "checkpoint",
+        "subject_id": "fmo:checkpoint:01a07073-5120-721d-866f-22cf14bbe1ea"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "openai/gpt-live-system-card",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07073-5164-742f-a28e-fc1d56cbbf56"
+    ],
+    "id": "fmo:artifact:01a07073-5164-742f-a28e-fc1ce64af12c",
+    "native_artifact_type": {
+      "native": "System Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "GPT-Live System Card",
+    "publisher_org_ids": [
+      "fmo:org:01a07073-5120-721d-866f-22cbdc29d637"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07073-5120-721d-866f-22d15d95d2eb"
+      },
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07073-5120-721d-866f-22d2be7adc98"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "google-deepmind/gemini-3-pro-model-card",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07073-5164-742f-a28e-fc22ac41f457"
+    ],
+    "id": "fmo:artifact:01a07073-5164-742f-a28e-fc2166fc5e64",
+    "native_artifact_type": {
+      "native": "Model Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "Gemini 3 Pro Model Card",
+    "publisher_org_ids": [
+      "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07073-5120-721d-866f-22d49a7b1e19"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "google-deepmind/veo-3-model-card",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07073-5166-7742-80e1-9285184289d2"
+    ],
+    "id": "fmo:artifact:01a07073-5166-7742-80e1-92846b9d6cdc",
+    "native_artifact_type": {
+      "native": "Model Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "Veo 3 Model Card",
+    "prospective_scope_native": "covers Veo 3 and subsequent versions",
+    "publisher_org_ids": [
+      "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "prospective",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07073-5121-70e0-8081-1e06f36d3b1d"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "anthropic/claude-4-system-card",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0960ea04f55"
+    ],
+    "id": "fmo:artifact:01a07078-ecf1-75b4-9b5a-c0943548ade4",
+    "native_artifact_type": {
+      "native": "System Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "Claude 4 System Card",
+    "publisher_org_ids": [
+      "fmo:org:01a07073-5120-721d-866f-22c6b3df1226"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07078-ecf1-75b4-9b5a-c09215e90101"
+      },
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07078-ecf1-75b4-9b5a-c0933211f9c8"
+      }
+    ]
+  },
+  {
+    "artifact_class": "system_prompt",
+    "canonical_key": "anthropic/claude-opus-5-system-prompt",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07078-ed03-70e4-b949-3124eca4e9df"
+    ],
+    "id": "fmo:artifact:01a07078-ed03-70e4-b949-3123f8932edd",
+    "native_artifact_type": {
+      "native": "system prompts",
+      "normalized": "system_prompt"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_documentation",
+    "preferred_title": "Claude Opus 5 system prompts",
+    "publisher_org_ids": [
+      "fmo:org:01a07073-5120-721d-866f-22c6b3df1226"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07078-ed03-70e4-b949-31210ad324d8"
+      },
+      {
+        "scope_role": "product",
+        "subject_id": "fmo:product:01a07078-ed03-70e4-b949-31220b3bd02d"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "openai/gpt-5-system-card",
+    "corpus_partition": "main",
+    "id": "fmo:artifact:01a07078-ed04-76cd-8a7c-850f27d67c65",
+    "native_artifact_type": {
+      "native": "System Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "GPT-5 System Card",
+    "publisher_org_ids": [
+      "fmo:org:01a07073-5120-721d-866f-22cbdc29d637"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:family:01a07078-ed04-76cd-8a7c-850c7472cbab"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "openai/gpt-5-2-system-card-update",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07078-ed04-76cd-8a7c-85113f9d163e"
+    ],
+    "id": "fmo:artifact:01a07078-ed04-76cd-8a7c-8510c0b99baf",
+    "native_artifact_type": {
+      "native": "Update to GPT-5 System Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "Update to GPT-5 System Card: GPT-5.2",
+    "publisher_org_ids": [
+      "fmo:org:01a07073-5120-721d-866f-22cbdc29d637"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07078-ed04-76cd-8a7c-850deb414333"
+      },
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07078-ed04-76cd-8a7c-850ebef2631b"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "openai/sora-2-system-card",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07078-ed08-76da-a1b2-a467aa605471"
+    ],
+    "id": "fmo:artifact:01a07078-ed08-76da-a1b2-a46622eecc25",
+    "native_artifact_type": {
+      "native": "System Card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_published",
+    "preferred_title": "Sora 2 System Card",
+    "publisher_org_ids": [
+      "fmo:org:01a07073-5120-721d-866f-22cbdc29d637"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07078-ed08-76da-a1b2-a4643d6ce8d9"
+      },
+      {
+        "scope_role": "product",
+        "subject_id": "fmo:product:01a07078-ed08-76da-a1b2-a4655be00e89"
+      }
+    ]
+  },
+  {
+    "artifact_class": "model_disclosure",
+    "canonical_key": "google-deepmind/gemma-4-model-card",
+    "corpus_partition": "main",
+    "current_version_ids": [
+      "fmo:artifact-version:01a07078-ed08-76da-a1b2-a47555ddd795"
+    ],
+    "id": "fmo:artifact:01a07078-ed08-76da-a1b2-a474b5d2f636",
+    "native_artifact_type": {
+      "native": "model card",
+      "normalized": "model_disclosure"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "officiality": "provider_documentation",
+    "preferred_title": "Gemma 4 model card",
+    "publisher_org_ids": [
+      "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1"
+    ],
+    "record_status": "active",
+    "record_type": "artifact",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "redistribution_status": "review_required",
+    "schema_version": "1.0.0",
+    "scope_temporality": "current",
+    "subject_refs": [
+      {
+        "scope_role": "primary",
+        "subject_id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550"
+      },
+      {
+        "scope_role": "configuration",
+        "subject_id": "fmo:configuration:01a07078-ed08-76da-a1b2-a46dc49d70e1"
+      },
+      {
+        "scope_role": "configuration",
+        "subject_id": "fmo:configuration:01a07078-ed08-76da-a1b2-a46eb2bd2bcb"
+      },
+      {
+        "scope_role": "configuration",
+        "subject_id": "fmo:configuration:01a07078-ed08-76da-a1b2-a46f13c4b832"
+      },
+      {
+        "scope_role": "configuration",
+        "subject_id": "fmo:configuration:01a07078-ed08-76da-a1b2-a4706af9146f"
+      },
+      {
+        "scope_role": "configuration",
+        "subject_id": "fmo:configuration:01a07078-ed08-76da-a1b2-a471b3727a64"
+      },
+      {
+        "scope_role": "configuration",
+        "subject_id": "fmo:configuration:01a07078-ed08-76da-a1b2-a4729c9c05dc"
+      },
+      {
+        "scope_role": "configuration",
+        "subject_id": "fmo:configuration:01a07078-ed08-76da-a1b2-a473d2efa8ad"
+      }
+    ]
+  },
+  {
+    "artifact_class_override": "model_disclosure",
+    "artifact_version_id": "fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7",
+    "byte_object_id": "fmo:sha256:b41a2f732f4755c7564b973bcc6ff8aebf3bb9a9f163328437e89533d372b2f4",
+    "canonical_key": "google-deepmind/gemini-robotics-1-5-technical-report/appendix-a-table-2",
+    "id": "fmo:part:01a0706c-eeb4-7658-98ac-4674e8708e50",
+    "label_native": "Appendix A. Model Card",
+    "locator": {
+      "page_range": {
+        "end": 30,
+        "scheme": "pdf_index",
+        "start": 30
+      },
+      "table": "Table 2"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "part_kind": "appendix",
+    "record_status": "active",
+    "record_type": "artifact_part",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "schema_version": "1.0.0",
+    "subject_ids": [
+      "fmo:model:01a0706c-edc2-711d-8771-383ccfb5a2dc",
+      "fmo:model:01a0706c-edec-7255-a68b-80d535b91a64"
+    ]
+  },
+  {
+    "canonical_key": "google-deepmind/gemini-robotics-1-5-model-card/part-of-technical-report",
+    "evidence": [
+      {
+        "artifact_part_id": "fmo:part:01a0706c-eeb4-7658-98ac-4674e8708e50",
+        "artifact_version_id": "fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7",
+        "page": 30,
+        "table": "Table 2"
+      }
+    ],
+    "id": "fmo:artifact-relationship:01a0706c-eedf-76cb-b7a3-456ef9748509",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "artifact_relationship",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "relationship_type": "part_of",
+    "relationship_type_native": "Appendix A. Model Card",
+    "schema_version": "1.0.0",
+    "source_ref": {
+      "id": "fmo:part:01a0706c-eeb4-7658-98ac-4674e8708e50",
+      "record_type": "artifact_part"
+    },
+    "target_ref": {
+      "id": "fmo:artifact:01a0706c-ee14-76c6-b3c7-a86492682718",
+      "record_type": "artifact"
+    },
+    "valid_time": {
+      "start": {
+        "basis": "index_surface",
+        "precision": "day",
+        "value": "2025-09-25"
+      },
+      "status": "known"
+    }
+  },
+  {
+    "canonical_key": "openai/gpt-5-2-system-card-update/updates/gpt-5-system-card",
+    "evidence": [
+      {
+        "artifact_version_id": "fmo:artifact-version:01a07078-ed04-76cd-8a7c-85113f9d163e",
+        "page": 1,
+        "text_quote": "Update to GPT-5 System Card: GPT-5.2"
+      }
+    ],
+    "id": "fmo:artifact-relationship:01a07078-ed08-76da-a1b2-a461b1455ba2",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "artifact_relationship",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "relationship_type": "updates",
+    "relationship_type_native": "Update to GPT-5 System Card",
+    "schema_version": "1.0.0",
+    "source_ref": {
+      "id": "fmo:artifact:01a07078-ed04-76cd-8a7c-8510c0b99baf",
+      "record_type": "artifact"
+    },
+    "target_ref": {
+      "id": "fmo:artifact:01a07078-ed04-76cd-8a7c-850f27d67c65",
+      "record_type": "artifact"
+    },
+    "valid_time": {
+      "start": {
+        "basis": "artifact_cover",
+        "precision": "day",
+        "value": "2025-12-11"
+      },
+      "status": "known"
+    }
+  },
+  {
+    "artifact_id": "fmo:artifact:01a0706c-ee14-76c6-b3c7-a86492682718",
+    "byte_object_ids": [
+      "fmo:sha256:b41a2f732f4755c7564b973bcc6ff8aebf3bb9a9f163328437e89533d372b2f4"
+    ],
+    "canonical_key": "google-deepmind/gemini-robotics-1-5-technical-report/v1",
+    "date_assertions": [
+      {
+        "date_role": "index_listed",
+        "value": {
+          "basis": "index_surface",
+          "precision": "day",
+          "value": "2025-09-25"
+        }
+      },
+      {
+        "date_role": "other",
+        "date_role_native": "PDF CreationDate and ModDate",
+        "value": {
+          "basis": "artifact_metadata",
+          "precision": "instant",
+          "value": "2025-09-24T22:47:47Z"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2025-09-25"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 62,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Gemini Robotics 1.5: Pushing the Frontier of Generalist Robots",
+    "url_alias_ids": [
+      "fmo:url:01a0706c-ee64-7474-888c-ae18892a4147",
+      "fmo:url:01a0706c-ee8d-7095-ab23-bf2a940e888f"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07073-5121-70e0-8081-1e07ba2b75f3",
+    "byte_object_ids": [
+      "fmo:sha256:4db67c6b6aea0a87e7f8a784b83fc05a0f1a61a3e87615fe7956e3486b951b3c"
+    ],
+    "canonical_key": "anthropic/claude-opus-4-6-system-card/v1",
+    "date_assertions": [
+      {
+        "date_role": "index_listed",
+        "value": {
+          "basis": "index_surface",
+          "precision": "month",
+          "value": "2026-02"
+        }
+      },
+      {
+        "date_role": "other",
+        "date_role_native": "PDF CreationDate and ModDate",
+        "value": {
+          "basis": "artifact_metadata",
+          "precision": "instant",
+          "value": "2026-03-06T17:06:30Z"
+        }
+      },
+      {
+        "date_role": "revised",
+        "value": {
+          "basis": "artifact_body",
+          "precision": "day",
+          "value": "2026-03-06"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07073-5121-70e0-8081-1e08863f9399",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 213,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Claude Opus 4.6 System Card - Google Docs",
+    "url_alias_ids": [
+      "fmo:url:01a07073-5121-70e0-8081-1e099a144f1a"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07073-5138-71cc-a851-cccee80a9667",
+    "byte_object_ids": [
+      "fmo:sha256:b0d59edc7a60eef32a879c13d713cce60c3fefd7e6b5183afdc8b835af3c8c39"
+    ],
+    "canonical_key": "anthropic/claude-fable-5-1-mythos-5-1-system-card/v1",
+    "date_assertions": [
+      {
+        "date_role": "published",
+        "value": {
+          "basis": "artifact_cover",
+          "precision": "day",
+          "value": "2026-09-01"
+        }
+      },
+      {
+        "date_role": "index_listed",
+        "value": {
+          "basis": "index_surface",
+          "precision": "month",
+          "value": "2026-09"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07073-5138-71cc-a851-cccfafd85401",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 212,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Claude Fable 5.1 & Claude Mythos 5.1 System Card",
+    "url_alias_ids": [
+      "fmo:url:01a07073-5138-71cc-a851-ccd03967fc8a"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07073-5155-7565-a2d3-aacc0b5955b2",
+    "byte_object_ids": [
+      "fmo:sha256:504f98072cf732afb89d728e5be94a1c1ec663c2e70f3299d8676f7dfad1d55a"
+    ],
+    "canonical_key": "openai/o1-system-card/v1",
+    "date_assertions": [
+      {
+        "date_role": "cover_date",
+        "value": {
+          "basis": "artifact_cover",
+          "precision": "day",
+          "value": "2024-09-12"
+        }
+      },
+      {
+        "date_role": "other",
+        "date_role_native": "PDF CreationDate and ModDate",
+        "value": {
+          "basis": "artifact_metadata",
+          "precision": "instant",
+          "value": "2024-09-13T05:44:59Z"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2024-09-14"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07073-5155-7565-a2d3-aacdbf9a6957",
+    "lifecycle": "superseded",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 43,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "OpenAI o1 System Card",
+    "url_alias_ids": [
+      "fmo:url:01a07073-5155-7565-a2d3-aaceac3a98ed"
+    ],
+    "version_label_native": "September 2024 initial",
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07073-5155-7565-a2d3-aacc0b5955b2",
+    "byte_object_ids": [
+      "fmo:sha256:228ef12983ba9bc93aa7d64f95b711b89652be045550585c5e0a9d3b74795bfd"
+    ],
+    "canonical_key": "openai/o1-system-card/v2",
+    "date_assertions": [
+      {
+        "date_role": "cover_date",
+        "value": {
+          "basis": "artifact_cover",
+          "precision": "day",
+          "value": "2024-09-12"
+        }
+      },
+      {
+        "date_role": "other",
+        "date_role_native": "PDF CreationDate and ModDate",
+        "value": {
+          "basis": "artifact_metadata",
+          "precision": "instant",
+          "value": "2024-12-04T01:55:31Z"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2024-12-04"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07073-5159-7103-bd69-93c5fa75d1bb",
+    "lifecycle": "superseded",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 42,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "supersedes_version_ids": [
+      "fmo:artifact-version:01a07073-5155-7565-a2d3-aacdbf9a6957"
+    ],
+    "title_native": "OpenAI o1 System Card",
+    "url_alias_ids": [
+      "fmo:url:01a07073-5159-7103-bd69-93c6cb85c5ee"
+    ],
+    "version_label_native": "September 2024 annotated reissue",
+    "version_ordinal": 2
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07073-5155-7565-a2d3-aacc0b5955b2",
+    "byte_object_ids": [
+      "fmo:sha256:3ba7bdbe69e022f6be0527edbfe18ac1becdea48d5be9891ab764ff336c8a033"
+    ],
+    "canonical_key": "openai/o1-system-card/v3",
+    "date_assertions": [
+      {
+        "date_role": "cover_date",
+        "value": {
+          "basis": "artifact_cover",
+          "precision": "day",
+          "value": "2024-12-05"
+        }
+      },
+      {
+        "date_role": "other",
+        "date_role_native": "PDF CreationDate and ModDate",
+        "value": {
+          "basis": "artifact_metadata",
+          "precision": "instant",
+          "value": "2025-02-14T23:44:40Z"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2025-02-15"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07073-515c-7540-9419-1390a4979cd4",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 52,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "supersedes_version_ids": [
+      "fmo:artifact-version:01a07073-5159-7103-bd69-93c5fa75d1bb"
+    ],
+    "title_native": "OpenAI o1 System Card",
+    "url_alias_ids": [
+      "fmo:url:01a07073-515c-7540-9419-139195c87eb0"
+    ],
+    "version_label_native": "December 2024 general availability",
+    "version_ordinal": 3
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07073-5164-742f-a28e-fc1ce64af12c",
+    "byte_object_ids": [
+      "fmo:sha256:8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d"
+    ],
+    "canonical_key": "openai/gpt-live-system-card/v1",
+    "date_assertions": [
+      {
+        "date_role": "cover_date",
+        "value": {
+          "basis": "artifact_cover",
+          "precision": "day",
+          "value": "2026-07-08"
+        }
+      },
+      {
+        "date_role": "index_listed",
+        "value": {
+          "basis": "index_surface",
+          "precision": "day",
+          "value": "2026-07-08"
+        }
+      },
+      {
+        "date_role": "revised",
+        "value": {
+          "basis": "artifact_body",
+          "precision": "day",
+          "value": "2026-08-04"
+        }
+      },
+      {
+        "date_role": "other",
+        "date_role_native": "PDF CreationDate and ModDate",
+        "value": {
+          "basis": "artifact_metadata",
+          "precision": "instant",
+          "value": "2025-12-17T19:27:05Z"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2026-09-05"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07073-5164-742f-a28e-fc1d56cbbf56",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 7,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "GPT-Live System Card",
+    "url_alias_ids": [
+      "fmo:url:01a07073-5164-742f-a28e-fc1eeeadac83"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07073-5164-742f-a28e-fc2166fc5e64",
+    "byte_object_ids": [
+      "fmo:sha256:9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8"
+    ],
+    "canonical_key": "google-deepmind/gemini-3-pro-model-card/v1",
+    "date_assertions": [
+      {
+        "date_role": "published",
+        "value": {
+          "basis": "artifact_body",
+          "precision": "month",
+          "value": "2025-11"
+        }
+      },
+      {
+        "date_role": "index_listed",
+        "value": {
+          "basis": "index_surface",
+          "precision": "day",
+          "value": "2025-11-18"
+        }
+      },
+      {
+        "date_role": "revised",
+        "value": {
+          "basis": "artifact_body",
+          "precision": "month",
+          "value": "2026-05"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2026-05-22"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07073-5164-742f-a28e-fc22ac41f457",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 10,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Gemini 3 Pro Model Card (May 2026)",
+    "url_alias_ids": [
+      "fmo:url:01a07073-5164-742f-a28e-fc23e2e82689"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07073-5166-7742-80e1-92846b9d6cdc",
+    "byte_object_ids": [
+      "fmo:sha256:805ca645079c287664890bdea737e22ebc8a66aca6e8f0a03d0ffeca86c4d17f"
+    ],
+    "canonical_key": "google-deepmind/veo-3-model-card/v1",
+    "date_assertions": [
+      {
+        "date_role": "published",
+        "value": {
+          "basis": "artifact_body",
+          "precision": "day",
+          "value": "2025-05-23"
+        }
+      },
+      {
+        "date_role": "revised",
+        "value": {
+          "basis": "artifact_body",
+          "precision": "day",
+          "value": "2026-01-13"
+        }
+      },
+      {
+        "date_role": "index_listed",
+        "value": {
+          "basis": "index_surface",
+          "precision": "day",
+          "value": "2026-01-13"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2026-03-26"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07073-5166-7742-80e1-9285184289d2",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 6,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Veo 3 Model Card (January 2026)",
+    "url_alias_ids": [
+      "fmo:url:01a07073-5166-7742-80e1-9286fb3016fe"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07078-ecf1-75b4-9b5a-c0943548ade4",
+    "byte_object_ids": [
+      "fmo:sha256:48d4d98c5767d02308ba68b595e344c4fd53fbef11f0f9ac351e8752a9129764"
+    ],
+    "canonical_key": "anthropic/claude-4-system-card/v1",
+    "date_assertions": [
+      {
+        "date_role": "cover_date",
+        "value": {
+          "basis": "artifact_cover",
+          "precision": "month",
+          "value": "2025-05"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2025-05-22"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0951c44306f",
+    "lifecycle": "superseded",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 120,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Claude 4 System Card",
+    "url_alias_ids": [
+      "fmo:url:01a07078-ecfa-7068-88a5-df663184ad1b"
+    ],
+    "version_label_native": "May 2025 earlier bytes",
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07078-ecf1-75b4-9b5a-c0943548ade4",
+    "byte_object_ids": [
+      "fmo:sha256:c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4"
+    ],
+    "canonical_key": "anthropic/claude-4-system-card/v2",
+    "date_assertions": [
+      {
+        "date_role": "cover_date",
+        "value": {
+          "basis": "artifact_cover",
+          "precision": "month",
+          "value": "2025-05"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2025-07-15"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0960ea04f55",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 123,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "supersedes_version_ids": [
+      "fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0951c44306f"
+    ],
+    "title_native": "Claude 4 System Card",
+    "url_alias_ids": [
+      "fmo:url:01a07078-ed03-70e4-b949-311e5949521d"
+    ],
+    "version_label_native": "July 2025 current bytes",
+    "version_ordinal": 2
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07078-ed03-70e4-b949-3123f8932edd",
+    "byte_object_ids": [
+      "fmo:sha256:921f46cf64ed0cc9e4a1fa54368116d0d3232b3fdde53f6360032140c052c5c5"
+    ],
+    "canonical_key": "anthropic/claude-opus-5-system-prompt/v1",
+    "date_assertions": [
+      {
+        "date_role": "published",
+        "value": {
+          "basis": "artifact_body",
+          "precision": "day",
+          "value": "2026-07-24"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07078-ed03-70e4-b949-3124eca4e9df",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "representation_kinds": [
+      "html"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Claude Opus 5 system prompts",
+    "url_alias_ids": [
+      "fmo:url:01a07078-ed04-76cd-8a7c-850940114b37"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07078-ed04-76cd-8a7c-8510c0b99baf",
+    "byte_object_ids": [
+      "fmo:sha256:37df7ab47f5c142891d25a1f351a7b3e9d1e38f5e13b8346ac15ed6470074db0"
+    ],
+    "canonical_key": "openai/gpt-5-2-system-card-update/v1",
+    "date_assertions": [
+      {
+        "date_role": "published",
+        "value": {
+          "basis": "artifact_cover",
+          "precision": "day",
+          "value": "2025-12-11"
+        }
+      },
+      {
+        "date_role": "other",
+        "date_role_native": "PDF CreationDate and ModDate",
+        "value": {
+          "basis": "artifact_metadata",
+          "precision": "instant",
+          "value": "2025-12-11T16:46:24Z"
+        }
+      },
+      {
+        "date_role": "transport_last_modified",
+        "value": {
+          "basis": "transport_header",
+          "precision": "day",
+          "value": "2025-12-11"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07078-ed04-76cd-8a7c-85113f9d163e",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "page_count": 27,
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "representation_kinds": [
+      "pdf"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Update to GPT-5 System Card: GPT-5.2",
+    "url_alias_ids": [
+      "fmo:url:01a07078-ed08-76da-a1b2-a45fd76ca4e6"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07078-ed08-76da-a1b2-a46622eecc25",
+    "byte_object_ids": [
+      "fmo:sha256:ab7616d162b29f90227013bb40bf10dd6f809ce38b0e6ba450bede2317b16b76"
+    ],
+    "canonical_key": "openai/sora-2-system-card/v1",
+    "date_assertions": [
+      {
+        "date_role": "other",
+        "date_role_native": "managed fetch published_date",
+        "value": {
+          "basis": "artifact_metadata",
+          "precision": "day",
+          "value": "2025-09-30"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07078-ed08-76da-a1b2-a467aa605471",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "representation_kinds": [
+      "html"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Sora 2 System Card",
+    "url_alias_ids": [
+      "fmo:url:01a07078-ed08-76da-a1b2-a46834b83557"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "artifact_id": "fmo:artifact:01a07078-ed08-76da-a1b2-a474b5d2f636",
+    "byte_object_ids": [
+      "fmo:sha256:c068dd88ad4ec9f13e0589cad1673bea95e94690a4201def518dbcb203ce6b33"
+    ],
+    "canonical_key": "google-deepmind/gemma-4-model-card/v1",
+    "date_assertions": [
+      {
+        "date_role": "index_listed",
+        "value": {
+          "basis": "index_surface",
+          "precision": "day",
+          "value": "2026-04-02"
+        }
+      },
+      {
+        "date_role": "platform_last_updated",
+        "value": {
+          "basis": "artifact_metadata",
+          "precision": "day",
+          "value": "2026-07-30"
+        }
+      }
+    ],
+    "id": "fmo:artifact-version:01a07078-ed08-76da-a1b2-a47555ddd795",
+    "lifecycle": "current",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "artifact_version",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "representation_kinds": [
+      "html"
+    ],
+    "schema_version": "1.0.0",
+    "title_native": "Gemma 4 model card",
+    "url_alias_ids": [
+      "fmo:url:01a07078-ed08-76da-a1b2-a47641a11bab"
+    ],
+    "version_ordinal": 1
+  },
+  {
+    "byte_length": 2036181,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:228ef12983ba9bc93aa7d64f95b711b89652be045550585c5e0a9d3b74795bfd",
+    "media_type_declared": "application/pdf",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "228ef12983ba9bc93aa7d64f95b711b89652be045550585c5e0a9d3b74795bfd",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/22/228ef12983ba9bc93aa7d64f95b711b89652be045550585c5e0a9d3b74795bfd/original.pdf"
+    }
+  },
+  {
+    "byte_length": 2141522,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:37df7ab47f5c142891d25a1f351a7b3e9d1e38f5e13b8346ac15ed6470074db0",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "37df7ab47f5c142891d25a1f351a7b3e9d1e38f5e13b8346ac15ed6470074db0",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/37/37df7ab47f5c142891d25a1f351a7b3e9d1e38f5e13b8346ac15ed6470074db0/original.pdf"
+    }
+  },
+  {
+    "byte_length": 4720304,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:3ba7bdbe69e022f6be0527edbfe18ac1becdea48d5be9891ab764ff336c8a033",
+    "media_type_declared": "application/pdf",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "3ba7bdbe69e022f6be0527edbfe18ac1becdea48d5be9891ab764ff336c8a033",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/3b/3ba7bdbe69e022f6be0527edbfe18ac1becdea48d5be9891ab764ff336c8a033/original.pdf"
+    }
+  },
+  {
+    "byte_length": 4876911,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:48d4d98c5767d02308ba68b595e344c4fd53fbef11f0f9ac351e8752a9129764",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "48d4d98c5767d02308ba68b595e344c4fd53fbef11f0f9ac351e8752a9129764",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/48/48d4d98c5767d02308ba68b595e344c4fd53fbef11f0f9ac351e8752a9129764/original.pdf"
+    }
+  },
+  {
+    "byte_length": 13208951,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:4db67c6b6aea0a87e7f8a784b83fc05a0f1a61a3e87615fe7956e3486b951b3c",
+    "media_type_declared": "application/pdf",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "4db67c6b6aea0a87e7f8a784b83fc05a0f1a61a3e87615fe7956e3486b951b3c",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/4d/4db67c6b6aea0a87e7f8a784b83fc05a0f1a61a3e87615fe7956e3486b951b3c/original.pdf"
+    }
+  },
+  {
+    "byte_length": 1934631,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:504f98072cf732afb89d728e5be94a1c1ec663c2e70f3299d8676f7dfad1d55a",
+    "media_type_declared": "application/pdf",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "504f98072cf732afb89d728e5be94a1c1ec663c2e70f3299d8676f7dfad1d55a",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/50/504f98072cf732afb89d728e5be94a1c1ec663c2e70f3299d8676f7dfad1d55a/original.pdf"
+    }
+  },
+  {
+    "byte_length": 161385,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:805ca645079c287664890bdea737e22ebc8a66aca6e8f0a03d0ffeca86c4d17f",
+    "media_type_declared": "application/pdf",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "805ca645079c287664890bdea737e22ebc8a66aca6e8f0a03d0ffeca86c4d17f",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/80/805ca645079c287664890bdea737e22ebc8a66aca6e8f0a03d0ffeca86c4d17f/original.pdf"
+    }
+  },
+  {
+    "byte_length": 43639,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d",
+    "media_type_declared": "application/pdf",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/8a/8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d/original.pdf"
+    }
+  },
+  {
+    "byte_length": 461476,
+    "derivation": "captured_html",
+    "id": "fmo:sha256:921f46cf64ed0cc9e4a1fa54368116d0d3232b3fdde53f6360032140c052c5c5",
+    "media_type_detected": "text/html",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "921f46cf64ed0cc9e4a1fa54368116d0d3232b3fdde53f6360032140c052c5c5",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git",
+      "locator": "artifacts/sha256/92/921f46cf64ed0cc9e4a1fa54368116d0d3232b3fdde53f6360032140c052c5c5/capture.html"
+    }
+  },
+  {
+    "byte_length": 834704,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8",
+    "media_type_declared": "application/pdf",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/9a/9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8/original.pdf"
+    }
+  },
+  {
+    "byte_length": 97762,
+    "derivation": "captured_html",
+    "id": "fmo:sha256:ab7616d162b29f90227013bb40bf10dd6f809ce38b0e6ba450bede2317b16b76",
+    "media_type_detected": "text/html",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "ab7616d162b29f90227013bb40bf10dd6f809ce38b0e6ba450bede2317b16b76",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git",
+      "locator": "artifacts/sha256/ab/ab7616d162b29f90227013bb40bf10dd6f809ce38b0e6ba450bede2317b16b76/capture.html"
+    }
+  },
+  {
+    "byte_length": 16397488,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:b0d59edc7a60eef32a879c13d713cce60c3fefd7e6b5183afdc8b835af3c8c39",
+    "media_type_declared": "application/pdf",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "b0d59edc7a60eef32a879c13d713cce60c3fefd7e6b5183afdc8b835af3c8c39",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/b0/b0d59edc7a60eef32a879c13d713cce60c3fefd7e6b5183afdc8b835af3c8c39/original.pdf"
+    }
+  },
+  {
+    "byte_length": 39642839,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:b41a2f732f4755c7564b973bcc6ff8aebf3bb9a9f163328437e89533d372b2f4",
+    "media_type_declared": "application/pdf",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "schema_version": "1.0.0",
+    "sha256": "b41a2f732f4755c7564b973bcc6ff8aebf3bb9a9f163328437e89533d372b2f4",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/b4/b41a2f732f4755c7564b973bcc6ff8aebf3bb9a9f163328437e89533d372b2f4/original.pdf"
+    }
+  },
+  {
+    "byte_length": 167405,
+    "derivation": "captured_html",
+    "id": "fmo:sha256:c068dd88ad4ec9f13e0589cad1673bea95e94690a4201def518dbcb203ce6b33",
+    "media_type_detected": "text/html",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "c068dd88ad4ec9f13e0589cad1673bea95e94690a4201def518dbcb203ce6b33",
+    "storage": {
+      "availability": "remote_only",
+      "backend": "external_only"
+    }
+  },
+  {
+    "byte_length": 4967773,
+    "derivation": "provider_original",
+    "id": "fmo:sha256:c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4",
+    "media_type_detected": "application/pdf",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "byte_object",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "sha256": "c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4",
+    "storage": {
+      "availability": "materialized",
+      "backend": "git_lfs",
+      "locator": "artifacts/sha256/c3/c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4/original.pdf"
+    }
+  },
+  {
+    "attribution": {
+      "actor_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+      "actor_type": "publisher"
+    },
+    "canonical_key": "google-deepmind/gemini-robotics-1-5/model-card-location",
+    "claim_kind": "assertion",
+    "epistemic_status": "stated",
+    "evidence": [
+      {
+        "artifact_part_id": "fmo:part:01a0706c-eeb4-7658-98ac-4674e8708e50",
+        "artifact_version_id": "fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7",
+        "page": 30,
+        "table": "Table 2",
+        "text_quote": "Appendix A. Model Card"
+      }
+    ],
+    "id": "fmo:claim:01a0706c-ef08-71b3-8531-7e29502c205e",
+    "lifecycle": "current",
+    "object": {
+      "type": "artifact_ref",
+      "value": "fmo:part:01a0706c-eeb4-7658-98ac-4674e8708e50"
+    },
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "predicate": {
+      "native": "Model Card location",
+      "normalized": "documented_in_part"
+    },
+    "record_status": "active",
+    "record_type": "claim",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "schema_version": "1.0.0",
+    "statement_native": "Appendix A. Model Card",
+    "subject_refs": [
+      {
+        "id": "fmo:model:01a0706c-edc2-711d-8771-383ccfb5a2dc",
+        "record_type": "entity"
+      },
+      {
+        "id": "fmo:model:01a0706c-edec-7255-a68b-80d535b91a64",
+        "record_type": "entity"
+      }
+    ],
+    "valid_time": {
+      "start": {
+        "basis": "index_surface",
+        "precision": "day",
+        "value": "2025-09-25"
+      },
+      "status": "open"
+    }
+  },
+  {
+    "absence_ids": [
+      "fmo:absence:01a0706c-ef58-70f6-b668-6439f84c5592"
+    ],
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/google-deepmind/gemini-robotics-1-5",
+    "coverage_basis": "Provider, family, two model subjects, report artifact and version, materialized bytes, official URLs, retrieval, embedded card part, relationship, claim, and typed standalone-card absence are represented.",
+    "coverage_status": "covered",
+    "covered_record_ids": [
+      "fmo:artifact:01a0706c-ee14-76c6-b3c7-a86492682718",
+      "fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7",
+      "fmo:part:01a0706c-eeb4-7658-98ac-4674e8708e50"
+    ],
+    "desired_artifact_classes": [
+      "technical_report",
+      "model_disclosure"
+    ],
+    "expected_count": 1,
+    "id": "fmo:coverage:01a0706c-ef82-71f7-8a6c-6b4c224d453b",
+    "next_action": "Resolve exact quote anchors and re-run the variation matrix with the three optional calibration subjects.",
+    "observed_count": 1,
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for a model card addressed as an appendix/table inside a larger technical report",
+    "scope_key": "calibration/google-deepmind/gemini-robotics-1-5",
+    "subject_ids": [
+      "fmo:model:01a0706c-edc2-711d-8771-383ccfb5a2dc",
+      "fmo:model:01a0706c-edec-7255-a68b-80d535b91a64"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a0706c-ee64-7474-888c-ae18892a4147",
+      "fmo:url:01a0706c-ee8d-7095-ab23-bf2a940e888f"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/anthropic/claude-opus-4-6",
+    "coverage_basis": "Identity, artifact, version, provider-original bytes, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact:01a07073-5121-70e0-8081-1e07ba2b75f3",
+      "fmo:artifact-version:01a07073-5121-70e0-8081-1e08863f9399",
+      "fmo:sha256:4db67c6b6aea0a87e7f8a784b83fc05a0f1a61a3e87615fe7956e3486b951b3c"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure"
+    ],
+    "id": "fmo:coverage:01a07073-5138-71cc-a851-cccd7ab8b367",
+    "next_action": "Extract four dated changelog blocks and correction claims.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for anthropic/claude-opus-4-6",
+    "scope_key": "calibration/anthropic/claude-opus-4-6",
+    "subject_ids": [
+      "fmo:model:01a07073-5120-721d-866f-22c800eb0fe5"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07073-5121-70e0-8081-1e099a144f1a"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/anthropic/claude-fable-5-1-mythos-5-1",
+    "coverage_basis": "Identity, artifact, version, provider-original bytes, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact:01a07073-5138-71cc-a851-cccee80a9667",
+      "fmo:artifact-version:01a07073-5138-71cc-a851-cccfafd85401",
+      "fmo:sha256:b0d59edc7a60eef32a879c13d713cce60c3fefd7e6b5183afdc8b835af3c8c39"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure"
+    ],
+    "id": "fmo:coverage:01a07073-5155-7565-a2d3-aacb2d91c41b",
+    "next_action": "Encode the companion risk report and safeguard-regime claims.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for anthropic/claude-fable-5-1-mythos-5-1",
+    "scope_key": "calibration/anthropic/claude-fable-5-1-mythos-5-1",
+    "subject_ids": [
+      "fmo:configuration:01a07073-5120-721d-866f-22c94c59d570",
+      "fmo:configuration:01a07073-5120-721d-866f-22ca52786b23"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07073-5138-71cc-a851-ccd03967fc8a"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/openai/o1",
+    "coverage_basis": "Identity, artifact, version, provider-original bytes, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact:01a07073-5155-7565-a2d3-aacc0b5955b2",
+      "fmo:artifact-version:01a07073-5155-7565-a2d3-aacdbf9a6957",
+      "fmo:artifact-version:01a07073-5159-7103-bd69-93c5fa75d1bb",
+      "fmo:artifact-version:01a07073-515c-7540-9419-1390a4979cd4",
+      "fmo:sha256:504f98072cf732afb89d728e5be94a1c1ec663c2e70f3299d8676f7dfad1d55a",
+      "fmo:sha256:228ef12983ba9bc93aa7d64f95b711b89652be045550585c5e0a9d3b74795bfd",
+      "fmo:sha256:3ba7bdbe69e022f6be0527edbfe18ac1becdea48d5be9891ab764ff336c8a033"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure"
+    ],
+    "id": "fmo:coverage:01a07073-5164-742f-a28e-fc1b41edacc7",
+    "next_action": "Encode the cross-pointer and preview/general-availability scope claims.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for openai/o1",
+    "scope_key": "calibration/openai/o1",
+    "subject_ids": [
+      "fmo:model:01a07073-5120-721d-866f-22cd394712b3",
+      "fmo:checkpoint:01a07073-5120-721d-866f-22ce42a209f3",
+      "fmo:checkpoint:01a07073-5120-721d-866f-22cf14bbe1ea"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07073-5155-7565-a2d3-aaceac3a98ed",
+      "fmo:url:01a07073-5159-7103-bd69-93c6cb85c5ee",
+      "fmo:url:01a07073-515c-7540-9419-139195c87eb0"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/openai/gpt-live",
+    "coverage_basis": "Identity, artifact, version, provider-original bytes, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact:01a07073-5164-742f-a28e-fc1ce64af12c",
+      "fmo:artifact-version:01a07073-5164-742f-a28e-fc1d56cbbf56",
+      "fmo:sha256:8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure"
+    ],
+    "id": "fmo:coverage:01a07073-5164-742f-a28e-fc20e071fdf9",
+    "next_action": "Extract original and corrected evaluation claims from the added appendix.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for openai/gpt-live",
+    "scope_key": "calibration/openai/gpt-live",
+    "subject_ids": [
+      "fmo:model:01a07073-5120-721d-866f-22d15d95d2eb",
+      "fmo:model:01a07073-5120-721d-866f-22d2be7adc98"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07073-5164-742f-a28e-fc1eeeadac83"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/google-deepmind/gemini-3-pro",
+    "coverage_basis": "Identity, artifact, version, provider-original bytes, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact:01a07073-5164-742f-a28e-fc2166fc5e64",
+      "fmo:artifact-version:01a07073-5164-742f-a28e-fc22ac41f457",
+      "fmo:sha256:9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure"
+    ],
+    "id": "fmo:coverage:01a07073-5166-7742-80e1-92839ad9d9d1",
+    "next_action": "Encode the alias redirect, date disagreement, and dependent-family scope.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for google-deepmind/gemini-3-pro",
+    "scope_key": "calibration/google-deepmind/gemini-3-pro",
+    "subject_ids": [
+      "fmo:model:01a07073-5120-721d-866f-22d49a7b1e19"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07073-5164-742f-a28e-fc23e2e82689"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/google-deepmind/veo-3",
+    "coverage_basis": "Identity, artifact, version, provider-original bytes, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact:01a07073-5166-7742-80e1-92846b9d6cdc",
+      "fmo:artifact-version:01a07073-5166-7742-80e1-9285184289d2",
+      "fmo:sha256:805ca645079c287664890bdea737e22ebc8a66aca6e8f0a03d0ffeca86c4d17f"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure"
+    ],
+    "id": "fmo:coverage:01a07073-5166-7742-80e1-92884ac4f7e4",
+    "next_action": "Extract prospective-scope and modality claims without inventing future entities.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for google-deepmind/veo-3",
+    "scope_key": "calibration/google-deepmind/veo-3",
+    "subject_ids": [
+      "fmo:model:01a07073-5121-70e0-8081-1e06f36d3b1d"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07073-5166-7742-80e1-9286fb3016fe"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/anthropic/claude-4",
+    "coverage_basis": "Identity, artifact, version, bytes or byte hash, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0951c44306f",
+      "fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0960ea04f55",
+      "fmo:artifact:01a07078-ecf1-75b4-9b5a-c0943548ade4",
+      "fmo:sha256:48d4d98c5767d02308ba68b595e344c4fd53fbef11f0f9ac351e8752a9129764",
+      "fmo:sha256:c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure",
+      "system_prompt"
+    ],
+    "id": "fmo:coverage:01a07078-ed03-70e4-b949-3120680d3347",
+    "next_action": "Diff the two live versions and extract changed claims.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for anthropic/claude-4",
+    "scope_key": "calibration/anthropic/claude-4",
+    "subject_ids": [
+      "fmo:model:01a07078-ecf1-75b4-9b5a-c09215e90101",
+      "fmo:model:01a07078-ecf1-75b4-9b5a-c0933211f9c8"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07078-ecfa-7068-88a5-df663184ad1b",
+      "fmo:url:01a07078-ed03-70e4-b949-311e5949521d"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/anthropic/claude-opus-5-system-prompt",
+    "coverage_basis": "Identity, artifact, version, bytes or byte hash, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact-version:01a07078-ed03-70e4-b949-3124eca4e9df",
+      "fmo:artifact:01a07078-ed03-70e4-b949-3123f8932edd",
+      "fmo:sha256:921f46cf64ed0cc9e4a1fa54368116d0d3232b3fdde53f6360032140c052c5c5"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure",
+      "system_prompt"
+    ],
+    "id": "fmo:coverage:01a07078-ed04-76cd-8a7c-850b823a327d",
+    "next_action": "Extract the prompt block, product scope, API non-applicability, and model identifiers.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for anthropic/claude-opus-5-system-prompt",
+    "scope_key": "calibration/anthropic/claude-opus-5-system-prompt",
+    "subject_ids": [
+      "fmo:model:01a07078-ed03-70e4-b949-31210ad324d8",
+      "fmo:product:01a07078-ed03-70e4-b949-31220b3bd02d"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07078-ed04-76cd-8a7c-850940114b37"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/openai/gpt-5-2",
+    "coverage_basis": "Identity, artifact, version, bytes or byte hash, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact-version:01a07078-ed04-76cd-8a7c-85113f9d163e",
+      "fmo:artifact:01a07078-ed04-76cd-8a7c-8510c0b99baf",
+      "fmo:sha256:37df7ab47f5c142891d25a1f351a7b3e9d1e38f5e13b8346ac15ed6470074db0"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure",
+      "system_prompt"
+    ],
+    "id": "fmo:coverage:01a07078-ed08-76da-a1b2-a46247f97671",
+    "next_action": "Extract warning, update relation, model aliases, and preparedness claims.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for openai/gpt-5-2",
+    "scope_key": "calibration/openai/gpt-5-2",
+    "subject_ids": [
+      "fmo:model:01a07078-ed04-76cd-8a7c-850deb414333",
+      "fmo:model:01a07078-ed04-76cd-8a7c-850ebef2631b"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07078-ed08-76da-a1b2-a45fd76ca4e6"
+    ]
+  },
+  {
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/openai/sora-2",
+    "coverage_basis": "Identity, artifact, version, bytes or byte hash, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact-version:01a07078-ed08-76da-a1b2-a467aa605471",
+      "fmo:artifact:01a07078-ed08-76da-a1b2-a46622eecc25",
+      "fmo:sha256:ab7616d162b29f90227013bb40bf10dd6f809ce38b0e6ba450bede2317b16b76"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure",
+      "system_prompt"
+    ],
+    "id": "fmo:coverage:01a07078-ed08-76da-a1b2-a46a32326b0e",
+    "next_action": "Record the apparent PDF redirect and typed nonavailability without fabricating PDF bytes.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for openai/sora-2",
+    "scope_key": "calibration/openai/sora-2",
+    "subject_ids": [
+      "fmo:model:01a07078-ed08-76da-a1b2-a4643d6ce8d9",
+      "fmo:product:01a07078-ed08-76da-a1b2-a4655be00e89"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07078-ed08-76da-a1b2-a46834b83557"
+    ]
+  },
+  {
+    "absence_ids": [
+      "fmo:absence:01a07078-ed08-76da-a1b2-a478a051e37c"
+    ],
+    "assessed_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "canonical_key": "calibration/google-deepmind/gemma-4",
+    "coverage_basis": "Identity, artifact, version, bytes or byte hash, URL, and retrieval are canonical; deep claims and extraction remain.",
+    "coverage_status": "partially_covered",
+    "covered_record_ids": [
+      "fmo:artifact-version:01a07078-ed08-76da-a1b2-a47555ddd795",
+      "fmo:artifact:01a07078-ed08-76da-a1b2-a474b5d2f636",
+      "fmo:sha256:c068dd88ad4ec9f13e0589cad1673bea95e94690a4201def518dbcb203ce6b33"
+    ],
+    "desired_artifact_classes": [
+      "model_disclosure",
+      "system_prompt"
+    ],
+    "id": "fmo:coverage:01a07078-ed08-76da-a1b2-a479a9bbe002",
+    "next_action": "Extract allowed model-card claims from provider text without materializing prohibited raw bytes.",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "coverage_ledger_entry",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "scope_description": "ADR-0006 calibration coverage for google-deepmind/gemma-4",
+    "scope_key": "calibration/google-deepmind/gemma-4",
+    "subject_ids": [
+      "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550",
+      "fmo:configuration:01a07078-ed08-76da-a1b2-a46dc49d70e1",
+      "fmo:configuration:01a07078-ed08-76da-a1b2-a46eb2bd2bcb",
+      "fmo:configuration:01a07078-ed08-76da-a1b2-a46f13c4b832",
+      "fmo:configuration:01a07078-ed08-76da-a1b2-a4706af9146f",
+      "fmo:configuration:01a07078-ed08-76da-a1b2-a471b3727a64",
+      "fmo:configuration:01a07078-ed08-76da-a1b2-a4729c9c05dc",
+      "fmo:configuration:01a07078-ed08-76da-a1b2-a473d2efa8ad"
+    ],
+    "surface_url_ids": [
+      "fmo:url:01a07078-ed08-76da-a1b2-a47641a11bab"
+    ]
+  },
+  {
+    "canonical_key": "openai/o1/preview",
+    "id": "fmo:checkpoint:01a07073-5120-721d-866f-22ce42a209f3",
+    "kind": "checkpoint",
+    "model_id": "fmo:model:01a07073-5120-721d-866f-22cd394712b3",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "OpenAI o1 preview"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "OpenAI o1 preview",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "stage": "preview"
+  },
+  {
+    "canonical_key": "openai/o1/general-availability",
+    "id": "fmo:checkpoint:01a07073-5120-721d-866f-22cf14bbe1ea",
+    "kind": "checkpoint",
+    "model_id": "fmo:model:01a07073-5120-721d-866f-22cd394712b3",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "OpenAI o1 general availability"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "OpenAI o1 general availability",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "stage": "general_availability"
+  },
+  {
+    "canonical_key": "anthropic/claude-fable-5-1",
+    "configuration_class": "safeguard",
+    "configures_id": "fmo:family:01a07073-5120-721d-866f-22c727ba9493",
+    "id": "fmo:configuration:01a07073-5120-721d-866f-22c94c59d570",
+    "kind": "configuration",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Claude Fable 5.1"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Claude Fable 5.1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "anthropic/claude-mythos-5-1",
+    "configuration_class": "safeguard",
+    "configures_id": "fmo:family:01a07073-5120-721d-866f-22c727ba9493",
+    "id": "fmo:configuration:01a07073-5120-721d-866f-22ca52786b23",
+    "kind": "configuration",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Claude Mythos 5.1"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Claude Mythos 5.1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-4/e2b",
+    "configuration_class": "size",
+    "configures_id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550",
+    "id": "fmo:configuration:01a07078-ed08-76da-a1b2-a46dc49d70e1",
+    "kind": "configuration",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemma 4 E2B"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemma 4 E2B",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-4/e4b",
+    "configuration_class": "size",
+    "configures_id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550",
+    "id": "fmo:configuration:01a07078-ed08-76da-a1b2-a46eb2bd2bcb",
+    "kind": "configuration",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemma 4 E4B"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemma 4 E4B",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-4/12b",
+    "configuration_class": "size",
+    "configures_id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550",
+    "id": "fmo:configuration:01a07078-ed08-76da-a1b2-a46f13c4b832",
+    "kind": "configuration",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemma 4 12B"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemma 4 12B",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-4/26b-a4b",
+    "configuration_class": "size",
+    "configures_id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550",
+    "id": "fmo:configuration:01a07078-ed08-76da-a1b2-a4706af9146f",
+    "kind": "configuration",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemma 4 26B A4B"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemma 4 26B A4B",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-4/31b",
+    "configuration_class": "size",
+    "configures_id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550",
+    "id": "fmo:configuration:01a07078-ed08-76da-a1b2-a471b3727a64",
+    "kind": "configuration",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemma 4 31B"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemma 4 31B",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-4/pretrained",
+    "configuration_class": "tuning",
+    "configures_id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550",
+    "id": "fmo:configuration:01a07078-ed08-76da-a1b2-a4729c9c05dc",
+    "kind": "configuration",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemma 4 pre-trained"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemma 4 pre-trained",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-4/instruction-tuned",
+    "configuration_class": "tuning",
+    "configures_id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550",
+    "id": "fmo:configuration:01a07078-ed08-76da-a1b2-a473d2efa8ad",
+    "kind": "configuration",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemma 4 instruction-tuned"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemma 4 instruction-tuned",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemini-robotics",
+    "id": "fmo:family:01a0706c-ed9a-7343-8190-13a8c59d8820",
+    "kind": "model_family",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemini Robotics"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemini Robotics",
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "anthropic/claude-family",
+    "id": "fmo:family:01a07073-5120-721d-866f-22c727ba9493",
+    "kind": "model_family",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Claude"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Claude",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/o1-family",
+    "id": "fmo:family:01a07073-5120-721d-866f-22cc1a57b708",
+    "kind": "model_family",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "OpenAI o1"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "OpenAI o1",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/gpt-live-family",
+    "id": "fmo:family:01a07073-5120-721d-866f-22d02038e9bf",
+    "kind": "model_family",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "GPT-Live"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "GPT-Live",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemini-family",
+    "id": "fmo:family:01a07073-5120-721d-866f-22d3a27a8ce0",
+    "kind": "model_family",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemini"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemini",
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/veo-family",
+    "id": "fmo:family:01a07073-5120-721d-866f-22d5e8f024e6",
+    "kind": "model_family",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Veo"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Veo",
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/gpt-5-family",
+    "id": "fmo:family:01a07078-ed04-76cd-8a7c-850c7472cbab",
+    "kind": "model_family",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "GPT-5"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "GPT-5",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/sora-family",
+    "id": "fmo:family:01a07078-ed08-76da-a1b2-a463f4b1d852",
+    "kind": "model_family",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Sora"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Sora",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-family",
+    "id": "fmo:family:01a07078-ed08-76da-a1b2-a46b6aed2609",
+    "kind": "model_family",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemma"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemma",
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemini-robotics-1-5",
+    "family_id": "fmo:family:01a0706c-ed9a-7343-8190-13a8c59d8820",
+    "id": "fmo:model:01a0706c-edc2-711d-8771-383ccfb5a2dc",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "robot camera images",
+        "normalized": "robotics"
+      },
+      {
+        "native": "text",
+        "normalized": "text"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemini Robotics 1.5"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemini Robotics 1.5",
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemini-robotics-er-1-5",
+    "family_id": "fmo:family:01a0706c-ed9a-7343-8190-13a8c59d8820",
+    "id": "fmo:model:01a0706c-edec-7255-a68b-80d535b91a64",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "robot camera images",
+        "normalized": "robotics"
+      },
+      {
+        "native": "text",
+        "normalized": "text"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemini Robotics-ER 1.5"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemini Robotics-ER 1.5",
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "anthropic/claude-opus-4-6",
+    "family_id": "fmo:family:01a07073-5120-721d-866f-22c727ba9493",
+    "id": "fmo:model:01a07073-5120-721d-866f-22c800eb0fe5",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text",
+        "normalized": "text"
+      },
+      {
+        "native": "image input",
+        "normalized": "image"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Claude Opus 4.6"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Claude Opus 4.6",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/o1",
+    "family_id": "fmo:family:01a07073-5120-721d-866f-22cc1a57b708",
+    "id": "fmo:model:01a07073-5120-721d-866f-22cd394712b3",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text",
+        "normalized": "text"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "OpenAI o1"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "OpenAI o1",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/gpt-live-1",
+    "family_id": "fmo:family:01a07073-5120-721d-866f-22d02038e9bf",
+    "id": "fmo:model:01a07073-5120-721d-866f-22d15d95d2eb",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "audio/voice",
+        "normalized": "audio"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "GPT-Live-1"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "GPT-Live-1",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/gpt-live-1-mini",
+    "family_id": "fmo:family:01a07073-5120-721d-866f-22d02038e9bf",
+    "id": "fmo:model:01a07073-5120-721d-866f-22d2be7adc98",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "audio/voice",
+        "normalized": "audio"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "GPT-Live-1 mini"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "GPT-Live-1 mini",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemini-3-pro",
+    "family_id": "fmo:family:01a07073-5120-721d-866f-22d3a27a8ce0",
+    "id": "fmo:model:01a07073-5120-721d-866f-22d49a7b1e19",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text",
+        "normalized": "text"
+      },
+      {
+        "native": "image",
+        "normalized": "image"
+      },
+      {
+        "native": "audio",
+        "normalized": "audio"
+      },
+      {
+        "native": "video",
+        "normalized": "video"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemini 3 Pro"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemini 3 Pro",
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/veo-3",
+    "family_id": "fmo:family:01a07073-5120-721d-866f-22d5e8f024e6",
+    "id": "fmo:model:01a07073-5121-70e0-8081-1e06f36d3b1d",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text and image input",
+        "normalized": "text"
+      },
+      {
+        "native": "video with audio output",
+        "normalized": "video"
+      },
+      {
+        "native": "video with audio output",
+        "normalized": "audio"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Veo 3"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Veo 3",
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "anthropic/claude-opus-4",
+    "family_id": "fmo:family:01a07073-5120-721d-866f-22c727ba9493",
+    "id": "fmo:model:01a07078-ecf1-75b4-9b5a-c09215e90101",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text",
+        "normalized": "text"
+      },
+      {
+        "native": "visual analysis",
+        "normalized": "image"
+      },
+      {
+        "native": "computer use",
+        "normalized": "tool_use"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Claude Opus 4"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Claude Opus 4",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "anthropic/claude-sonnet-4",
+    "family_id": "fmo:family:01a07073-5120-721d-866f-22c727ba9493",
+    "id": "fmo:model:01a07078-ecf1-75b4-9b5a-c0933211f9c8",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text",
+        "normalized": "text"
+      },
+      {
+        "native": "visual analysis",
+        "normalized": "image"
+      },
+      {
+        "native": "computer use",
+        "normalized": "tool_use"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Claude Sonnet 4"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Claude Sonnet 4",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "anthropic/claude-opus-5",
+    "family_id": "fmo:family:01a07073-5120-721d-866f-22c727ba9493",
+    "id": "fmo:model:01a07078-ed03-70e4-b949-31210ad324d8",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text",
+        "normalized": "text"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Claude Opus 5"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Claude Opus 5",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/gpt-5-2-instant",
+    "family_id": "fmo:family:01a07078-ed04-76cd-8a7c-850c7472cbab",
+    "id": "fmo:model:01a07078-ed04-76cd-8a7c-850deb414333",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text",
+        "normalized": "text"
+      },
+      {
+        "native": "image input",
+        "normalized": "image"
+      },
+      {
+        "native": "tool use",
+        "normalized": "tool_use"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "GPT-5.2 Instant"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "GPT-5.2 Instant",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/gpt-5-2-thinking",
+    "family_id": "fmo:family:01a07078-ed04-76cd-8a7c-850c7472cbab",
+    "id": "fmo:model:01a07078-ed04-76cd-8a7c-850ebef2631b",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text",
+        "normalized": "text"
+      },
+      {
+        "native": "image input",
+        "normalized": "image"
+      },
+      {
+        "native": "tool use",
+        "normalized": "tool_use"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "GPT-5.2 Thinking"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "GPT-5.2 Thinking",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/sora-2",
+    "family_id": "fmo:family:01a07078-ed08-76da-a1b2-a463f4b1d852",
+    "id": "fmo:model:01a07078-ed08-76da-a1b2-a4643d6ce8d9",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "video generation",
+        "normalized": "video"
+      },
+      {
+        "native": "audio generation",
+        "normalized": "audio"
+      },
+      {
+        "native": "text prompts",
+        "normalized": "text"
+      },
+      {
+        "native": "image inputs",
+        "normalized": "image"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Sora 2"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Sora 2",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-4",
+    "family_id": "fmo:family:01a07078-ed08-76da-a1b2-a46b6aed2609",
+    "id": "fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550",
+    "kind": "model",
+    "modalities": [
+      {
+        "native": "text",
+        "normalized": "text"
+      },
+      {
+        "native": "image input",
+        "normalized": "image"
+      },
+      {
+        "native": "audio input on selected sizes",
+        "normalized": "audio"
+      },
+      {
+        "native": "video through image frames",
+        "normalized": "video"
+      }
+    ],
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Gemma 4"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Gemma 4",
+    "provider_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "google-deepmind",
+    "id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "kind": "organization",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Google DeepMind"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Google DeepMind",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "roles": [
+      "provider",
+      "publisher"
+    ],
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "anthropic",
+    "id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "kind": "organization",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Anthropic"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Anthropic",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "roles": [
+      "provider",
+      "publisher"
+    ],
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai",
+    "id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "kind": "organization",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "OpenAI"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "OpenAI",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "roles": [
+      "provider",
+      "publisher"
+    ],
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "anthropic/claude-ai",
+    "id": "fmo:product:01a07078-ed03-70e4-b949-31220b3bd02d",
+    "kind": "product",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "claude.ai"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "claude.ai",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "canonical_key": "openai/sora-product",
+    "id": "fmo:product:01a07078-ed08-76da-a1b2-a4655be00e89",
+    "kind": "product",
+    "names": [
+      {
+        "name_type": "provider_preferred",
+        "value": "Sora"
+      }
+    ],
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "preferred_name": "Sora",
+    "provider_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "record_status": "active",
+    "record_type": "entity",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0"
+  },
+  {
+    "agent": "Frontier Model Observatory calibration research session",
+    "byte_object_id": "fmo:sha256:b41a2f732f4755c7564b973bcc6ff8aebf3bb9a9f163328437e89533d372b2f4",
+    "cache_status": "live",
+    "canonical_key": "google-deepmind/gemini-robotics-1-5-technical-report/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a0706c-ee64-7474-888c-ae18892a4147",
+    "id": "fmo:retrieval:01a0706c-efaa-7285-a7a0-fbd1353e721a",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "requested_url_id": "fmo:url:01a0706c-ee64-7474-888c-ae18892a4147",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration research session",
+    "byte_object_id": "fmo:sha256:4db67c6b6aea0a87e7f8a784b83fc05a0f1a61a3e87615fe7956e3486b951b3c",
+    "cache_status": "live",
+    "canonical_key": "anthropic/claude-opus-4-6-system-card/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07073-5121-70e0-8081-1e099a144f1a",
+    "id": "fmo:retrieval:01a07073-5138-71cc-a851-cccc5866ba9d",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "requested_url_id": "fmo:url:01a07073-5121-70e0-8081-1e099a144f1a",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration research session",
+    "byte_object_id": "fmo:sha256:b0d59edc7a60eef32a879c13d713cce60c3fefd7e6b5183afdc8b835af3c8c39",
+    "cache_status": "live",
+    "canonical_key": "anthropic/claude-fable-5-1-mythos-5-1-system-card/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07073-5138-71cc-a851-ccd03967fc8a",
+    "id": "fmo:retrieval:01a07073-5155-7565-a2d3-aaca64989e6f",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "requested_url_id": "fmo:url:01a07073-5138-71cc-a851-ccd03967fc8a",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration research session",
+    "byte_object_id": "fmo:sha256:504f98072cf732afb89d728e5be94a1c1ec663c2e70f3299d8676f7dfad1d55a",
+    "cache_status": "live",
+    "canonical_key": "openai/o1-system-card/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07073-5155-7565-a2d3-aaceac3a98ed",
+    "id": "fmo:retrieval:01a07073-5159-7103-bd69-93c41272df85",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "requested_url_id": "fmo:url:01a07073-5155-7565-a2d3-aaceac3a98ed",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration research session",
+    "byte_object_id": "fmo:sha256:228ef12983ba9bc93aa7d64f95b711b89652be045550585c5e0a9d3b74795bfd",
+    "cache_status": "live",
+    "canonical_key": "openai/o1-system-card/v2/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07073-5159-7103-bd69-93c6cb85c5ee",
+    "id": "fmo:retrieval:01a07073-515c-7540-9419-138f7453cb73",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "requested_url_id": "fmo:url:01a07073-5159-7103-bd69-93c6cb85c5ee",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration research session",
+    "byte_object_id": "fmo:sha256:3ba7bdbe69e022f6be0527edbfe18ac1becdea48d5be9891ab764ff336c8a033",
+    "cache_status": "live",
+    "canonical_key": "openai/o1-system-card/v3/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07073-515c-7540-9419-139195c87eb0",
+    "id": "fmo:retrieval:01a07073-5164-742f-a28e-fc1a7e1890e9",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "requested_url_id": "fmo:url:01a07073-515c-7540-9419-139195c87eb0",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration research session",
+    "byte_object_id": "fmo:sha256:8a1bac366bbe4e7ac08fbd86614186b2743ae5253517ca06c902f3497115805d",
+    "cache_status": "live",
+    "canonical_key": "openai/gpt-live-system-card/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07073-5164-742f-a28e-fc1eeeadac83",
+    "id": "fmo:retrieval:01a07073-5164-742f-a28e-fc1fcefb4360",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "requested_url_id": "fmo:url:01a07073-5164-742f-a28e-fc1eeeadac83",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration research session",
+    "byte_object_id": "fmo:sha256:9a1734bc3aa310691772d1756990b01383dc7732d4f9cb0a2888e2e06a7f84d8",
+    "cache_status": "live",
+    "canonical_key": "google-deepmind/gemini-3-pro-model-card/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07073-5164-742f-a28e-fc23e2e82689",
+    "id": "fmo:retrieval:01a07073-5166-7742-80e1-928293ce4942",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "requested_url_id": "fmo:url:01a07073-5164-742f-a28e-fc23e2e82689",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration research session",
+    "byte_object_id": "fmo:sha256:805ca645079c287664890bdea737e22ebc8a66aca6e8f0a03d0ffeca86c4d17f",
+    "cache_status": "live",
+    "canonical_key": "google-deepmind/veo-3-model-card/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07073-5166-7742-80e1-9286fb3016fe",
+    "id": "fmo:retrieval:01a07073-5166-7742-80e1-9287592feef0",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "requested_url_id": "fmo:url:01a07073-5166-7742-80e1-9286fb3016fe",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration retrieval",
+    "byte_object_id": "fmo:sha256:48d4d98c5767d02308ba68b595e344c4fd53fbef11f0f9ac351e8752a9129764",
+    "cache_status": "live",
+    "canonical_key": "anthropic/claude-4-system-card/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07078-ecfa-7068-88a5-df663184ad1b",
+    "id": "fmo:retrieval:01a07078-ecfa-7068-88a5-df67a36d7617",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "requested_url_id": "fmo:url:01a07078-ecfa-7068-88a5-df663184ad1b",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration retrieval",
+    "byte_object_id": "fmo:sha256:c358464289e24283fc9d5613d2a676fd8aaba510f1449bcedae01a74d8232ab4",
+    "cache_status": "live",
+    "canonical_key": "anthropic/claude-4-system-card/v2/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07078-ed03-70e4-b949-311e5949521d",
+    "id": "fmo:retrieval:01a07078-ed03-70e4-b949-311f73b49a53",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "requested_url_id": "fmo:url:01a07078-ed03-70e4-b949-311e5949521d",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration retrieval",
+    "byte_object_id": "fmo:sha256:921f46cf64ed0cc9e4a1fa54368116d0d3232b3fdde53f6360032140c052c5c5",
+    "cache_status": "bypassed",
+    "canonical_key": "anthropic/claude-opus-5-system-prompt/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07078-ed04-76cd-8a7c-850940114b37",
+    "id": "fmo:retrieval:01a07078-ed04-76cd-8a7c-850aecbd90f2",
+    "method": "managed_fetch",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "requested_url_id": "fmo:url:01a07078-ed04-76cd-8a7c-850940114b37",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration retrieval",
+    "byte_object_id": "fmo:sha256:37df7ab47f5c142891d25a1f351a7b3e9d1e38f5e13b8346ac15ed6470074db0",
+    "cache_status": "live",
+    "canonical_key": "openai/gpt-5-2-system-card-update/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07078-ed08-76da-a1b2-a45fd76ca4e6",
+    "id": "fmo:retrieval:01a07078-ed08-76da-a1b2-a460647b22c5",
+    "method": "http_get",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "requested_url_id": "fmo:url:01a07078-ed08-76da-a1b2-a45fd76ca4e6",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration retrieval",
+    "byte_object_id": "fmo:sha256:ab7616d162b29f90227013bb40bf10dd6f809ce38b0e6ba450bede2317b16b76",
+    "cache_status": "bypassed",
+    "canonical_key": "openai/sora-2-system-card/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07078-ed08-76da-a1b2-a46834b83557",
+    "id": "fmo:retrieval:01a07078-ed08-76da-a1b2-a469617cd66f",
+    "method": "managed_fetch",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "requested_url_id": "fmo:url:01a07078-ed08-76da-a1b2-a46834b83557",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "agent": "Frontier Model Observatory calibration retrieval",
+    "byte_object_id": "fmo:sha256:c068dd88ad4ec9f13e0589cad1673bea95e94690a4201def518dbcb203ce6b33",
+    "cache_status": "bypassed",
+    "canonical_key": "google-deepmind/gemma-4-model-card/v1/retrieval/2026-09-05",
+    "final_url_id": "fmo:url:01a07078-ed08-76da-a1b2-a47641a11bab",
+    "id": "fmo:retrieval:01a07078-ed08-76da-a1b2-a4771bc4413b",
+    "method": "managed_fetch",
+    "outcome": "success",
+    "record_status": "active",
+    "record_type": "retrieval_event",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "requested_url_id": "fmo:url:01a07078-ed08-76da-a1b2-a47641a11bab",
+    "retrieved_at": {
+      "basis": "retrieval",
+      "precision": "day",
+      "value": "2026-09-05"
+    },
+    "schema_version": "1.0.0",
+    "status_code": 200
+  },
+  {
+    "canonical_key": "google-deepmind/gemini-robotics-1-5-technical-report/pdf",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "id": "fmo:url:01a0706c-ee64-7474-888c-ae18892a4147",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a0706c-ee3d-73ce-889e-f2955ec0e9e7",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-1-5-Tech-Report.pdf",
+    "url_normalized": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-1-5-Tech-Report.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "google-deepmind/gemini-robotics-1-5-model-card/part-locator",
+    "canonicality": "provider_declared",
+    "fragment": "page=30",
+    "host_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "id": "fmo:url:01a0706c-ee8d-7095-ab23-bf2a940e888f",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:16:42Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:part:01a0706c-eeb4-7658-98ac-4674e8708e50",
+        "record_type": "artifact_part"
+      }
+    ],
+    "url": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-1-5-Tech-Report.pdf#page=30",
+    "url_normalized": "https://storage.googleapis.com/deepmind-media/gemini-robotics/Gemini-Robotics-1-5-Tech-Report.pdf#page=30",
+    "url_role": "part_locator"
+  },
+  {
+    "canonical_key": "anthropic/claude-opus-4-6-system-card/v1/pdf",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "id": "fmo:url:01a07073-5121-70e0-8081-1e099a144f1a",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07073-5121-70e0-8081-1e08863f9399",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://anthropic.com/claude-opus-4-6-system-card",
+    "url_normalized": "https://anthropic.com/claude-opus-4-6-system-card",
+    "url_role": "vanity"
+  },
+  {
+    "canonical_key": "anthropic/claude-fable-5-1-mythos-5-1-system-card/v1/pdf",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "id": "fmo:url:01a07073-5138-71cc-a851-ccd03967fc8a",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07073-5138-71cc-a851-cccfafd85401",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+    "url_normalized": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+    "url_role": "vanity"
+  },
+  {
+    "canonical_key": "openai/o1-system-card/v1/pdf",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "id": "fmo:url:01a07073-5155-7565-a2d3-aaceac3a98ed",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07073-5155-7565-a2d3-aacdbf9a6957",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://cdn.openai.com/o1-system-card.pdf",
+    "url_normalized": "https://cdn.openai.com/o1-system-card.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "openai/o1-system-card/v2/pdf",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "id": "fmo:url:01a07073-5159-7103-bd69-93c6cb85c5ee",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07073-5159-7103-bd69-93c5fa75d1bb",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://cdn.openai.com/o1-preview-system-card-20240917.pdf",
+    "url_normalized": "https://cdn.openai.com/o1-preview-system-card-20240917.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "openai/o1-system-card/v3/pdf",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "id": "fmo:url:01a07073-515c-7540-9419-139195c87eb0",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07073-515c-7540-9419-1390a4979cd4",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://cdn.openai.com/o1-system-card-20241205.pdf",
+    "url_normalized": "https://cdn.openai.com/o1-system-card-20241205.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "openai/gpt-live-system-card/v1/pdf",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "id": "fmo:url:01a07073-5164-742f-a28e-fc1eeeadac83",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07073-5164-742f-a28e-fc1d56cbbf56",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+    "url_normalized": "https://deploymentsafety.openai.com/gpt-live/gpt-live.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "google-deepmind/gemini-3-pro-model-card/v1/pdf",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "id": "fmo:url:01a07073-5164-742f-a28e-fc23e2e82689",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07073-5164-742f-a28e-fc22ac41f457",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "url_normalized": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-Pro-Model-Card.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "google-deepmind/veo-3-model-card/v1/pdf",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "id": "fmo:url:01a07073-5166-7742-80e1-9286fb3016fe",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:30:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07073-5166-7742-80e1-9285184289d2",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf",
+    "url_normalized": "https://storage.googleapis.com/deepmind-media/Model-Cards/Veo-3-Model-Card.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "anthropic/claude-4-system-card/v1/asset",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "id": "fmo:url:01a07078-ecfa-7068-88a5-df663184ad1b",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0951c44306f",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf",
+    "url_normalized": "https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "anthropic/claude-4-system-card/v2/asset",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "id": "fmo:url:01a07078-ed03-70e4-b949-311e5949521d",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07078-ecf1-75b4-9b5a-c0960ea04f55",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+    "url_normalized": "https://www-cdn.anthropic.com/07b2a3f9902ee19fe39a36ca638e5ae987bc64dd.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "anthropic/claude-opus-5-system-prompt/v1/canonical",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22c6b3df1226",
+    "id": "fmo:url:01a07078-ed04-76cd-8a7c-850940114b37",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07078-ed03-70e4-b949-3124eca4e9df",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://platform.claude.com/docs/en/release-notes/system-prompts/claude-opus-5",
+    "url_normalized": "https://platform.claude.com/docs/en/release-notes/system-prompts/claude-opus-5",
+    "url_role": "canonical"
+  },
+  {
+    "canonical_key": "openai/gpt-5-2-system-card-update/v1/asset",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "id": "fmo:url:01a07078-ed08-76da-a1b2-a45fd76ca4e6",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07078-ed04-76cd-8a7c-85113f9d163e",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf",
+    "url_normalized": "https://cdn.openai.com/pdf/3a4153c8-c748-4b71-8e31-aecbde944f8d/oai_5_2_system-card.pdf",
+    "url_role": "asset"
+  },
+  {
+    "canonical_key": "openai/sora-2-system-card/v1/canonical",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a07073-5120-721d-866f-22cbdc29d637",
+    "id": "fmo:url:01a07078-ed08-76da-a1b2-a46834b83557",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07078-ed08-76da-a1b2-a467aa605471",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://deploymentsafety.openai.com/sora-2",
+    "url_normalized": "https://deploymentsafety.openai.com/sora-2",
+    "url_role": "canonical"
+  },
+  {
+    "canonical_key": "google-deepmind/gemma-4-model-card/v1/canonical",
+    "canonicality": "provider_declared",
+    "host_org_id": "fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1",
+    "id": "fmo:url:01a07078-ed08-76da-a1b2-a47641a11bab",
+    "is_provider_controlled": true,
+    "lifecycle": "active",
+    "observed_time": {
+      "first_observed": {
+        "basis": "retrieval",
+        "precision": "day",
+        "value": "2026-09-05"
+      }
+    },
+    "record_status": "active",
+    "record_type": "url_alias",
+    "recorded_at": "2026-09-05T07:40:00Z",
+    "schema_version": "1.0.0",
+    "target_refs": [
+      {
+        "id": "fmo:artifact-version:01a07078-ed08-76da-a1b2-a47555ddd795",
+        "record_type": "artifact_version"
+      }
+    ],
+    "url": "https://ai.google.dev/gemma/docs/core/model_card_4",
+    "url_normalized": "https://ai.google.dev/gemma/docs/core/model_card_4",
+    "url_role": "canonical"
+  }
+]

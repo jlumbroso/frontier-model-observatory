@@ -1,0 +1,41 @@
+id,canonical_key,kind,preferred_name,provider_org_id,family_id
+fmo:checkpoint:01a07073-5120-721d-866f-22ce42a209f3,openai/o1/preview,checkpoint,OpenAI o1 preview,,
+fmo:checkpoint:01a07073-5120-721d-866f-22cf14bbe1ea,openai/o1/general-availability,checkpoint,OpenAI o1 general availability,,
+fmo:configuration:01a07073-5120-721d-866f-22c94c59d570,anthropic/claude-fable-5-1,configuration,Claude Fable 5.1,,
+fmo:configuration:01a07073-5120-721d-866f-22ca52786b23,anthropic/claude-mythos-5-1,configuration,Claude Mythos 5.1,,
+fmo:configuration:01a07078-ed08-76da-a1b2-a46dc49d70e1,google-deepmind/gemma-4/e2b,configuration,Gemma 4 E2B,,
+fmo:configuration:01a07078-ed08-76da-a1b2-a46eb2bd2bcb,google-deepmind/gemma-4/e4b,configuration,Gemma 4 E4B,,
+fmo:configuration:01a07078-ed08-76da-a1b2-a46f13c4b832,google-deepmind/gemma-4/12b,configuration,Gemma 4 12B,,
+fmo:configuration:01a07078-ed08-76da-a1b2-a4706af9146f,google-deepmind/gemma-4/26b-a4b,configuration,Gemma 4 26B A4B,,
+fmo:configuration:01a07078-ed08-76da-a1b2-a471b3727a64,google-deepmind/gemma-4/31b,configuration,Gemma 4 31B,,
+fmo:configuration:01a07078-ed08-76da-a1b2-a4729c9c05dc,google-deepmind/gemma-4/pretrained,configuration,Gemma 4 pre-trained,,
+fmo:configuration:01a07078-ed08-76da-a1b2-a473d2efa8ad,google-deepmind/gemma-4/instruction-tuned,configuration,Gemma 4 instruction-tuned,,
+fmo:family:01a0706c-ed9a-7343-8190-13a8c59d8820,google-deepmind/gemini-robotics,model_family,Gemini Robotics,fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,
+fmo:family:01a07073-5120-721d-866f-22c727ba9493,anthropic/claude-family,model_family,Claude,fmo:org:01a07073-5120-721d-866f-22c6b3df1226,
+fmo:family:01a07073-5120-721d-866f-22cc1a57b708,openai/o1-family,model_family,OpenAI o1,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,
+fmo:family:01a07073-5120-721d-866f-22d02038e9bf,openai/gpt-live-family,model_family,GPT-Live,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,
+fmo:family:01a07073-5120-721d-866f-22d3a27a8ce0,google-deepmind/gemini-family,model_family,Gemini,fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,
+fmo:family:01a07073-5120-721d-866f-22d5e8f024e6,google-deepmind/veo-family,model_family,Veo,fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,
+fmo:family:01a07078-ed04-76cd-8a7c-850c7472cbab,openai/gpt-5-family,model_family,GPT-5,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,
+fmo:family:01a07078-ed08-76da-a1b2-a463f4b1d852,openai/sora-family,model_family,Sora,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,
+fmo:family:01a07078-ed08-76da-a1b2-a46b6aed2609,google-deepmind/gemma-family,model_family,Gemma,fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,
+fmo:model:01a0706c-edc2-711d-8771-383ccfb5a2dc,google-deepmind/gemini-robotics-1-5,model,Gemini Robotics 1.5,fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,fmo:family:01a0706c-ed9a-7343-8190-13a8c59d8820
+fmo:model:01a0706c-edec-7255-a68b-80d535b91a64,google-deepmind/gemini-robotics-er-1-5,model,Gemini Robotics-ER 1.5,fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,fmo:family:01a0706c-ed9a-7343-8190-13a8c59d8820
+fmo:model:01a07073-5120-721d-866f-22c800eb0fe5,anthropic/claude-opus-4-6,model,Claude Opus 4.6,fmo:org:01a07073-5120-721d-866f-22c6b3df1226,fmo:family:01a07073-5120-721d-866f-22c727ba9493
+fmo:model:01a07073-5120-721d-866f-22cd394712b3,openai/o1,model,OpenAI o1,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,fmo:family:01a07073-5120-721d-866f-22cc1a57b708
+fmo:model:01a07073-5120-721d-866f-22d15d95d2eb,openai/gpt-live-1,model,GPT-Live-1,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,fmo:family:01a07073-5120-721d-866f-22d02038e9bf
+fmo:model:01a07073-5120-721d-866f-22d2be7adc98,openai/gpt-live-1-mini,model,GPT-Live-1 mini,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,fmo:family:01a07073-5120-721d-866f-22d02038e9bf
+fmo:model:01a07073-5120-721d-866f-22d49a7b1e19,google-deepmind/gemini-3-pro,model,Gemini 3 Pro,fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,fmo:family:01a07073-5120-721d-866f-22d3a27a8ce0
+fmo:model:01a07073-5121-70e0-8081-1e06f36d3b1d,google-deepmind/veo-3,model,Veo 3,fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,fmo:family:01a07073-5120-721d-866f-22d5e8f024e6
+fmo:model:01a07078-ecf1-75b4-9b5a-c09215e90101,anthropic/claude-opus-4,model,Claude Opus 4,fmo:org:01a07073-5120-721d-866f-22c6b3df1226,fmo:family:01a07073-5120-721d-866f-22c727ba9493
+fmo:model:01a07078-ecf1-75b4-9b5a-c0933211f9c8,anthropic/claude-sonnet-4,model,Claude Sonnet 4,fmo:org:01a07073-5120-721d-866f-22c6b3df1226,fmo:family:01a07073-5120-721d-866f-22c727ba9493
+fmo:model:01a07078-ed03-70e4-b949-31210ad324d8,anthropic/claude-opus-5,model,Claude Opus 5,fmo:org:01a07073-5120-721d-866f-22c6b3df1226,fmo:family:01a07073-5120-721d-866f-22c727ba9493
+fmo:model:01a07078-ed04-76cd-8a7c-850deb414333,openai/gpt-5-2-instant,model,GPT-5.2 Instant,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,fmo:family:01a07078-ed04-76cd-8a7c-850c7472cbab
+fmo:model:01a07078-ed04-76cd-8a7c-850ebef2631b,openai/gpt-5-2-thinking,model,GPT-5.2 Thinking,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,fmo:family:01a07078-ed04-76cd-8a7c-850c7472cbab
+fmo:model:01a07078-ed08-76da-a1b2-a4643d6ce8d9,openai/sora-2,model,Sora 2,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,fmo:family:01a07078-ed08-76da-a1b2-a463f4b1d852
+fmo:model:01a07078-ed08-76da-a1b2-a46c6d39f550,google-deepmind/gemma-4,model,Gemma 4,fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,fmo:family:01a07078-ed08-76da-a1b2-a46b6aed2609
+fmo:org:01a0706c-ed72-7311-b7ba-2bf17a5688b1,google-deepmind,organization,Google DeepMind,,
+fmo:org:01a07073-5120-721d-866f-22c6b3df1226,anthropic,organization,Anthropic,,
+fmo:org:01a07073-5120-721d-866f-22cbdc29d637,openai,organization,OpenAI,,
+fmo:product:01a07078-ed03-70e4-b949-31220b3bd02d,anthropic/claude-ai,product,claude.ai,fmo:org:01a07073-5120-721d-866f-22c6b3df1226,
+fmo:product:01a07078-ed08-76da-a1b2-a4655be00e89,openai/sora-product,product,Sora,fmo:org:01a07073-5120-721d-866f-22cbdc29d637,

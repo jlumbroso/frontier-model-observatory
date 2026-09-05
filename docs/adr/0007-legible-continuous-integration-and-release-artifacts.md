@@ -3,7 +3,7 @@
 # Legible Continuous Integration and Release Artifacts
 
 - **Date**: 2026-09-05
-- **Iteration**: 3
+- **Iteration**: 4
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -81,11 +81,11 @@ On version tags:
 1. run the full verification gate;
 2. build the distributable skill from canonical skill sources;
 3. validate the complete skill tree;
-4. build approved dataset and index distributions;
+4. build approved dataset, index, and extracted-text distributions;
 5. produce deterministic archives where practical;
 6. generate SHA-256 checksums and a manifest containing source revision, schema version, generator version, and build time;
 7. upload the skill ZIP and diagnostics as workflow artifacts;
-8. attach the skill ZIP, checksums, manifest, and approved distributions to the GitHub Release.
+8. attach the skill ZIP, extracted-text ZIP, checksums, manifest, and approved distributions to the GitHub Release.
 
 The release must not silently omit an expected asset. An unavailable distribution is represented as an explicit failed requirement or a versioned “not yet part of this release contract,” never as an accidental absence.
 
@@ -125,6 +125,7 @@ The current fine-grained PAT has repository-content authority but correctly reje
 - [x] Prepare and locally validate pinned verification and release workflows.
 - [x] Implement deterministic skill packaging and checksums.
 - [x] Add release-manifest generation and tests.
+- [x] Package extracted text separately from the compact skill, with an in-archive provenance manifest.
 - [ ] Land workflows using a credential or human commit with workflow authority.
 - [ ] Inspect the first hosted summary and preserve any resulting corrections.
 
@@ -135,6 +136,7 @@ The current fine-grained PAT has repository-content authority but correctly reje
 - [x] GPT 5.6 Sol at Perplexity Computer: Direct requirement is captured without reducing CI to pass/fail.
 - [x] Local verification scripts validate and render all four result states.
 - [x] Workflow YAML, immutable action pins, static contracts, and actionlint 1.7.12 validate locally.
+- [x] Local release build deterministically produces ten primary assets, including a validated skill ZIP and a 13-document extracted-text ZIP.
 - [ ] Hosted push/PR run produces a complete failure-resistant summary.
 - [ ] Tagged release publishes a downloadable validated skill ZIP and checksums.
 
@@ -160,10 +162,16 @@ The current fine-grained PAT has repository-content authority but correctly reje
 - Changes: Added deterministic skill and dataset release assets, SHA-256 manifests, immutable action pins, LFS checkout, always-on summary fallbacks, and GitHub Release publication. Both workflows pass YAML parsing, static tests, and actionlint 1.7.12.
 - Outcome: Remains Partially Implemented; workflow files need an authorized landing commit and first hosted-run inspection.
 
+### Iteration 4 (2026-09-05)
+- Trigger: Policy-clean extracted text became a complete calibration-layer distribution.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added a deterministic `fmo-extracted-text-<version>.zip` release asset containing 13 full-text derivatives and an in-archive manifest that binds each text hash to its source byte identity. Kept the text archive separate so the skill remains compact and progressively loadable.
+- Outcome: The local release contract is complete for current assets; hosted publication and inspection remain authorization-gated.
+
 ---
 
 ## Links
 
 - Related ADRs: `0001-portable-agent-instructions.md`, `0004-artifact-archive-and-prompt-provenance.md`, `0005-summonable-recurring-operations.md`, `0006-calibration-corpus-and-documentary-variation-stopping-rule.md`
-- Related code: future `.github/workflows/`, summary renderer, packaging scripts, and release manifest
+- Related code: `.github/workflows/` candidates, `scripts/verify.py`, `scripts/package_release.py`, and release manifests
 - Supersedes: none

@@ -10,6 +10,7 @@ from pathlib import Path
 import shutil
 import sys
 import tempfile
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -17,6 +18,7 @@ sys.path.insert(0, str(ROOT))
 from scripts import build_skill, package_skill
 
 
+FIXED_TIME = (1980, 1, 1, 0, 0, 0)
 DATASET_FILES = [
     "fmo-records.jsonl",
     "fmo-records.json",
@@ -27,6 +29,60 @@ DATASET_FILES = [
     "fmo.sqlite",
     "manifest.json",
 ]
+
+
+def extracted_text_records() -> list[dict]:
+    records = []
+    for line in (
+        ROOT / "data" / "byte-objects.jsonl"
+    ).read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        record = json.loads(line)
+        if record.get("derivation") == "extracted_text":
+            records.append(record)
+    return records
+
+
+def build_extracted_text_archive(destination: Path, version: str) -> None:
+    records = sorted(extracted_text_records(), key=lambda record: record["id"])
+    manifest = {
+        "schema_version": 1,
+        "release_version": version,
+        "derivation": "extracted_text",
+        "records": [
+            {
+                "byte_object_id": record["id"],
+                "sha256": record["sha256"],
+                "byte_length": record["byte_length"],
+                "derived_from_byte_ids": record["derived_from_byte_ids"],
+                "archive_path": (
+                    f"sha256/{record['sha256']}/extracted.txt"
+                ),
+            }
+            for record in records
+        ],
+    }
+    with zipfile.ZipFile(
+        destination,
+        "w",
+        compression=zipfile.ZIP_DEFLATED,
+        compresslevel=9,
+    ) as archive:
+        info = zipfile.ZipInfo("manifest.json", FIXED_TIME)
+        info.compress_type = zipfile.ZIP_DEFLATED
+        info.external_attr = 0o644 << 16
+        archive.writestr(
+            info,
+            (json.dumps(manifest, sort_keys=True, indent=2) + "\n").encode(),
+        )
+        for record in records:
+            source = ROOT / record["storage"]["locator"]
+            archive_path = f"sha256/{record['sha256']}/extracted.txt"
+            info = zipfile.ZipInfo(archive_path, FIXED_TIME)
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o644 << 16
+            archive.writestr(info, source.read_bytes())
 
 
 def build(output: Path, version: str) -> dict:
@@ -45,6 +101,9 @@ def build(output: Path, version: str) -> dict:
         shutil.copyfile(skill_archive, output / skill_archive.name)
 
     assets = [output / skill_manifest["archive"]]
+    text_archive = output / f"fmo-extracted-text-{version}.zip"
+    build_extracted_text_archive(text_archive, version)
+    assets.append(text_archive)
     for filename in DATASET_FILES:
         source = ROOT / "dist" / filename
         destination = output / (

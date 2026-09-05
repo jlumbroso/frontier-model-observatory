@@ -253,7 +253,7 @@ The repository preserves original artifacts where lawful and practical, separate
 ### Current focus:
 
 - Preserve the founding conversation as ADRs before implementation.
-- Calibrate the ontology against representative primary-source cards and release artifacts.
+- Materialize and encode the twelve-artifact primary-source calibration set selected in ADR-0006.
 - Decide archival, licensing, prompt-provenance, and "frontier" scope boundaries.
 - Establish stable schemas and validation before corpus-scale collection.
 - Draft the progressively disclosed skill only after evidence tests the architecture.
@@ -269,6 +269,7 @@ The repository preserves original artifacts where lawful and practical, separate
 - Archival storage is tiered; public redistribution is evidence-gated; unofficial prompts are quarantined outside ordinary views. See `docs/adr/0004-artifact-archive-and-prompt-provenance.md`.
 - The intended provider scope is comprehensive and delivered through useful intermediate stakes rather than reduced to a permanently narrow v0.1.
 - The categorical excluded-company rule is repository governance, not a custom license restriction. Keep standard licensing; enforce the rule in the canonical repository and request continuity from forks. Governance and provenance may name the exclusion only as needed to state and audit it. See `docs/adr/0002-observatory-scope-and-layered-architecture.md`.
+- Schema calibration uses twelve primary-source artifacts, four per core provider, and a documentary-variation stopping rule. See `docs/adr/0006-calibration-corpus-and-documentary-variation-stopping-rule.md`.
 
 ### Open questions:
 

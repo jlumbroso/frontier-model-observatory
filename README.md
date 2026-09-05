@@ -20,11 +20,12 @@ Completed:
 - founding scope, representation, archival, and governance ADRs;
 - parser-backed ORRCF question routing;
 - a local verification gate and repository exclusion-policy checker.
+- a primary-source disclosure-surface inventory and twelve-artifact calibration
+  decision.
 
 In progress:
 
-- representative primary-source calibration across Anthropic, OpenAI, and
-  Google/Google DeepMind;
+- materialization and encoding of the twelve-artifact calibration corpus;
 - entity, event, artifact, and claim schemas;
 - coverage-ledger semantics;
 - archival manifests and storage measurement.
@@ -170,6 +171,8 @@ scripts or source modules.
   preservation, evidence-gated redistribution, and prompt quarantine.
 - [ADR-0005](docs/adr/0005-summonable-recurring-operations.md): recurring
   operations as named recipes.
+- [ADR-0006](docs/adr/0006-calibration-corpus-and-documentary-variation-stopping-rule.md):
+  twelve-artifact calibration and documentary-variation stopping rule.
 
 ## License and Artifact Rights
 

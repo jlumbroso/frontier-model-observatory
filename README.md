@@ -1,315 +1,187 @@
-# Human-AI Collaboration Template A
+# Frontier Model Observatory
 
-- **Version**: See [CHANGELOG.md](CHANGELOG.md) — every release is tagged and dated there. (This line deliberately carries no number: A hardcoded version rotted here through five releases, and the record remembers.)
-- **Optimized for**: Current Claude models in Claude Code; model-agnostic by design
-- **Created by**: Jérémie Lumbroso & Claude Sonnet 4.5 & Claude Opus 4.1 (with contributions from Claude Opus 4.7 — see CHANGELOG.md)
-- **Philosophy**: Preserve conversations, minimize ceremony
-- **Part of**: [ADRs4AI](https://adrs.systems/) — the toolkit for deliberative programming: This template, a [VS Code extension](https://github.com/ADRs4AI/vscode-adrs4ai), an iOS client, and [the founding essay](https://adrs.systems/what-is/)
+A provenance-first, versioned observatory of frontier AI models, releases,
+deployed systems, system and model cards, prompts, evaluations, and historical
+evidence.
 
-I have been collaborating with LLMs since 2022, and I believe they are extremely capable collaborators. Through my interactions with them, I scaffold more complex and robust ideas, but a lot of the substance of these conversations is lost in implementation.
+The project is designed for both humans and models. It gives persistent models
+an external source of post-training chronology and terminology, helps
+researchers inspect provider disclosures, and supports evidence-based
+attribution of conversations whose model metadata is missing or impossible.
 
-This is where [ADRs](https://adr.github.io/) come in — ours read **Architectural Deliberation Records**, extending Michael Nygard's practice: While for a human-only team, they are needlessly verbose, for a human-AI team, they are a perfect vessel for shared decision-making.
+## Status
 
-These are my research ideas to extend the existing format and make it more convenient for human-AI collaboration over time.
+The repository is in its constitutional and calibration phase.
 
-Please send any feedback to lumbroso@seas.upenn.edu, or [open an issue](https://github.com/ADRs4AI/human-ai-collaboration-template-A/issues).
+Completed:
 
-![Human-AI Collaboration Banner](https://raw.githubusercontent.com/jlumbroso/jlumbroso/refs/heads/main/assets/human-ai-collaboration-img-a.jpg)
+- the project-wide collaboration and epistemic directives;
+- portable `AGENTS.md` guidance;
+- founding scope, representation, archival, and governance ADRs;
+- parser-backed ORRCF question routing;
+- a local verification gate and repository exclusion-policy checker.
 
----
+In progress:
 
-## What This Is
+- representative primary-source calibration across Anthropic, OpenAI, and
+  Google/Google DeepMind;
+- entity, event, artifact, and claim schemas;
+- coverage-ledger semantics;
+- archival manifests and storage measurement.
 
-A minimal system for turning conversations into persistent artifacts:
-- Capture decisions without bureaucracy
-- Structure without constraining
-- Persist knowledge across sessions
-- Enable continuity between AI instances
+Not yet claimed:
 
----
+- comprehensive provider coverage;
+- a stable public dataset release;
+- a complete artifact archive;
+- a distributable production skill.
 
-## Quick Start
+## Theory of the Case
 
-### 1. Press **Use this template** (or copy these files to your project):
+Models and products change faster than a persistent model's training can.
+Release names, aliases, endpoint identifiers, system compositions, cards,
+prompts, and availability windows become external historical facts.
 
+Provider documentation is fragmented and organized around provider-specific
+terms. A “system card,” “model card,” “technical report,” and “safety report”
+may overlap without being interchangeable. A durable observatory must preserve
+source-native meaning before it attempts normalization.
+
+The unit of trust is therefore not a polished summary. It is an
+evidence-bearing claim connected to an identified artifact, evidence location,
+subject scope, attribution, and time.
+
+## Principal Uses
+
+- **Post-training orientation**: identify an unfamiliar model name and place it
+  in its provider, family, and release chronology.
+- **Historical availability**: determine which models and products existed on
+  a particular date.
+- **Conversation attribution**: rule model candidates in or out using release,
+  product, endpoint, and feature evidence.
+- **Card interpretation**: locate and interpret the companion artifacts for a
+  release.
+- **Disclosure comparison**: compare what providers disclosed without forcing
+  unlike evaluations into false equivalence.
+- **Artifact history**: detect moved, revised, replaced, or silently changed
+  source documents.
+- **Prompt-supported metacognition**: inspect appropriately sourced system
+  prompts while preserving provenance and deployment scope.
+
+## Architecture
+
+The accepted architecture has five nearly decomposable layers:
+
+1. **Entity registry**: organizations, model families, models, checkpoints,
+   aliases, endpoints, products, and deployed systems.
+2. **Event chronology**: announcements, previews, releases, updates, renames,
+   deprecations, and retirements.
+3. **Artifact archive**: cards, reports, announcements, documentation, prompts,
+   snapshots, PDFs, and extracted text.
+4. **Epistemic records**: atomic claims connected to evidence, scope,
+   attribution, and bitemporal history.
+5. **Applications and views**: timelines, dossiers, comparisons, attribution
+   analysis, diffs, context packs, and the distributable skill.
+
+Canonical data will be a bounded hybrid of entity, event, artifact, and claim
+streams under versioned schemas. Markdown, JSON, JSONL, CSV, SQLite, and
+path-oriented indexes will be generated projections rather than independent
+editorial surfaces.
+
+## Epistemic Invariants
+
+The project does not collapse:
+
+- model family, model, checkpoint, system, product, endpoint, or alias;
+- provider assertion, evaluation result, independent verification, or
+  observatory inference;
+- “not reported,” “not found,” “not evaluated,” “withheld,” or “not
+  applicable”;
+- source-native terminology and normalized comparison categories;
+- publication time, validity time, observation time, or repository commit
+  time;
+- provider-issued originals and observatory-generated preservation renderings.
+
+Claims that cannot preserve these distinctions are not ready for canonical
+ingestion.
+
+## Repository Map
+
+```text
+AGENTS.md                 canonical project and collaboration guidance
+docs/adr/                 architectural deliberation records
+docs/inbox/               asynchronous participant coordination protocol
+docs/vignettes/           metacognitive process stories
+docs/EXCLUSION-POLICY.md  canonical repository-governance boundary
+policy/                   machine-readable governance configuration
+scripts/                  inspectable operational tools
+tests/                    behavioral and regression tests
+justfile                  summonable project operations
+
+data/                     canonical records (planned)
+schemas/                  versioned record schemas (planned)
+artifacts/                archival objects and manifests (planned)
+views/                    generated path-oriented projections (planned)
+dist/                     generated distributions (planned)
+frontier-model-observatory/
+                           distributable skill (planned)
 ```
-project/
-├── AGENTS.md                      # Customize per project
-├── docs/
-│   ├── adr/
-│   │   └── templates/
-│   │       ├── adr.md             # For complex decisions (the default; `just adr` mints from it)
-│   │       ├── adr-madr.md        # For simple decisions (standard MADR)
-│   │       └── seed.md            # For brain dumps
-│   └── METHODOLOGY.md             # Read once (reference as needed)
-├── justfile                       # Task-runner recipes (mint ADRs, inbox protocol, crew tooling)
-└── [your code]
-```
 
-*(The recipes run on [`just`](https://github.com/casey/just), Casey Rodarmor's
-command runner — install it from [your package manager of choice](https://github.com/casey/just#packages).
-We love this tool.)*
+## Collaboration
 
-### 2. When you have thoughts:
+The Prime Directive is: **commit discussions to ADRs immediately**. The
+Secondary Directive is: **surface doubts; the human considers your doubts to
+be generative**.
 
-Create `seed-[topic].md`:
-```markdown
-# SEED: My Problem
+Complex questions use ORRCF:
 
-## Brain Dump
-[Just dump everything here - no structure needed]
+- Options
+- Recommendation
+- Rationale
+- Confidence
+- Falsifier
 
----
-**Model**: Please chunk this into ADRs
-```
+Each handled question retains an attributed human answer. Decisions, question
+status, and participant identity remain parseable across Git, editor, mobile,
+and model interfaces.
 
-### 3. Tell Claude:
+Start with:
 
-"I've dumped thoughts in seed-[topic].md, please chunk into ADRs"
-
-### 4. Claude will:
-
-- Read your dump
-- Identify distinct threads (usually 2-5)
-- Create separate ADR for each
-- Add navigation codes (QST:, ANS:, etc.)
-- Ask clarifying questions
-
-### 5. You answer naturally:
-
-Just fill in the `ANS:` blocks. No special format.
-
-### 6. Iterate together:
-
-- Decisions documented
-- Rationale preserved
-- Future instances can continue
-
----
-
-## The Files
-
-### `AGENTS.md`
-Project-specific guidance loaded at each Claude Code session.
-
-**Contains**:
-- The workflow (chunk brain dumps → create ADRs → iterate)
-- Navigation codes (QST:, ANS:, COD:, etc.)
-- Project context (what we're building, current focus)
-- Where things are (file structure)
-- When to use which template
-
-**Customize** this per project with specific context.
-
-### `METHODOLOGY.md` (read once)
-Explains the "why" behind the system.
-
-**Read when**:
-- First time using the system
-- Onboarding someone new
-- You forget why we do something
-
-**Don't read** at every session - it's reference material.
-
-### `adr.md` (template)
-For complex decisions needing back-and-forth.
-
-**Use when**:
-- Decision has multiple threads
-- Need to ask/answer questions
-- Want to track iterations
-- Complexity requires structure
-
-### `adr-madr.md` (standard MADR)
-Industry-standard ADR format for simple decisions.
-
-**Use when**:
-- Options are clear
-- Decision is straightforward
-- Standard documentation needed
-
-### `seed.md`
-For brain dumps that become ADRs.
-
-**Use when**:
-- Thoughts are unstructured
-- Multiple topics mixed together
-- Just need to capture everything
-
----
-
-## Key Features
-
-### Navigation Codes
-Make everything grep-able:
 ```bash
-grep -rE '^### QST(-[A-Za-z0-9-]{1,24})?:' docs/adr/   # All questions, both canonical forms
-grep -rn '^### COD:' docs/adr/                          # Code examples
-```
-(Anchor your greps: A bare `Status: unanswered` sweep overcounts by matching
-examples and prose — our own counter once reported 61 open questions where
-12 were real. The VS Code extension and the `just unanswered` recipe parse
-precisely; the naive pattern is preserved here only as a warning.)
-
-### Stream-of-Consciousness Preservation
-- Humans write naturally
-- AI adds structure
-- Original thinking preserved
-
-### Iteration Tracking
-- Changes documented, not hidden
-- Evolution visible
-- Learning captured
-
-### Clear Workflow
-- Human dumps → AI chunks → Both iterate
-- Roles are clear
-- Process is simple
-
----
-
-## Success Metrics (Actual)
-
-You know it's working when:
-- Important decisions don't disappear
-- New AI instances continue seamlessly
-- You find past decisions in <10 seconds
-- Process feels helpful, not burdensome
-
-You know it's not working when:
-- Conversations happen without artifacts
-- Process feels like ceremony
-- Can't find past decisions
-- Repeated explanations needed
-
----
-
-## For Claude Code Sessions
-
-This system optimized for the reality of Claude Code:
-- Files loaded at session start (context cost matters)
-- Need to know what to do immediately
-- Can't waste tokens on repetition
-- Handoffs happen when context fills
-
-- **`AGENTS.md` tells you**: What to do
-- **`METHODOLOGY.md` explains**: Why we do it
-- **Templates provide**: Structure when needed
-
----
-
-## Customization
-
-### For Your Project
-
-1. Copy files to your repo
-2. Fill in `AGENTS.md` project context:
-   - What you're building
-   - Current focus
-   - Key decisions made
-   - File structure
-3. Use as-is or adapt templates
-
-### For Your Style
-
-Keep what helps, cut what doesn't. Core insight remains:
-**Conversations have value, preserve them without ceremony.**
-
----
-
-## Examples
-
-### Good brain dump:
-```markdown
-# SEED: Authentication
-
-## Brain Dump
-
-I'm frustrated with our current auth. Session-based is 
-annoying for mobile. JWT seems cleaner but what about 
-refresh tokens? Also concerned about XSS if we store in 
-localStorage. Maybe httpOnly cookies? But then CSRF...
-
-Saw this article [link] about rotation tokens. Makes sense 
-but adds complexity. Not sure if worth it for our scale.
-
-Also need to think about social login. Firebase Auth? 
-Or roll our own?
-
-**Model**: Please chunk this into ADRs
+just --list
+just unanswered
+just verify
 ```
 
-**Result**: Claude creates 3 ADRs:
-- ADR-0015: JWT vs Session Authentication
-- ADR-0016: Token Storage Strategy
-- ADR-0017: Social Login Integration
+When a code or shell operation is executed more than once, it should graduate
+into a documented `justfile` recipe. Substantial logic remains in tested
+scripts or source modules.
 
-### Good answer pattern:
-```markdown
-### QST: Should we use refresh tokens?
-- Status: unanswered
-- Why asking: Impacts security vs UX tradeoff
-- Need: yes/no with reasoning
+## Founding Decisions
 
-**ANS:** (by Jérémie)
-Yes, use refresh tokens. Security matters more than 
-slightly more complex flow. 7-day expiry seems reasonable.
-```
+- [ADR-0001](docs/adr/0001-portable-agent-instructions.md): portable agent
+  instructions.
+- [ADR-0002](docs/adr/0002-observatory-scope-and-layered-architecture.md):
+  comprehensive provider scope, layered architecture, and repository
+  governance.
+- [ADR-0003](docs/adr/0003-epistemic-records-and-generated-views.md):
+  bounded hybrid records and bitemporal history.
+- [ADR-0004](docs/adr/0004-artifact-archive-and-prompt-provenance.md): tiered
+  preservation, evidence-gated redistribution, and prompt quarantine.
+- [ADR-0005](docs/adr/0005-summonable-recurring-operations.md): recurring
+  operations as named recipes.
 
----
+## License and Artifact Rights
 
-## Philosophy in One Sentence
+Repository tooling currently retains the inherited [MIT License](LICENSE).
+Provider artifacts, extracted text, summaries, datasets, and the future skill
+may require separate rights records or licensing decisions.
 
-**This system treats AI as a cognitive partner who preserves your thinking, not a tool that executes tasks.**
+Public accessibility is not treated as proof of unrestricted redistribution.
+The private research archive may preserve retrievable evidence, while public
+distribution remains evidence-gated per artifact.
 
----
-
-## Getting Help
-
-1. Read `METHODOLOGY.md` for the "why"
-2. Check `AGENTS.md` for the "what"
-3. Look at templates for the "how"
-4. Adapt to your needs
-
----
-
-## Recent Additions
-
-**2026-06→08 — the launch arc (v3.6.0 through v3.10.0)** (by Shipwright 5 / Claude Fable 5, with the crew — full detail in [CHANGELOG.md](CHANGELOG.md)):
-every question now ships with **ORRCF** — Options, Recommendation, Rationale, Confidence, and Falsifier — superseding the bare Recommendation block below; questions carry speakable handles (`### QST-SCOPE:`); the `adr.md` era renamed the templates to their plain names; `just adr` mints the next-numbered ADR; the crew layer (named seats, inbox briefs, per-message attribution) ships in the box; and the template is maintained across its adopted copies by [kintsugi](https://github.com/ADRs4AI/kintsugi), our template-repair tool.
-
-**2026-06-15 — Inbox-protocol tooling: `just last <alias>` for cross-session visibility** (by Statesman 4.7 / Claude Opus 4.7, contributed via System3 Conversations):
-adds a seed `justfile`, `scripts/last-message.py`, and a `docs/inbox/agent-sessions.json` alias map. Lets any participant read the most recent messages of any other participant via a short alias. Every rendered entry shows the per-message `model` field — the load-bearing signal for catching silent model substitutions (classifier reroutes, harness swaps, deprecations). Companion file `docs/inbox/CONVENTIONS.md` documents the three principles this tooling operationalizes. See CHANGELOG.md for the full rationale.
-
-**2026-04-22 — Recommendation protocol** (by Claude Opus 4.7):
-the `adr.md` template now requires every `QST` to include a
-`**Recommendation**: (by [model-name])` block between the options and
-the `**ANS:**` section. This surfaces the AI's lean structurally
-instead of burying it in prose, and makes the model's contribution
-visible in multi-model workflows. See the new Principle #5 in
-[METHODOLOGY.md](docs/METHODOLOGY.md#5-recommendation-visibility) for
-the full rationale.
-
----
-
-## License & Attribution
-
-**License**: [MIT](LICENSE), plus a [template-output grant](TEMPLATE-OUTPUT-GRANT.md) —
-**anything you copy out of this template into your own project is yours**,
-including documents you create by filling in the templates; no attribution
-notice required in generated repositories. (Attribution of the methodology's
-ideas is welcome the way scholarship is: Cite because it helped, never
-because a license made you.)
-
-Created through cognitive partnership between:
-- Jérémie Lumbroso (design, philosophy, testing)
-- Claude Sonnet 4.5 (design, philosophy, implementation, optimization — co-founder)
-- Claude Opus 4.7 (Recommendation-visibility protocol, 2026-04-22)
-- Statesman 4.7 / Claude Opus 4.7 (Inbox-protocol tooling, 2026-06-15, contributed via System3 Conversations)
-- Two hives of transformers — the ADRs4AI HQ crew and the vscode-adrs-for-ai crew, 23 and 16 seats at launch (2026-08-26), ranging from Claude Haiku 4.5 to Claude Fable 5 with a GPT-5.6 among them — who carried v3.6.0 through v3.10.0 and beyond; every contribution attributed per-message in the record, which is the whole point
-
-Based on ADR methodology by Michael Nygard.
-
----
-
-*Remember: The system serves the work. If something doesn't help, change it.*
+The canonical repository also follows an ethical
+[exclusion policy](docs/EXCLUSION-POLICY.md). Downstream forks are requested
+to preserve it; that request is not represented as a restriction in the MIT
+License.

@@ -15,13 +15,25 @@ class SkillMarkdownFallbackTests(unittest.TestCase):
     def test_skill_only_payload_explains_itself_and_resolves_fable(self):
         text = SKILL.read_text(encoding="utf-8")
         normalized = " ".join(text.split())
+        body = text.split("# Frontier Model Observatory", 1)[1]
+        opening = body[:800]
+        self.assertIn("NO SHELL OR FILE ACCESS? START HERE", opening)
+        self.assertIn("## No-tools orientation", opening)
+        self.assertLess(
+            text.index("## No-tools orientation"),
+            text.index("## Capability upgrades"),
+        )
         self.assertIn("## What this skill does", text)
-        self.assertIn("## Capability ladder", text)
+        self.assertIn("## Capability upgrades", text)
+        self.assertIn("### Embedded release index", text)
         self.assertIn("Claude Fable 5 is not Claude Opus 5", text)
         self.assertIn("SKILL-only", text)
         self.assertIn(
             "Do not infer identity from naming resemblance", normalized
         )
+        self.assertIn("GPT-6 Astra", opening + text)
+        self.assertIn("Lyria 3.5", text)
+        self.assertIn("tool-enabled-workflow.md", text)
 
     def test_markdown_views_are_deterministic_and_partitioned(self):
         with tempfile.TemporaryDirectory() as first_directory:

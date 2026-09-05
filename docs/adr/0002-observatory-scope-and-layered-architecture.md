@@ -3,8 +3,8 @@
 # Observatory Scope and Layered Architecture
 
 - **Date**: 2026-09-05
-- **Iteration**: 4
-- **Status**: Draft
+- **Iteration**: 5
+- **Status**: Accepted
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
 **TL;DR**: Build a multimodal model observatory beginning with Anthropic, OpenAI, and Google, expanding to selected Asian and open-model families, while explicitly excluding Meta on ethical grounds.
@@ -155,6 +155,25 @@ Thanks for being transparent about your confidence of Medium because it helped m
 
 ---
 
+## Final Decision
+
+### Chosen: Comprehensive declared scope with a repository-governance exclusion
+
+Build the whole declared observatory through useful intermediate stakes. Begin with comprehensive chronology and artifact discovery for Anthropic, OpenAI, and Google across modalities, then expand to admitted families including DeepSeek, Moonshot AI/Kimi, Alibaba/Qwen, and an open-model view.
+
+Apply the categorical excluded-company rule as repository governance, not as a custom copyright-license restriction:
+
+- keep the inherited standard software license unless a separate licensing ADR changes it;
+- prohibit excluded subject matter in the canonical repository through `AGENTS.md`, contribution policy, review, and CI;
+- permit only the narrow governance and provenance references required to state, audit, and enforce the rule itself;
+- request that downstream forks preserve the policy, while not claiming that the standard license legally compels them to do so.
+
+**Why**: Jérémie selected zero ordinary mention in QST-META-BOUNDARY, comprehensive delivery in QST-V01-SCOPE, and Option A in QST-EXCLUSION-TERMS after distinguishing an ethical repository stance from a copyright-license restriction.
+
+**Trade-offs accepted**: A standard license cannot guarantee that every downstream fork preserves the policy. The canonical repository can enforce the stance honestly without mislabeling a restrictive custom license as open source.
+
+---
+
 ## Consequences
 
 - “Frontier” becomes an explicit, inspectable coverage policy.
@@ -170,7 +189,8 @@ Thanks for being transparent about your confidence of Medium because it helped m
 - [ ] Confirm provider-name interpretations.
 - [x] Record the categorical exclusion answer.
 - [x] Replace a narrow v0.1 scope with whole-project delivery through intermediate stakes.
-- [ ] Resolve the license/governance mechanism and its necessary policy exception.
+- [x] Resolve the license/governance mechanism and its necessary policy exception.
+- [ ] Implement the repository policy and semantic CI guard before corpus ingestion.
 - [ ] Create a coverage-ledger schema after ADR-0003 settles canonical records.
 
 ---
@@ -178,7 +198,7 @@ Thanks for being transparent about your confidence of Medium because it helped m
 ## Validation
 
 - [x] GPT 5.6 Sol at Perplexity Computer: Human scope answer is preserved.
-- [ ] Jérémie Lumbroso: Scope and exclusion policy match intent.
+- [x] Jérémie "Sonnet 4.5" Lumbroso: Selected comprehensive scope, categorical repository exclusion, and standard-license governance.
 - [ ] Calibration corpus: Provider and modality boundaries are implementable.
 
 ---
@@ -208,6 +228,12 @@ Thanks for being transparent about your confidence of Medium because it helped m
 - Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
 - Changes: Adopted zero mention and whole-scope delivery through intermediate stakes; surfaced the unresolved license and self-reference boundary as QST-EXCLUSION-TERMS.
 - Outcome: Remains Draft pending the licensing answer.
+
+### Iteration 5 (2026-09-05)
+- Trigger: QST-EXCLUSION-TERMS answered through ADRs4AI mobile.
+- Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Adopted Option A, keeping standard licensing while enforcing the categorical exclusion through repository governance and requesting downstream continuity.
+- Outcome: Draft → Accepted.
 
 ---
 

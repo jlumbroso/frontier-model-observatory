@@ -3,8 +3,8 @@
 # Progressive Skill Packaging and Query Protocol
 
 - **Date**: 2026-09-05
-- **Iteration**: 1
-- **Status**: Accepted
+- **Iteration**: 2
+- **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the continuing agency grant
 
 **TL;DR**: Package a thin progressive skill with a validated canonical snapshot and deterministic query tool, while keeping archival binaries and deep research reports in the repository.
@@ -106,21 +106,21 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 
 ## Action Items
 
-- [ ] Author and validate `SKILL.md` plus progressive references.
-- [ ] Implement and test the packaged query tool.
-- [ ] Generate snapshot data and manifest from canonical records.
-- [ ] Implement deterministic ZIP, checksum, and release manifest generation.
-- [ ] Register skill freshness, validation, and packaging with `just verify`.
+- [x] Author and validate `SKILL.md` plus progressive references.
+- [x] Implement and test the packaged query tool.
+- [x] Generate snapshot data and manifest from canonical records.
+- [x] Implement deterministic ZIP, checksum, and release manifest generation.
+- [x] Register skill freshness, validation, and packaging with `just verify`.
 
 ---
 
 ## Validation
 
 - [x] Architecture distinguishes skill context from archival evidence.
-- [ ] Agent Skills validator passes the complete tree.
-- [ ] Query tests cover lookup, chronology, as-of, coverage, and typed misses.
-- [ ] A rebuilt skill tree matches committed generated resources.
-- [ ] Release package is deterministic and checksum-bound.
+- [x] Agent Skills validator passes the complete 16-file tree.
+- [x] Query tests cover lookup, chronology, as-of, coverage, and typed misses.
+- [x] A rebuilt skill tree matches committed generated resources.
+- [x] Release package is deterministic and checksum-bound.
 
 ---
 
@@ -131,6 +131,12 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Defined progressive modes, package boundary, query interface, and release contract.
 - Outcome: Accepted.
+
+### Iteration 2 (2026-09-05)
+- Trigger: Skill protocol, snapshot, query CLI, validation, and packaging implemented.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Built a 16-file progressively disclosed skill with a queryable 132-record snapshot and a deterministic 65,525-byte ZIP plus complete release bundle.
+- Outcome: Accepted → Partially Implemented; hosted release publication and broader-than-calibration coverage remain.
 
 ---
 

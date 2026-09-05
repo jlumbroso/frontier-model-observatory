@@ -3,8 +3,8 @@
 # Legible Continuous Integration and Release Artifacts
 
 - **Date**: 2026-09-05
-- **Iteration**: 6
-- **Status**: Partially Implemented
+- **Iteration**: 8
+- **Status**: Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
 **TL;DR**: Continuous integration must make repository health legible through `GITHUB_STEP_SUMMARY`, and releases must publish validated, downloadable skill and dataset artifacts with integrity metadata.
@@ -155,8 +155,9 @@ I updated the existing PAT to have Workflows read/write. I had preauthorized Act
 - [x] Add release-manifest generation and tests.
 - [x] Package extracted text separately from the compact skill, with an in-archive provenance manifest.
 - [x] Publish comprehensive chronology research as standalone JSONL, JSON, and CSV assets with a source-bound manifest.
-- [ ] Land workflows using a credential or human commit with workflow authority.
-- [ ] Inspect the first hosted summary and preserve any resulting corrections.
+- [x] Land workflows using the repository-scoped workflow authority selected by the human.
+- [x] Inspect the first hosted summary and preserve the resulting dependency and cross-version corrections.
+- [x] Publish and inspect `v0.1.0` through the hosted release workflow.
 
 ---
 
@@ -166,8 +167,8 @@ I updated the existing PAT to have Workflows read/write. I had preauthorized Act
 - [x] Local verification scripts validate and render all four result states.
 - [x] Workflow YAML, immutable action pins, static contracts, and actionlint 1.7.12 validate locally.
 - [x] Local release build deterministically produces fourteen primary assets, including a validated skill ZIP, a 13-document extracted-text ZIP, and three chronology-research formats.
-- [ ] Hosted push/PR run produces a complete failure-resistant summary.
-- [ ] Tagged release publishes a downloadable validated skill ZIP and checksums.
+- [x] Hosted push run produces a complete failure-resistant summary with all eleven checks and repository metrics.
+- [x] Tagged release publishes the validated skill ZIP, extracted text, chronology formats, manifests, and checksums.
 
 ---
 
@@ -208,6 +209,18 @@ I updated the existing PAT to have Workflows read/write. I had preauthorized Act
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added standalone JSONL, JSON, CSV, and manifest chronology assets to the deterministic release bundle, increasing the local release contract from ten to fourteen primary assets.
 - Outcome: Every current canonical, research, skill, and extracted-text surface is locally packageable; hosted publication still awaits QST-WORKFLOW-LANDING.
+
+### Iteration 7 (2026-09-05)
+- Trigger: Jérémie granted Workflows read/write on the existing repository-scoped PAT.
+- Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Landed the pinned verification and release workflows. The first hosted run failed legibly and exposed three environment assumptions: missing `skills-ref`, missing Poppler, and byte-unstable SQLite generation across Python/SQLite versions. Added declarative validator installation, a summonable system-package recipe, logical SQLite row digests, and regression contracts. The second run, `33986263879`, passed and uploaded a complete 4,118-byte summary.
+- Outcome: Hosted verification implemented and empirically inspected.
+
+### Iteration 8 (2026-09-05)
+- Trigger: The release workflow required an end-to-end hosted test and the authorized history rewrite changed both branch and tag identities.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Published `v0.1.0` with sixteen attached files, then re-ran verification and release after rewriting history. Hosted verification run `33986456547` and release run `33986456235` passed on rewritten refs.
+- Outcome: Implemented. Push verification, legible summaries, diagnostic artifacts, deterministic packaging, and hosted release publication are all exercised.
 
 ---
 

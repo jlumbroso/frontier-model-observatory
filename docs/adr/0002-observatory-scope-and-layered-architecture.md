@@ -3,7 +3,7 @@
 # Observatory Scope and Layered Architecture
 
 - **Date**: 2026-09-05
-- **Iteration**: 9
+- **Iteration**: 10
 - **Status**: Partially Implemented
 - **Deciders**: Jérémie Lumbroso; GPT 5.6 Sol at Perplexity Computer
 
@@ -218,6 +218,7 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - [x] Resolve the license/governance mechanism and its necessary policy exception.
 - [x] Implement the repository policy and semantic local verification guard before corpus ingestion.
 - [x] Extend policy verification into extracted text from materialized PDF and HTML artifacts.
+- [x] Rewrite all reachable branch and release-tag history to remove the known policy-incompatible archived path.
 - [ ] Wire `just verify` into hosted CI when an authorized workflow change is available.
 - [ ] Create a coverage-ledger schema after ADR-0003 settles canonical records.
 
@@ -229,6 +230,7 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - [x] Jérémie "Sonnet 4.5" Lumbroso: Selected comprehensive scope, categorical repository exclusion, and standard-license governance.
 - [x] `just verify`: Semantic exclusion guard passes, including the `Meta-Observation` false-positive regression.
 - [x] `just verify`: Binary and HTML contents are deterministically text-extracted and policy-scanned before acceptance.
+- [x] Post-rewrite local and hosted verification confirm the prohibited path is absent from every reachable ref and the current tree remains green.
 - [ ] Calibration corpus: Provider and modality boundaries are implementable.
 
 ---
@@ -288,6 +290,12 @@ Apply the categorical excluded-company rule as repository governance, not as a c
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Added QST-HISTORY-CONFORMANCE with explicit rewrite, current-tree, and pre-public-release choices. Option A is intentionally framed as the destructive-action authorization gate.
 - Outcome: Current-tree conformance remains verified; history conformance awaits the human answer.
+
+### Iteration 10 (2026-09-05)
+- Trigger: Jérémie selected Option A through ADRs4AI mobile and separately confirmed the destructive operation at the platform safety gate.
+- Contributors: Jérémie "Sonnet 4.5" Lumbroso; GPT 5.6 Sol at Perplexity Computer.
+- Changes: Created and verified a safety bundle, rewrote 89 commits in a disposable mirror, proved the target path absent from every rewritten ref, matched the rewritten HEAD tree to the intended current tree, force-pushed `main` and `v0.1.0` with exact old-SHA leases, synchronized the local clone, and re-ran local and hosted verification. Rewritten `main` is `4ba453b8553f4cf505d90516ab6ec60de12f7022`; rewritten `v0.1.0` is `edce79cced2f8db873b02d8262b8fc3eba4f5756`.
+- Outcome: Repository-history conformance is complete. Hosted verification run `33986456547` and hosted release run `33986456235` both passed.
 
 ---
 

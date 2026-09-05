@@ -3,7 +3,7 @@
 # Progressive Skill Packaging and Query Protocol
 
 - **Date**: 2026-09-05
-- **Iteration**: 2
+- **Iteration**: 3
 - **Status**: Partially Implemented
 - **Deciders**: GPT 5.6 Sol at Perplexity Computer, under the continuing agency grant
 
@@ -15,7 +15,7 @@
 
 **Source**: Founding conversation and implemented architecture in ADR-0003, ADR-0006, ADR-0007, and ADR-0008.
 
-The human requires a broad-ranging skill usable by models with stale training, redundant access paths for context loading and manipulation, and downloadable skill artifacts on releases. The repository now has 132 canonical records and deterministic projections.
+The human requires a broad-ranging skill usable by models with stale training, redundant access paths for context loading and manipulation, and downloadable skill artifacts on releases. The repository now has 146 canonical calibration records and a comprehensive 438-row official-source chronology research projection.
 
 **Agency Grant**: Build the best model-usable skill and release surface without waiting for another blocking question.
 
@@ -73,16 +73,18 @@ The model should produce the smallest sufficient mode and deepen only when compr
 Bundle:
 
 - the complete current canonical JSONL snapshot;
+- the comprehensive core-provider chronology research JSONL and its manifest,
+  explicitly marked `research_projection_not_canonical`;
 - compact CSV indexes for entities, artifacts, chronology, and coverage;
 - a standard-library query script;
 - references for epistemic protocol, query modes, data layout, and attribution;
 - snapshot manifest with schema version, coverage boundary, hashes, and source revision.
 
-Do not bundle provider PDF/HTML bytes, quarantine material, or the full research reports. Records preserve official URLs and hashes; repository users can inspect the archive.
+Do not bundle provider PDF/HTML bytes, quarantine material, full extracted texts, or the full research reports. Records preserve official URLs and hashes; repository users can inspect the archive and release users can download the separate extracted-text package.
 
 ### Query interface
 
-The packaged script supports model/name lookup, artifact lookup, provider and family filtering, timeline/as-of queries, coverage inspection, and raw ID resolution. Output is deterministic Markdown or JSON and states snapshot coverage.
+The packaged script supports model/name lookup, artifact lookup, provider and family filtering, timeline/as-of queries, coverage inspection, raw ID resolution, and on-demand search over comprehensive chronology research. Output is deterministic Markdown or JSON and states whether results are canonical or research projections.
 
 ### Release contract
 
@@ -99,6 +101,7 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 - Skill installation works without cloning the archive.
 - Packaged data remains inspectable and grep-friendly.
 - The skill cannot imply that current calibration coverage is comprehensive.
+- Comprehensive research rows remain usable without being silently promoted to canonical identity claims.
 - Live research augments rather than silently overwrites snapshot evidence.
 - Release packaging and skill validation become part of `just verify-complete`.
 
@@ -111,14 +114,15 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 - [x] Generate snapshot data and manifest from canonical records.
 - [x] Implement deterministic ZIP, checksum, and release manifest generation.
 - [x] Register skill freshness, validation, and packaging with `just verify`.
+- [x] Bundle and query the comprehensive chronology behind an explicit non-canonical boundary.
 
 ---
 
 ## Validation
 
 - [x] Architecture distinguishes skill context from archival evidence.
-- [x] Agent Skills validator passes the complete 16-file tree.
-- [x] Query tests cover lookup, chronology, as-of, coverage, and typed misses.
+- [x] Agent Skills validator passes the complete 19-file tree.
+- [x] Query tests cover lookup, chronology, as-of, coverage, typed misses, and non-canonical research lookup.
 - [x] A rebuilt skill tree matches committed generated resources.
 - [x] Release package is deterministic and checksum-bound.
 
@@ -137,6 +141,12 @@ Build a deterministic ZIP named with skill version, include SHA-256 checksums an
 - Contributors: GPT 5.6 Sol at Perplexity Computer.
 - Changes: Built a 16-file progressively disclosed skill with a queryable 132-record snapshot and a deterministic 65,525-byte ZIP plus complete release bundle.
 - Outcome: Accepted → Partially Implemented; hosted release publication and broader-than-calibration coverage remain.
+
+### Iteration 3 (2026-09-05)
+- Trigger: Comprehensive official-source chronology became available before semantic record-by-record canonical promotion.
+- Contributors: GPT 5.6 Sol at Perplexity Computer.
+- Changes: Added a 438-row chronology JSONL and manifest, an on-demand `research` query mode, a required epistemic reference, and explicit canonical-versus-research output status. The deterministic skill ZIP is now 138,192 bytes across 19 files.
+- Outcome: Broader-than-calibration chronology is immediately usable by models without weakening canonical identity constraints; semantic promotion and hosted publication remain.
 
 ---
 

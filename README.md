@@ -28,15 +28,20 @@ Completed:
 - 13 policy-clean provider sources and 13 linked, content-addressed text
   derivatives, totaling 93,562,059 materialized bytes;
 - deterministic Markdown, JSON, JSONL, CSV, and SQLite projections;
-- a validated 16-file progressive skill with deterministic ZIP, dataset assets,
-  release manifests, and SHA-256 checksums.
+- a 438-row comprehensive, official-source chronology research projection in
+  JSONL, JSON, and CSV, with the distinct 464 Markdown-table-line count
+  preserved;
+- a validated 19-file progressive skill with canonical and on-demand research
+  query modes, deterministic ZIP, dataset assets, release manifests, and
+  SHA-256 checksums.
 
 In progress:
 
 - evidence anchors, corrected evaluation claims, summaries, and three optional
   documentary-variation probes;
 - authorized landing and hosted inspection of the prepared CI workflows;
-- provider-wide chronology and artifact inventory beyond calibration.
+- semantic promotion of comprehensive chronology rows into canonical entity,
+  event, alias, endpoint, and deployment records.
 
 Not yet claimed:
 
@@ -130,6 +135,7 @@ justfile                  summonable project operations
 data/                     canonical type-homogeneous JSONL records
 schemas/                  versioned JSON Schema 2020-12 package
 artifacts/                content-addressed originals and extracted text
+research/                 machine-readable non-canonical research projections
 views/                    generated path-oriented projections
 dist/                     generated JSON, JSONL, CSV, and SQLite distributions
 frontier-model-observatory/

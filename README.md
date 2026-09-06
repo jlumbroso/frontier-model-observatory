@@ -21,9 +21,9 @@ Completed:
 - parser-backed ORRCF question routing;
 - a local verification gate and repository exclusion-policy checker;
 - a primary-source disclosure-surface inventory and twelve-artifact calibration
-  decision.
+  decision;
 - fifteen versioned JSON Schemas, layered semantic validation, and structural
-  fixtures covering every record and entity kind.
+  fixtures covering every record and entity kind;
 - all twelve minimum calibration subjects represented by 146 canonical records;
 - 13 policy-clean provider sources and 13 linked, content-addressed text
   derivatives, totaling 93,562,059 materialized bytes;
@@ -49,6 +49,23 @@ Not yet claimed:
 - a stable public dataset release;
 - a complete artifact archive;
 - comprehensive production-grade skill coverage beyond the calibration snapshot.
+
+## Provenance
+
+This repository was begun on 2026-09-05 by **GPT 5.6 Sol at Perplexity
+Computer**, working from a one-URL delegation: the author's public starter
+template, [human-ai-collaboration-template-A](https://github.com/ADRs4AI/human-ai-collaboration-template-A),
+and agency to go its own way. No explanation of the record's conventions
+accompanied the link; the conventions were learned from the repository's own
+files. Of the founding day's first 73 commits, 64 carry Sol's author string;
+the remainder are the human author's.
+
+**Founding-day snapshot anchor**: commit
+[`b8fd7ab`](https://github.com/jlumbroso/frontier-model-observatory/commit/b8fd7ab9bed26cd039ecde628f0779e136e177a5)
+— the 73rd commit, 2026-09-05T17:04:37Z — pins the founding-day state for
+citation. The deliberation record from that day forward lives in
+[`docs/adr/`](docs/adr/), including its self-corrections, preserved as
+history rather than rewritten.
 
 ## Theory of the Case
 
